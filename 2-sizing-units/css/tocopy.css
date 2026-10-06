@@ -10,19 +10,20 @@
   font-size: 20px;
   width: 50%;
   border: black solid 2px;
+
+  & > div {
+    background: purple;
+    padding: 1em;
+    margin: 1rem;
+    color: white;
+    font-weight: 900;
+  }
 }
-.abs_rel_lengths__container > div {
-  background: purple;
-  padding: 1em;
-  margin: 1rem;
-  color: white;
-  font-weight: 900;
-}
-.px { width: 300px; }
-.vw { width: 30vw; }
-.em { width: 30em; }
-.rem { width: 30rem; }
-.percentage { width: 30%; }
+.px__300 { width: 300px; }
+.vw__30 { width: 30vw; }
+.em__30 { width: 30em; }
+.rem__30 { width: 30rem; }
+.perc__30 { width: 30%; }
 
 /*
   Below, for #1, create a new class or classes to test out padding and margins with any of the lengths' values.
