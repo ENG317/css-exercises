@@ -6,6 +6,15 @@
 /*=======================================
   1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS
 =======================================*/
+/* 1.1. Experiment with CSS values
+  Test out changing the padding and margins with any of the elements: the `section` element with the `abs_rel_lengths__container` class and anything contained by it.
+
+  Play around with changing it to diffferent values in the inspection tool.
+
+  Be sure to test them out in the browser's inspection tool.
+
+  Be sure to understand the difference between padding and margins and how to write the shorthand versions.
+*/
 .abs_rel_lengths__container {
   font-size: 20px;
   width: 50%;
@@ -24,13 +33,6 @@
 .em__30 { width: 30em; }
 .rem__30 { width: 30rem; }
 .perc__30 { width: 30%; }
-
-/*
-  Below, for #1, create a new class or classes to test out padding and margins with any of the lengths' values.
-  Be sure to test them out in the browser's inspection tool.
-
-  Be sure to understand the difference between padding and margins and how to write the shorthand versions.
-*/
 
 
 /*===============
@@ -58,4 +60,9 @@
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
+/*
+  Recreate the wireframe design in the images folder.
+
+  HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
+*/
 
