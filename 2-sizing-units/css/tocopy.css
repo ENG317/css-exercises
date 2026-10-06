@@ -22,8 +22,6 @@
 
   & > div {
     background: purple;
-    padding: 1em;
-    margin: 1rem;
     color: white;
     font-weight: 900;
   }
