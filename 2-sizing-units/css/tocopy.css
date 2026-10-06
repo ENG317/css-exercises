@@ -1,0 +1,60 @@
+/* Root */
+:root {
+  font-size: 10px;
+}
+
+/*=======================================
+  1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS
+=======================================*/
+.abs_rel_lengths__container {
+  font-size: 20px;
+  width: 50%;
+  border: black solid 2px;
+}
+.abs_rel_lengths__container > div {
+  background: purple;
+  padding: 1em;
+  margin: 1rem;
+  color: white;
+  font-weight: 900;
+}
+.px { width: 300px; }
+.vw { width: 30vw; }
+.em { width: 30em; }
+.rem { width: 30rem; }
+.percentage { width: 30%; }
+
+/*
+  Below, for #1, create a new class or classes to test out padding and margins with any of the lengths' values.
+  Be sure to test them out in the browser's inspection tool.
+
+  Be sure to understand the difference between padding and margins and how to write the shorthand versions.
+*/
+
+
+/*===============
+  2. IMAGE SIZING
+================*/
+/*
+  Below, apply and inspect your work as you go, making sure they each work ...
+
+  1.a viewport width of 65 (65vw) to the section with the class "img_sizing__container"
+    - What does this select and do, and how does it impact the elements inside of it?
+
+  2. an absolute length of 100 pixels (100px to the image with the "img_absolute_px" class
+
+  3. a percentage relative length to the image with an "img_relative_percentage" class
+
+  4. a viewport width relative length to the image with an "img_relative_vw" class
+
+  REVIEW
+    - Inspect each image and change their values.
+    - AS you do so, also hover over the HTML of those images to compare their box dimensions and see if you understand why their size is as it is.
+*/
+
+
+
+/*======================
+  3. RECREATE THE DESIGN
+======================*/
+
