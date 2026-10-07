@@ -22,57 +22,10 @@
 
 ==================================== */
 
-
-/* I. ON COMMENTS
-  =============== */
-
-/* I.i. Comment Scope
-  Comments have scope like HTML elements. But, instead of opening and closing tags, note the opening and closing syntax that uses the asterisk and forward-slash characters.
-
-  Everything within this defined scope is ignored by the browser, when applying new declaration rulesets to your project.
-*/
-
-/* I.ii. Comments can be all on one line */
-
-/* I.iii. Multiline Comments
-
-  line
-  another line
-  another line
-  another line
-
-  You can also collapse/close a multiline comment, if you format it in this particular way. Hover over/around the top/start of this comment to reveal the dropdown button. Practice opening and closing it a few times.
-
-  Notice how you can still see the first line of the comment after you collapse it. That's a handy feature, as you can use comments to create "headings" to document your code.
-*/
-
-/* I.iv. Quick Comment Creation
-  Easily create the opening and closing scope with a simple hotkey combination:
-  - Mac: cmd + /
-  - Windows: ctrl + /
-*/
-
-/* I.v. You Try
-  Create a new comment after this one by using the hotkey combo on the next line
-*/
-
-/* OK, clean up a bit by deleting this comment and the above comments about comments above and get started! */
+/* Amina's comment */
 
 /* II. ROOT & BODY SELECTION
   ====================== */
-
-/* II.i. Inherited Styles via General Selection
-
-  The most general selections possible are any elements with lots of scope, such as the root <html> and <body> elements. Why? Because they contain ALL of the content, so all of the elements can inherit any styled properties defined on them.
-
-  To select the ROOT, i.e., the <html> element, of the page, you use the following special selector: `:root`. (See it used below).
-
-  When you select the :root, and write rules to it, you will begin to learn how the genetic inheritance metaphor of HTML elements becomes much more literal. Why? Because if <html> is the progenitor of all that it contains, then you should recognize now that all elements can potentially inherit the root's properties that you apply to it.
-
-  The same goes for the other widely scoped container: the <body>. Consider how all of the elements within the <body> are either direct children or descendants of the <body>. So, if you change the default properties of the <body>, like its 'background-color' property, then all of the HTML elements within the body will inherit that new property, unless you define it otherwise in a more specific selection condition.
-
-  The beauty of these general rules is that you can define a new default style that all child and descendant elements will inherit. From there, you can write more specific rules, based on new HTML patterns/contexts/scopes. Indeed, you'll see how, further on down, you will write rules that select more specific elements with classes and combinators.
-==================================== */
 
 :root {
   /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
@@ -80,12 +33,12 @@
   /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
   background-color: black;
 
-  /* CSS variables can be defined on the root element, so you can use consistent values throughout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+  /* CSS variables can be defined on the root element, so you can use consistent values throguhout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
 
   /* SPACING VARIABLES */
   --spacing-none: 0;
-  --spacing-extra-small: .25rem;
-  --spacing-small: .5rem;
+  --spacing-extra-small: 0.25rem;
+  --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
   --spacing-extra-large: 4rem;
@@ -135,20 +88,9 @@
   /* ROOT OBSERVATIONS
     Write your observations in this commment.
   ================== */
+
+  /* A lot of the elements on the page seem to have more specific styles that override the root styling. It's interesting that the root selector seems to be used more for defining specific constants/variables and less for actual styling */
 }
-
-/* II.ii. General Selection with Type Selectors
-
-  Beyond the :root and body, GENERAL SELECTION typically refers to the simplest selection technique, which uses the the TYPE selector.
-
-  TYPE selectors are just the names of the HTML elements. So, to select ALL
-    - paragraphs on a page, write p
-    - sections on a page, write section
-    - blockquotes on the page, blockquote
-    - etc.
-
-  The beauty of these general rules is that you can define a new default style that elements will use. From there, you can write more specific rules, based on new HTML patterns/contexts/scopes. Indeed, you'll see how, further on down, you will write rules that select more specific elements with classes and combinators.
-============================================ */
 
 /* 1. GENERAL */
 body {
@@ -166,36 +108,40 @@ body {
   /* margin: 0; */
 
   /* BODY OBSERVATIONS
-    Write your observations in this comment.
-  ================== */
+    Write your observations in this commment.
+  ==================
+  When I made changes in this selector, I started to actually see the changes take effect and show in the browser
+  ==================*/
 }
 
-/* 2. TYPOGRAPHY */
+/* 2. TYPOGRAPAHY */
 
 /* Sizing */
-h1 { font-size: 32px; }
-h2 { font-size: 26px; }
-/* II.iii. Cascade Question!
-   Add a font-size below like 24px.
-   Now, check an h3 in your inspection tool.
-   In the reflection area provided below,
-   explain why the h3 elements' font size
-   is **NOT** changing.
-
-   HINT: Your inspection tool's CSS panel
-   will help you solve this mystery.
-========================= */
-h3 {  }
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 26px;
+}
+/* 
+   ==================
+  The size isn't changed because the size of the h3 elements are being overridden by a more specific selector later in the file, so that takes precedence
+  ========================= */
+h3 {
+  font-size: 24px;
+}
 
 /* H3 Font Size Observations
-  Write your observations in this comment.
+  Write your observations in this commment.
+==================
+  The styling in this block seems to not be used at all, and it seems to be more of a fallback/default styling option
 ================== */
 
 /* 3. LINKS */
 
 /* III. SKIP LINK SOLUTION
 ======================= */
-/* Here's a skip link class that we can apply to all skip links. Use the inspection tool to find the skip link on this page. What do you think is happening with the rewritten properties below. Share your thoughts in the observations area below. */
+
 .skiplink__sr_only {
   position: absolute;
   width: 1px;
@@ -208,8 +154,8 @@ h3 {  }
   border-width: 0;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this comment.
-    HINT: Lookup 'position' on MDN.
+  ==================
+    It looks like the skip link is hidden from users in the top left corner. The absolute position means that the element isn't arranged/affected by the rest of the document's flow or styling. This probably ensures that people using screenreaders can still access a skip link, but its not visible to users who are actually looking at the website
   ================== */
 }
 
@@ -221,37 +167,25 @@ img {
   height: 100%; */
 }
 
-
 /* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
 ========================================= */
 
-/*
-  Classes are meant to be used interchangeably and across multiple elements in sophisticated ways.
-
-  Unlike the `id` attribute, a class attribute on an element can contain multiple class values by simply separating them out with a whitespace.
-
-  Note how you write classes differently in HTML vs. CSS. In HTML, you simply write the name of the class, such as `class="mt4"` on the `main` element. In CSS, when you create a class, you prepend it with a period character, such as `.mt4`.
-
-  IV.i. Take stock of where the `mt4` class is being used in the HTML. Use the inspection tool to observe its behavior and reflect on your observations in the provided space. Be sure to discuss the values being applied with the var() syntax.
-
-  IV.ii. Add a padding class in the HTML. Use the inspection tool to observe its behavior. Then, reflect on your observations in the provided space. Be sure to discuss the values being applied with the var() syntax.
-
-==================================== */
-
 /* Reusable Class Observations
-  IV.i. Write your observations in this comment.
+  IV.i. Write your observations in this commment.
+  The mt4 class is applied to the main element, it it primarily affects the padding on top of the elemtn. the --spacing-large variable, which was defined earlier in the :root selector, applies a padding of 2em on top of the main element
 
-  IV.ii. Write your observations in this comment.
+  IV.ii. Write your observations in this commment.
+  I added a padding class to the h3 card name element for the first card. I made the left margin large and the right margin extra small. On the live HTML, I can see the disrepancy between the padding on both sides of the h3 element
 ================== */
 
 /* 5. REUSABLE CLASSES */
 
 .pa3 {
-  padding: var(--spacing-medium)
+  padding: var(--spacing-medium);
 }
 
 .pt4 {
-  padding-top: var(--spacing-large)
+  padding-top: var(--spacing-large);
 }
 
 .pv3 {
@@ -323,31 +257,10 @@ img {
   margin-top: 0;
 }
 
-
-/*
-  Ok, we've written some more general rules that can be applied in numerous places. Now, let's use the Position rule to our advantage and write our CSS in relationship to the position of the HTML source order:
-    - Header
-    - Main
-    - Section
-    - Footer
- */
-
-/* V. READING DESCENDANT SELECTORS WITH CSS NESTING
-  Note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
-
-  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
-
-  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
-
-  Respond to the prompts below in the space provided for section V.
-
-  V.i. Note how I am selecting the header with its class name, but also how I am using CSS Nesting to write a "descendant combinator" that selects any descendant img inside of this `.banner__container` class and any descendant `h1` element. Reflect on your observations about how CSS nesting works in practice, noting any syntax and example ways to format/indent the code too.
-
-  V.ii. Update the `width` and `height` properties of this specific img element to a percentage value of `100%`. Reflect on what behavior changes, if any.
-
-  V.iii. Now, tinker and reflect on the h1. What's your best guess as to why the h1 element is behaving like this?
-
-================================================= */
+.abdulsalam_padding {
+  margin-left: var(--spacing-large);
+  margin-right: var(--spacing-extra-small);
+}
 
 /* 5. PAGE BANNER HEADER
 ========================*/
@@ -361,8 +274,8 @@ img {
       - Mac: CMD+/
       - Windows: CTRL+/
      */
-    /* width: ; */
-    /* height: ; */
+    width: 100%;
+    height: 100%;
   }
 
   & h1 {
@@ -372,51 +285,29 @@ img {
 }
 
 /* V. Page Banner Class Observations
-  V.i. Write your observations in this comment.
-
-  V.ii. Write your observations in this comment.
-
-  V.iii. Write your observations in this comment.
-================== */
-
-
-
-/* VI. WRITE YOUR OWN CSS NOW
-
-  1. Select the main element.
-  2. Apply a `max-width` of 810px.
-  3. Center the main along the horizontal axis with the box model's `margin` as follows: `margin: auto;`
-
-  Research into this solution. Why does it work? Respond in the observations area below.
 ==================================== */
 
 /* 6. MAIN
 ========*/
-
+main {
+  max-width: 810px;
+  margin: auto;
+}
 
 /* VI. MAIN OBSERVATIONS
-  Write your observations in this comment.
+  Write your observations in this commment.
+
+  It seems like "margin:auto" sets the left margins equal to the right margins, and same for the top and bottom margins, which makes the margins all around the main elemenr equal and therefore centers it on the page
 ================== */
 
-
-
-/* 7. SECTIONs =====================
-  Once you've completed all of the prompts, come back here.
-  And, iff you'd like to do so, select and style anything regarding the sections on the page and their contents within this portion of the CSS document.
-
-  I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
+/* 7. SECTIONs
 ==================================== */
 
-
-
+section {
+  background-color: lightskyblue;
+  color: darkmagenta;
+}
 /* VII. PRACTICE READING CSS NESTING
-  Again, note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
-
-  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
-
-  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
-
-  Below, I ask you a series of questions to respond to about the different types of selectors used in this footer class.
 ==================================== */
 
 /* 8. PAGE FOOTER
@@ -432,13 +323,13 @@ img {
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A:
+    A: It means descendant, so it applies to any row class that appears in the footer_site__container class
 
     What type of selector is this: `& .row`?
-    A:
+    A: Its a class selector 
 
     How would you explain the selection condition in plain language?
-    A:
+    A: Select any element with the row class thats within an element with the footer_site__container class
   ================== */
   & .row {
     display: flex;
@@ -449,13 +340,13 @@ img {
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A:
+      A: Its a type selector
 
       What type of selector is `:first-child`?
-      A:
+      A: Its a pseudo-selector
 
       How would you explain this selection condition in plain language?
-      A:
+      A: Choose the first div element thats directly contained in footer_site__container
     ================== */
     & > div:first-child {
       flex: 1 0 300px;
@@ -475,17 +366,17 @@ img {
   & a {
     text-decoration: underline;
     color: var(--foregroundColor);
-    transition: .5s;
+    transition: 0.5s;
     position: relative;
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A:
+      A: When you hover your mouse over an element in footer_site__container, apply this style
     ================== */
     &:hover {
       color: var(--primaryColor);
       text-decoration: none;
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 
@@ -512,10 +403,10 @@ img {
 
     /* QUESTIONS
       What type of selector is this: `&.small`?
-      A:
+      A: Class selector
 
       How would you explain the selection condition in plain language?
-      A:
+      A: Choose any element with both the footer_site__container and small classes
     ================== */
     &.small {
       margin: 20px 0;
@@ -524,29 +415,15 @@ img {
 }
 
 /* VIII. WHAT ARE COMPONENTS?
-
-  Components are any specific HTML-CSS patterns that you wish to reuse across your website pages. For this example, read and inspect the `card__sections` component.
-
-  Don't worry about tinkering and understanding all of the property rules and values. That'll come with time.
-
-  Instead, focus on the CSS Nesting work. Use the observations area to reflect about the following questions/prompts.
-
-  VIII.i. Why wouldn't we put these styles under the "sections" area instead?
-
-  VIII.ii. How many nested levels are there in this component? Which selectors are in the deepest level of .card__sections?
-
-  VIII.iii. Name all the selector types in this component. List the selections under their particular selector type.
-
-==================================== */
+===============*/
+*/
 
 /* 9. COMPONENTS
 ===============*/
 
 /* 9.1. PAGE Cards Component */
 .card__sections {
-
   .cards__main_external_wrapper {
-
     h2 {
       font-size: clamp(1.5rem, 2.5rem, 3rem);
       line-height: 1.2em;
@@ -580,7 +457,7 @@ img {
           margin: 1.15rem 0 1.15rem 0;
         }
 
-        .partner_title,
+        .card__main_name,
         a {
           color: var(--secondaryShade5);
           font-weight: 600;
@@ -631,14 +508,39 @@ img {
       }
     }
   }
-
 }
 
 /* VIII. COMPONENTS OBSERVATIONS
-  VIII.i. Write your observations in this comment.
+  VIII.i. Write your observations in this commment.
+  By putting them under the card_sections selector, since its a more specific type of selector, the styles here would apply over styles defined in section.
 
-  VIII.ii. Write your observations in this comment.
+  VIII.ii. Write your observations in this commment.
+  There are five nested levels in this component. The deepest selectors are the span selector under the h3 element, @media selector and :hover selector
 
-  VIII.iii. Write your observations in this comment.
+  VIII.iii. Write your observations in this commment.
+  Selector types:
+
+  Class selector
+  .card__sections
+  .cards__main_external_wrapper
+  .cards__sub_container
+  .card__project_leads_container
+  .card__main_name
+  .card__main_name
+  .partner_title
+  .bio_container
+
+  Pseudo Selector
+  :hover
+
+  Type
+  picture
+  img
+  a (link)
+  p (paragraph)
+  h2
+  h3
+
+
 
 ================== */
