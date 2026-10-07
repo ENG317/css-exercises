@@ -2,7 +2,7 @@
 
 :root {
   font-size: 22px;
-  background-color: teal;
+  background-color: rgb(78, 28, 78);
 
   /* CSS VARIABLES ROOT OBSERVATIONS
     CSS variables are defined in the :root selector so they can be reused throughout the stylesheet.
@@ -205,7 +205,7 @@ main {
 /* 8. PAGE FOOTER
 ================*/
 .footer_site__container {
-  background-color: teal;
+  background-color: rgb(255, 141, 160);
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
