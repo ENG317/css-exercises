@@ -1,0 +1,447 @@
+/* Hello, this is a new comment */
+
+:root {
+  font-size: 22px;
+  background-color: rgb(78, 28, 78);
+
+  /* CSS VARIABLES ROOT OBSERVATIONS
+    CSS variables are defined in the :root selector so they can be reused throughout the stylesheet.
+    The var() function retrieves the value stored in a variable.
+    For example, --spacing-large is used to create consistent spacing in multiple classes.
+    If the variable value changes in :root, every rule that references that variable updates automatically.
+    The color variables work the same way. */
+}
+
+/* 1. GENERAL */
+body {
+  font-size: 20px;
+  background-color: teal;
+  color: beige;
+  margin: 8px;
+
+  /* CSS BODY OBSERVATIONS
+    The body inherits values from the root and applies general styles to the entire page.
+    Changing the font-size affects the default text size for most elements, changing the background-color updates the page background.
+    The body has a default margin supplied by the browser (user agent stylesheet), which creates space around the edges of the page. */
+}
+
+/* 2. TYPOGRAPHY */
+
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 24px;
+}
+
+/* H3 Font Size Observations
+    The h3 font size did not change because a more specific CSS rule elsewhere in the stylesheet is overriding it.
+    The browser's inspector showed another rule with higher specificity taking precedence.
+    The cascade applies the most specific matching rule. */
+
+/* 3. LINKS */
+
+/* III. SKIP LINK SOLUTION*/
+.skiplink__sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+
+  /* SKIPLINK OBSERVATIONS
+    The skip link is an accessibility feature that allows users to jump directly to the main content.
+    The absolute property removes the link from the normal page layout so it doesn't take up visible space.
+    The width and height are reduced to 1px and overflow is hidden, so the visible content is hidden.
+    The link is visually hidden, but it still exists in the HTML and can be accessed by screen readers and keyboard navigation. */
+}
+
+/* 4. IMAGES */
+/* don't want to apply universal rules to images bc it can cause unintended effects like warping and distortion */
+img {
+  /* display: block;
+  width: 100%;
+  height: 100%; */
+}
+
+/* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?*/
+
+/* Class observations
+ The mt4 class is applied to the main element and adds space above the main content. It sets the margin-top to var(--spacing-large). The var() function retrieves the value from the CSS variable defined in :root. Because--spacing-large is defined as 2rem, the main element receives 2rem of space above it. Using variables makes consistent spacing across the entire site easier.
+*/
+
+/* Reusable Class Observations
+  I added a padding class after Kara Long's section.
+  The ph3 class adds margins at the top of an element. It uses var(--spacing-medium), which retrieves the value in the CSS variable --spacing-medium.
+  The current value is 1rem, so every element with the ph3 class receives a top margin of 1rem. IT allows for consistency without having to redefine something every time you want to use it.
+*/
+
+/* 5. REUSABLE CLASSES */
+
+.pa3 {
+  padding: var(--spacing-medium);
+}
+
+.pt4 {
+  padding-top: var(--spacing-large);
+}
+
+.pv3 {
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
+}
+
+.pv4 {
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
+}
+
+.pv6 {
+  padding-top: var(--spacing-extra-extra-large);
+  padding-bottom: var(--spacing-extra-extra-large);
+}
+
+.ph3 {
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+}
+
+.ph4 {
+  padding-left: var(--spacing-large);
+  padding-right: var(--spacing-large);
+}
+
+.mb0 {
+  margin-bottom: var(--spacing-none);
+}
+
+.mb1 {
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.mb2 {
+  margin-bottom: var(--spacing-small);
+}
+
+.mb3 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.mb4 {
+  margin-bottom: var(--spacing-large);
+}
+
+.mt0 {
+  margin-top: var(--spacing-none);
+}
+
+.mt1 {
+  margin-top: var(--spacing-extra-small);
+}
+
+.mt2 {
+  margin-top: var(--spacing-small);
+}
+
+.mt3 {
+  margin-top: var(--spacing-medium);
+}
+
+.mt4 {
+  margin-top: var(--spacing-large);
+}
+
+.mt_remove {
+  margin-top: 0;
+}
+
+/* 5. PAGE BANNER HEADER
+========================*/
+
+.banner__container {
+  max-width: 1080px;
+  margin: auto;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  & h1 {
+    position: relative;
+    bottom: 100px;
+  }
+}
+
+/* V. Page Banner Class Observations
+  CSS nesting allows selectors to be grouped inside a parent selector. The ampersand (&) refers to the parent selector, so "& img" means ".banner__container img" and "& h1" means ".banner__container h1". This makes the CSS easier to read bc it follows HTML hierarchy.
+
+  Setting the image width and height to 100%, the image expands to fill the available space inside its container. It adjusts to the size of the banner container rather than using its original dimensions.
+
+  The h1 has a set position, relative to the bottom. This means it shifts visually from its original position.
+*/
+
+/* 6. MAIN
+*/
+
+main {
+  max-width: 810px;
+  margin: auto;
+}
+
+/* VI. MAIN OBSERVATIONS
+  The max-width property prevents the main element from becoming wider than 810px.
+  The auto rule centres the element horizontally because the browser automatically distributes the remaining space equally on the sides.
+  The element has a defined width constraint (max-width), so the browser calculate the extra space and centres the element within its parent container.
+*/
+
+/* 8. PAGE FOOTER
+================*/
+.footer_site__container {
+  background-color: rgb(255, 141, 160);
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--foregroundColor);
+  position: relative;
+  z-index: 1;
+
+  /* QUESTIONS
+    What does the ampersand `&` mean here?
+    A: The ampersand refers to the parent selector. In this case, footer_site__container.
+
+    What type of selector is this: `& .row`?
+    A: Descendent selector
+
+    How would you explain the selection condition in plain language?
+    A: Select any element with the class .row that is inside the .footer_site__container element.
+  */
+  & .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1080px;
+    margin: auto;
+
+    /* QUESTIONS
+      What type of selector type is this: `& > div:first-child`?
+      A: A child combinator selector combined with a pseudo-class selector
+
+      What type of selector is `:first-child`?
+      A: Pseudo-class selector
+
+      How would you explain this selection condition in plain language?
+      A: Select the first child element that is a div.
+    ================== */
+    & > div:first-child {
+      flex: 1 0 300px;
+    }
+    & > :not(div:first-child()) {
+      flex: 0.1 1 240px;
+    }
+  }
+
+  & h2 {
+    color: var(--primaryColor);
+    font-size: 16px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+  }
+
+  & a {
+    text-decoration: underline;
+    color: var(--foregroundColor);
+    transition: 0.5s;
+    position: relative;
+
+    /* QUESTION
+      How would you explain this selection condition in plain language?
+      A: When a user hovers over a link inside the footer, apply these styles
+     */
+    &:hover {
+      color: var(--primaryColor);
+      text-decoration: none;
+      transition: 0.5s;
+    }
+  }
+
+  & ul {
+    padding-left: 0;
+    list-style: none;
+
+    & li {
+      display: block;
+      line-height: 1.15;
+      margin: 0;
+      padding: 0;
+
+      & a {
+        margin: 0;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  & hr {
+    border-top-color: var(--accent2Color);
+    opacity: 0.5;
+
+    /* QUESTIONS
+      What type of selector is this: `&.small`?
+      A: A class selector combined with the parent selector
+
+      How would you explain the selection condition in plain language?
+      A: Select an hr element inside .footer_site__container that also has the class "small".
+    */
+    &.small {
+      margin: 20px 0;
+    }
+  }
+}
+
+/* 9. COMPONENTS
+*/
+
+/* 9.1. PAGE Cards Component */
+.card__sections {
+  .cards__main_external_wrapper {
+    h2 {
+      font-size: clamp(1.5rem, 2.5rem, 3rem);
+      line-height: 1.2em;
+    }
+
+    .cards__sub_container {
+      margin: 3rem 0 0 0;
+
+      .card__project_leads_container {
+        margin: 1rem;
+        margin-bottom: 2em;
+        padding: 1.25em;
+        background-color: var(--accentShade1);
+        box-shadow:
+          var(--secondaryShade3) 0px 1px 1px,
+          var(--secondaryShade5) 0px 0px 1px 1px;
+
+        h3.card__main_name {
+          font-size: 1.5rem;
+          margin-bottom: 0.25rem;
+
+          & > span {
+            font-size: 0.8rem;
+          }
+        }
+
+        p {
+          color: var(--neutralShade8);
+          font-size: 1rem;
+          line-height: 1.25;
+          margin: 1.15rem 0 1.15rem 0;
+        }
+
+        .partner_title,
+        a {
+          color: var(--secondaryShade5);
+          font-weight: 600;
+        }
+
+        .partner_title,
+        .bio_container {
+          margin-top: 1rem;
+        }
+
+        .partner_title {
+          font-size: 1.15rem;
+        }
+
+        a {
+          transition: 0.3s;
+
+          &:hover {
+            text-decoration: none;
+            transition: 0.3s;
+          }
+        }
+
+        & picture,
+        img {
+          max-width: 190px;
+          min-width: 165px;
+          float: left;
+          margin: 1rem 1rem 1rem 0;
+          shape-outside: circle();
+          border-radius: 50%;
+          height: auto;
+
+          /* We'll learn about @media queries later! */
+          @media screen and (max-width: 600px) {
+            float: unset;
+            max-width: unset;
+            min-width: unset;
+            margin: 0;
+            shape-outside: unset;
+            border-radius: unset;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* VIII. COMPONENTS OBSERVATIONS
+  These styles would not be placed under the general "sections" area because they are specific to the card component. A component is meant to be individual andreusable. Keeping the styles grouped together makes the code easier to maintain.
+
+  There are about 6 levels of nesting in this component:
+  - .card__sections
+  - .cards__main_external_wrapper
+  - .cards__sub_container
+  - .card__project_leads_container
+  - a
+  - &:hover
+  The deepest selectors include &:hover, & > span
+
+  Class selectors:
+  - .card__sections
+  - .cards__main_external_wrapper
+  - .cards__sub_container
+  - .card__project_leads_container
+  - .card__main_name
+  - .partner_title
+  - .bio_container
+  
+  Type selectors:
+  - h2
+  - p
+  - a
+  - img
+  - picture
+
+  Combined selectors:
+  - h3.card__main_name
+
+  Descendant selectors:
+  - .card__sections .cards__main_external_wrapper
+  - .card__project_leads_container p
+  - .card__project_leads_container a
+  Child selector:
+  - & > span
+  
+  Pseudo-class selectors:
+  - :hover
+  
+  Media query:
+  - @media screen
+  - (max-width: 600px)
+  
+  These are all used to target specific elements within the card component while maintaining reusability.
+*/
