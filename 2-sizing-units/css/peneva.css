@@ -1,0 +1,83 @@
+/* Root */
+:root {
+  font-family: "vogue", serif;
+  font-size: 25px;
+}
+h2 {
+  font-size: 35px;
+}
+/*=======================================
+  1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS
+=======================================*/
+.abs_rel_lengths__container {
+  font-size: 20px;
+  width: 50%;
+  border: black solid 2px;
+  padding: 30px;
+
+  & > div {
+    background: purple;
+    color: white;
+    font-weight: 900;
+  }
+}
+.px__300 {
+  width: 300px;
+}
+.vw__30 {
+  width: 30vw;
+}
+.em__30 {
+  width: 30em;
+}
+.rem__30 {
+  width: 30rem;
+}
+.perc__30 {
+  width: 30%;
+}
+
+/*===============
+  2. IMAGE SIZING
+================*/
+
+.img_absolute_px {
+  width: 100px;
+  height: auto;
+}
+.img_relative_percentage {
+  width: 25%;
+  height: auto;
+}
+.img_relative_vw {
+  width: 65vw;
+  height: auto;
+}
+
+/*======================
+  3. RECREATE THE DESIGN
+======================*/
+/*
+  Recreate the wireframe design in the images folder.
+
+  HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
+*/
+.wireframe_imagep {
+  float: left;
+  width: 30%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.wireframe_imagex {
+  float: right;
+  width: 30%;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.wireframe_container {
+  text-align: justify;
+}
+.wireframe_container p {
+  font-size: 30px;
+  padding: 30px;
+}
