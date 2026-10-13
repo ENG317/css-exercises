@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units & Sizing</title>
+
+    <!-- RESOURCES -->
+    <link rel="stylesheet" href="css/abdulsalam.css" />
+  </head>
+  <body>
+    <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+    <section class="abs_rel_lengths__container">
+      <h2>1. Absolute vs. Relative Lengths</h2>
+      <div class="px__300">
+        <p>I am 300px wide - Absolute length (px)</p>
+      </div>
+      <div class="vw__30">
+        <p>I am 30vw wide - Relative to viewport width (vw)</p>
+      </div>
+      <div class="perc__30">
+        <p>I am 30% wide - Relative to parent container's width</p>
+      </div>
+      <div class="em__30">
+        <p>I am 30em wide - Relative to local element (em) font size</p>
+      </div>
+      <div class="rem__30">
+        <p>I am 30rem wide - Relative to :root element (rem) font size</p>
+      </div>
+    </section>
+
+    <!-- 2. IMAGE SIZING
+       Start and complete in Tuesday's class
+
+    Below, create the following HTML structure:
+
+    A <section> with the class "img_sizing__container"
+      - h2 - "1. Image Sizing"
+      - img with
+        - class: img_absolute_px
+        - src: "https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+      - img with
+        - class: img_relative_percentage
+        - src: "https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+      - img with
+        - class: img_relative_vw
+        - src: "https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+  -->
+    <section class="img_sizing__container">
+      <h2>1. Image Sizing</h2>
+      <img
+        class="img_absolute_px"
+        src="https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+        width="800px"
+        height="400px"
+        alt=""
+      />
+      <img
+        class="img_relative_percentage"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+        width="800px"
+        height="400px"
+        alt=""
+      />
+      <img
+        class="img_relative_vw"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+        width="800px"
+        height="400px"
+        alt=""
+      />
+    </section>
+
+    <!-- 3. RECREATE THE DESIGN
+    Start on Tuesday and complete during Thursday's class
+
+    3.1. Open the image in the 'images' folder.
+    3.2. Review the wireframe and outline your HTML
+    3.3. Recreate it by writing both the HTML and CSS with your newfound sizing knowledge.
+
+    Hint: You'll need to apply a float property and value to those images to change their default flow behavior.
+  -->
+    <section class="wireframe">
+      <h2>Recreated Wireframe</h2>
+      <img class="float_left" src="https://placehold.co/300x400/orange/white" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae quia
+        officiis dolores quidem est numquam corporis ipsa laborum debitis dicta
+        exercitationem quis id quae obcaecati, libero excepturi sed dolore dolor
+        similique pariatur et odit! Architecto iure porro eligendi, nulla, quas
+        adipisci, voluptatem quasi libero id error in perspiciatis! Laboriosam
+        veritatis ducimus reprehenderit autem amet esse nisi facilis quo,
+        molestiae quidem distinctio nam ipsum eligendi doloribus enim odit
+        voluptas error ea sunt alias minima inventore, quasi sed? Velit sit
+        architecto nostrum aperiam, ad doloribus eum modi voluptates hic autem,
+        cupiditate quae dolore eos voluptatum ipsum reprehenderit, magnam
+        voluptas. Placeat aut, deleniti sequi corrupti recusandae eaque dicta,
+        repellendus modi blanditiis quo molestiae voluptates ipsa architecto a
+        rerum, libero nisi soluta asperiores autem eligendi vitae distinctio?
+        Asperiores dolorum vero architecto blanditiis voluptatem assumenda,
+        suscipit ullam unde laborum tempora ducimus accusantium veniam saepe
+        error non est recusandae nemo facilis! Distinctio, nesciunt
+        exercitationem molestias reiciendis voluptate numquam suscipit ratione
+        ipsam. Exercitationem ut cumque sed cum ipsum eum non tenetur iure,
+        veritatis consequuntur dolor eaque, quia ratione ad reprehenderit nam
+        qui veniam at ab hic corrupti accusantium! Voluptatem corporis magni
+        quam corrupti numquam nulla tempore quidem ab iusto, amet nam deserunt,
+        doloremque, in et error mollitia.
+      </p>
+      <p class="clearfix">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        ducimus incidunt quam accusantium rerum sit dignissimos excepturi.
+        Explicabo delectus doloribus debitis ipsa illum accusantium recusandae
+        provident nobis incidunt. Iure esse a incidunt doloribus cum natus
+        blanditiis eum ipsa quis atque voluptates, modi, porro doloremque. Eaque
+        exercitationem fugit quo, facilis adipisci laudantium voluptatum
+        voluptate dolores modi officiis aspernatur! Dolorem sequi voluptatem
+        dignissimos distinctio fugiat similique delectus, exercitationem nisi
+        iure numquam commodi eius? Enim veritatis eius molestiae nobis
+        dignissimos modi ducimus laborum consectetur, doloribus repudiandae
+        ratione rem a accusantium animi officiis. Repellat corporis ratione
+        asperiores exercitationem. Impedit vero dolores pariatur, temporibus
+        deserunt modi eveniet veritatis, dignissimos recusandae possimus
+        reiciendis hic harum, quisquam suscipit. Aperiam inventore veniam in
+        nisi error magni est voluptatum earum hic, nemo tempora delectus
+        pariatur facere quidem alias. Sed, deleniti dolore quis recusandae dicta
+        maiores sequi libero et possimus repudiandae dolor, natus sint ad
+        reprehenderit ratione repellat quo odio excepturi qui labore officiis?
+        Quas sit eum corporis veniam, animi rem quis debitis laudantium dolor
+        perferendis quasi quae voluptas et nihil fuga suscipit aliquid culpa
+        similique dicta omnis eligendi? Voluptatum rem error inventore, itaque
+        magni debitis numquam vitae expedita hic ad eum modi nostrum id est,
+        consectetur amet unde accusantium.
+      </p>
+      <img
+        class="float_right"
+        src="https://placehold.co/300x400/orange/white"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        explicabo, suscipit, ullam voluptatem commodi iste numquam, recusandae
+        deleniti assumenda quisquam culpa repellat reiciendis at nam quae porro
+        accusantium laborum accusamus cumque amet. Obcaecati error quae
+        asperiores eaque at ipsa quisquam laboriosam, itaque minima velit
+        tempora aliquid neque. Eaque itaque nesciunt, voluptatibus saepe culpa
+        et tempora id esse nobis. Fugit saepe magnam ex et laboriosam
+        consequuntur eaque dolorum eius. Est aliquid necessitatibus hic veniam,
+        magnam, reprehenderit dolorum neque veritatis facilis eius perferendis
+        dolores fugit voluptas nostrum tenetur. Aliquam fugiat iure voluptate
+        quibusdam? Vel sit totam cum nam perferendis cupiditate aliquid nisi
+        magnam. Fugit consectetur ipsam doloribus, totam est blanditiis debitis
+        quia pariatur ex vitae aperiam labore sint quos voluptatibus obcaecati
+        eos? Voluptate, et quidem incidunt aspernatur mollitia nisi labore.
+        Quas, quod. Dolores, asperiores saepe? Accusantium architecto
+        consectetur, officia deserunt dolorum hic nam quas harum maxime quisquam
+        sed odit inventore non asperiores, pariatur, voluptates explicabo ipsum.
+        Suscipit delectus sint minus eaque maiores ducimus excepturi, earum
+        iusto magni praesentium ad nostrum officiis vitae. Ex ullam in voluptas
+        quae quod amet animi quas, neque quia illum quidem accusantium libero
+        rerum, voluptatibus officia beatae, quaerat nisi quos! Blanditiis
+        molestiae expedita debitis, nemo suscipit amet soluta?
+      </p>
+      <p class="clearfix">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        ducimus incidunt quam accusantium rerum sit dignissimos excepturi.
+        Explicabo delectus doloribus debitis ipsa illum accusantium recusandae
+        provident nobis incidunt. Iure esse a incidunt doloribus cum natus
+        blanditiis eum ipsa quis atque voluptates, modi, porro doloremque. Eaque
+        exercitationem fugit quo, facilis adipisci laudantium voluptatum
+        voluptate dolores modi officiis aspernatur! Dolorem sequi voluptatem
+        dignissimos distinctio fugiat similique delectus, exercitationem nisi
+        iure numquam commodi eius? Enim veritatis eius molestiae nobis
+        dignissimos modi ducimus laborum consectetur, doloribus repudiandae
+        ratione rem a accusantium animi officiis. Repellat corporis ratione
+        asperiores exercitationem. Impedit vero dolores pariatur, temporibus
+        deserunt modi eveniet veritatis, dignissimos recusandae possimus
+        reiciendis hic harum, quisquam suscipit. Aperiam inventore veniam in
+        nisi error magni est voluptatum earum hic, nemo tempora delectus
+        pariatur facere quidem alias. Sed, deleniti dolore quis recusandae dicta
+        maiores sequi libero et possimus repudiandae dolor, natus sint ad
+        reprehenderit ratione repellat quo odio excepturi qui labore officiis?
+        Quas sit eum corporis veniam, animi rem quis debitis laudantium dolor
+        perferendis quasi quae voluptas et nihil fuga suscipit aliquid culpa
+        similique dicta omnis eligendi? Voluptatum rem error inventore, itaque
+        magni debitis numquam vitae expedita hic ad eum modi nostrum id est,
+        consectetur amet unde accusantium.
+      </p>
+    </section>
+  </body>
+</html>
