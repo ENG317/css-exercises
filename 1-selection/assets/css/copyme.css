@@ -27,7 +27,7 @@
   =============== */
 
 /* I.i. Comment Scope
-  Comments have scope like HTML elements. But, instead of opening and closing tags, note the openning and closing syntax that uses the asterisk and forward-slash characters.
+  Comments have scope like HTML elements. But, instead of opening and closing tags, note the opening and closing syntax that uses the asterisk and forward-slash characters.
 
   Everything within this defined scope is ignored by the browser, when applying new declaration rulesets to your project.
 */
@@ -41,9 +41,9 @@
   another line
   another line
 
-  You can also collapse/close a multiline comment, if you format it in this particular way. Hover over/around the top/start of this comment to reveal the dropdown button. Practice openning and closing it a few times.
+  You can also collapse/close a multiline comment, if you format it in this particular way. Hover over/around the top/start of this comment to reveal the dropdown button. Practice opening and closing it a few times.
 
-  Notice how you can still see the first line of the comment after you collapse it. That's a hand feature, as you can use comments to create "headings" to document your code.
+  Notice how you can still see the first line of the comment after you collapse it. That's a handy feature, as you can use comments to create "headings" to document your code.
 */
 
 /* I.iv. Quick Comment Creation
@@ -71,7 +71,7 @@
 
   The same goes for the other widely scoped container: the <body>. Consider how all of the elements within the <body> are either direct children or descendants of the <body>. So, if you change the default properties of the <body>, like its 'background-color' property, then all of the HTML elements within the body will inherit that new property, unless you define it otherwise in a more specific selection condition.
 
-  The beauty of these general rules is that you can define a new default style that all child and descendat elements will inherit. From there, you can write more specific rules, based on new HTML patterns/contexts/scopes. Indeed, you'll see how, further on down, you will write rules that select more specific elements with classes and combinators.
+  The beauty of these general rules is that you can define a new default style that all child and descendant elements will inherit. From there, you can write more specific rules, based on new HTML patterns/contexts/scopes. Indeed, you'll see how, further on down, you will write rules that select more specific elements with classes and combinators.
 ==================================== */
 
 :root {
@@ -80,7 +80,7 @@
   /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
   background-color: black;
 
-  /* CSS variables can be defined on the root element, so you can use consistent values throguhout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+  /* CSS variables can be defined on the root element, so you can use consistent values throughout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
 
   /* SPACING VARIABLES */
   --spacing-none: 0;
@@ -166,11 +166,11 @@ body {
   /* margin: 0; */
 
   /* BODY OBSERVATIONS
-    Write your observations in this commment.
+    Write your observations in this comment.
   ================== */
 }
 
-/* 2. TYPOGRAPAHY */
+/* 2. TYPOGRAPHY */
 
 /* Sizing */
 h1 { font-size: 32px; }
@@ -188,14 +188,14 @@ h2 { font-size: 26px; }
 h3 {  }
 
 /* H3 Font Size Observations
-  Write your observations in this commment.
+  Write your observations in this comment.
 ================== */
 
 /* 3. LINKS */
 
 /* III. SKIP LINK SOLUTION
 ======================= */
-/* Here's a skip link class that we can apply to all skip links. Use the inspection tool to find the skip link on this page. What do you think is happenning with the rewritten properties below. Share your thoughts in the observations area below. */
+/* Here's a skip link class that we can apply to all skip links. Use the inspection tool to find the skip link on this page. What do you think is happening with the rewritten properties below. Share your thoughts in the observations area below. */
 .skiplink__sr_only {
   position: absolute;
   width: 1px;
@@ -208,7 +208,7 @@ h3 {  }
   border-width: 0;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this commment.
+    Write your observations in this comment.
     HINT: Lookup 'position' on MDN.
   ================== */
 }
@@ -232,16 +232,16 @@ img {
 
   Note how you write classes differently in HTML vs. CSS. In HTML, you simply write the name of the class, such as `class="mt4"` on the `main` element. In CSS, when you create a class, you prepend it with a period character, such as `.mt4`.
 
-  IV.i. Take stock of where the `mt4` class is being used in the HTML. Use the inspection tool to observe its behavior and reflect on your observations in the provided space. Be sure to discuss the values being applid with the var() syntax.
+  IV.i. Take stock of where the `mt4` class is being used in the HTML. Use the inspection tool to observe its behavior and reflect on your observations in the provided space. Be sure to discuss the values being applied with the var() syntax.
 
-  IV.ii. Add a padding class in the HTML. Use the inspection tool to observe its behavior. Then, reflect on your observations in the provided space. Be sure to discuss the values being applid with the var() syntax.
+  IV.ii. Add a padding class in the HTML. Use the inspection tool to observe its behavior. Then, reflect on your observations in the provided space. Be sure to discuss the values being applied with the var() syntax.
 
 ==================================== */
 
 /* Reusable Class Observations
-  IV.i. Write your observations in this commment.
+  IV.i. Write your observations in this comment.
 
-  IV.ii. Write your observations in this commment.
+  IV.ii. Write your observations in this comment.
 ================== */
 
 /* 5. REUSABLE CLASSES */
@@ -372,11 +372,11 @@ img {
 }
 
 /* V. Page Banner Class Observations
-  V.i. Write your observations in this commment.
+  V.i. Write your observations in this comment.
 
-  V.ii. Write your observations in this commment.
+  V.ii. Write your observations in this comment.
 
-  V.iii. Write your observations in this commment.
+  V.iii. Write your observations in this comment.
 ================== */
 
 
@@ -395,7 +395,7 @@ img {
 
 
 /* VI. MAIN OBSERVATIONS
-  Write your observations in this commment.
+  Write your observations in this comment.
 ================== */
 
 
@@ -635,10 +635,10 @@ img {
 }
 
 /* VIII. COMPONENTS OBSERVATIONS
-  VIII.i. Write your observations in this commment.
+  VIII.i. Write your observations in this comment.
 
-  VIII.ii. Write your observations in this commment.
+  VIII.ii. Write your observations in this comment.
 
-  VIII.iii. Write your observations in this commment.
+  VIII.iii. Write your observations in this comment.
 
 ================== */
