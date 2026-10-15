@@ -400,7 +400,7 @@ There was a bit of a gap at the top of the image, but when I changed the width a
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A: direct child
+      A:  child
 
       What type of selector is `:first-child`?
       A: pseudo-class

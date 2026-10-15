@@ -26,12 +26,21 @@
     font-weight: 900;
   }
 }
-.px__300 { width: 300px; }
-.vw__30 { width: 30vw; }
-.em__30 { width: 30em; }
-.rem__30 { width: 30rem; }
-.perc__30 { width: 30%; }
-
+.px__300 {
+  width: 300px;
+}
+.vw__30 {
+  width: 30vw;
+}
+.em__30 {
+  width: 30em;
+}
+.rem__30 {
+  width: 30rem;
+}
+.perc__30 {
+  width: 30%;
+}
 
 /*===============
   2. IMAGE SIZING
@@ -41,6 +50,8 @@
 
   1.a viewport width of 65 (65vw) to the section with the class "img_sizing__container"
     - What does this select and do, and how does it impact the elements inside of it?
+
+  This selects the entire section of images. It ensures that the width of the images only reaches 65vw. This means that the images take up 65% of the viewport's width. It impacts the div, header and three images inside.
 
   2. an absolute length of 100 pixels (100px to the image with the "img_absolute_px" class
 
@@ -53,8 +64,18 @@
     - AS you do so, also hover over the HTML of those images to compare their box dimensions and see if you understand why their size is as it is.
 */
 
-
-
+.img_sizing__container {
+  width: 65vw;
+}
+.img_absolute_px {
+  length: 100px;
+}
+.img_relative_percentage {
+  length: 30%;
+}
+.img_relative_vw {
+  length: 45vw;
+}
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
@@ -63,4 +84,3 @@
 
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
-
