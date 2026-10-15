@@ -22,42 +22,6 @@
 
 ==================================== */
 
-
-/* I. ON COMMENTS
-  =============== */
-
-/* I.i. Comment Scope
-  Comments have scope like HTML elements. But, instead of opening and closing tags, note the openning and closing syntax that uses the asterisk and forward-slash characters.
-
-  Everything within this defined scope is ignored by the browser, when applying new declaration rulesets to your project.
-*/
-
-/* I.ii. Comments can be all on one line */
-
-/* I.iii. Multiline Comments
-
-  line
-  another line
-  another line
-  another line
-
-  You can also collapse/close a multiline comment, if you format it in this particular way. Hover over/around the top/start of this comment to reveal the dropdown button. Practice openning and closing it a few times.
-
-  Notice how you can still see the first line of the comment after you collapse it. That's a hand feature, as you can use comments to create "headings" to document your code.
-*/
-
-/* I.iv. Quick Comment Creation
-  Easily create the opening and closing scope with a simple hotkey combination:
-  - Mac: cmd + /
-  - Windows: ctrl + /
-*/
-
-/* I.v. You Try
-  Create a new comment after this one by using the hotkey combo on the next line
-*/
-
-/* OK, clean up a bit by deleting this comment and the above comments about comments above and get started! */
-
 /* II. ROOT & BODY SELECTION
   ====================== */
 
@@ -76,16 +40,16 @@
 
 :root {
   /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
-  font-size: 18px;
+  font-size: 12px;
   /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
-  background-color: black;
+  background-color: black; 
 
   /* CSS variables can be defined on the root element, so you can use consistent values throguhout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
 
   /* SPACING VARIABLES */
   --spacing-none: 0;
-  --spacing-extra-small: .25rem;
-  --spacing-small: .5rem;
+  --spacing-extra-small: 0.25rem;
+  --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
   --spacing-extra-large: 4rem;
@@ -133,7 +97,7 @@
   --neutralShade8: #212122;
 
   /* ROOT OBSERVATIONS
-    Write your observations in this commment.
+    Inside the root element you define variables to be used later in the coding in specific places. It's like an organizer tool for available values so that they can be consistent and changed universally. The current values are the colors available and being used in the document. I think the spacing variables relative to the margins within boxes but I'm not sure.
   ================== */
 }
 
@@ -155,7 +119,7 @@ body {
   /* Change my values and inspect the changes IN YOUR BROWSER to the body. Then, come back and note some of your observations in the comment below about the relationships between the rules in the :root and the rules for the body */
 
   /* Be sure to select the <html> element, then scroll down and through all of the styles that are defined on it. The inspection tool will tell you the "Origin" of the style, whether it's from your stylesheet or the "user agent" */
-  font-size: 18px;
+  font-size: 16px;
 
   /* All elements have a property of `background-color`. Change the body's default background color from the default hex color value of white (#ffffff) to a sandy tan brown color of the hex value of #ffe9d7 ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
   background-color: #ffe9d7;
@@ -166,26 +130,32 @@ body {
   /* margin: 0; */
 
   /* BODY OBSERVATIONS
-    Write your observations in this commment.
+   Changes in the body values changes specific html elements within the body. They are all visual changes that you can see compared to root values which are not always directly visual. It makes general changes where the root values need to be placed with a certain element to be seen.
   ================== */
 }
 
 /* 2. TYPOGRAPAHY */
 
 /* Sizing */
-h1 { font-size: 32px; }
-h2 { font-size: 26px; }
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 26px;
+}
 /* II.iii. Cascade Question!
    Add a font-size below like 24px.
    Now, check an h3 in your inspection tool.
    In the reflection area provided below,
    explain why the h3 elements' font size
    is **NOT** changing.
-
+I think h3 elements font size is not changing because its defaulting to the root font size of 12px.
    HINT: Your inspection tool's CSS panel
    will help you solve this mystery.
 ========================= */
-h3 {  }
+h3 {
+  font-size: 20px;
+}
 
 /* H3 Font Size Observations
   Write your observations in this commment.
@@ -208,7 +178,7 @@ h3 {  }
   border-width: 0;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this commment.
+   The rewritten properties are positioning the skip link to be hidden from the user and stay in the top left corner of the page.
     HINT: Lookup 'position' on MDN.
   ================== */
 }
@@ -216,11 +186,10 @@ h3 {  }
 /* 4. IMAGES */
 img {
   /* We'll cover why I commented out this code in class together. */
-  /* display: block;
+  display: block;
   width: 100%;
-  height: 100%; */
+  height: 100%;
 }
-
 
 /* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
 ========================================= */
@@ -239,19 +208,19 @@ img {
 ==================================== */
 
 /* Reusable Class Observations
-  IV.i. Write your observations in this commment.
+  IV.i. In the HTML the class mt4 is being used on the main element. It's adding margin spacing around the main element. The var() syntax is defined by the values set in the root element.
 
-  IV.ii. Write your observations in this commment.
+  IV.ii. The padding class moves content within the html element away from the edges.
 ================== */
 
 /* 5. REUSABLE CLASSES */
 
 .pa3 {
-  padding: var(--spacing-medium)
+  padding: var(--spacing-medium);
 }
 
 .pt4 {
-  padding-top: var(--spacing-large)
+  padding-top: var(--spacing-large);
 }
 
 .pv3 {
@@ -323,7 +292,6 @@ img {
   margin-top: 0;
 }
 
-
 /*
   Ok, we've written some more general rules that can be applied in numerous places. Now, let's use the Position rule to our advantage and write our CSS in relationship to the position of the HTML source order:
     - Header
@@ -361,25 +329,23 @@ img {
       - Mac: CMD+/
       - Windows: CTRL+/
      */
-    /* width: ; */
-    /* height: ; */
+    width: 100%;
+    height: 100%;
   }
 
   & h1 {
     position: relative;
-    bottom: 100px;
+    bottom: 120px;
   }
 }
 
 /* V. Page Banner Class Observations
-  V.i. Write your observations in this commment.
+  V.i. The nesting of CSS allows for clear structure of which classes are being used and what elements they effect.
 
-  V.ii. Write your observations in this commment.
+  V.ii. The % values change the size of the element to match the viewport size and be responsive to it.
 
-  V.iii. Write your observations in this commment.
+  V.iii. The h1 element is behaving this way because it's positioned relative to the block element below it. The bottom margin is effecting its positioning.
 ================== */
-
-
 
 /* VI. WRITE YOUR OWN CSS NOW
 
@@ -392,13 +358,14 @@ img {
 
 /* 6. MAIN
 ========*/
-
+main {
+  max-width: 810px;
+  margin: auto;
+}
 
 /* VI. MAIN OBSERVATIONS
-  Write your observations in this commment.
+  This works the max-width property limits the width and the margin; auto centers it based on the available viewport.
 ================== */
-
-
 
 /* 7. SECTIONs =====================
   Once you've completed all of the prompts, come back here.
@@ -406,8 +373,6 @@ img {
 
   I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
 ==================================== */
-
-
 
 /* VII. PRACTICE READING CSS NESTING
   Again, note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
@@ -432,10 +397,10 @@ img {
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A:
+    A: 
 
     What type of selector is this: `& .row`?
-    A:
+    A: 
 
     How would you explain the selection condition in plain language?
     A:
@@ -475,7 +440,7 @@ img {
   & a {
     text-decoration: underline;
     color: var(--foregroundColor);
-    transition: .5s;
+    transition: 0.5s;
     position: relative;
 
     /* QUESTION
@@ -485,7 +450,7 @@ img {
     &:hover {
       color: var(--primaryColor);
       text-decoration: none;
-      transition: .5s;
+      transition: 0.5s;
     }
   }
 
@@ -544,9 +509,7 @@ img {
 
 /* 9.1. PAGE Cards Component */
 .card__sections {
-
   .cards__main_external_wrapper {
-
     h2 {
       font-size: clamp(1.5rem, 2.5rem, 3rem);
       line-height: 1.2em;
@@ -631,7 +594,6 @@ img {
       }
     }
   }
-
 }
 
 /* VIII. COMPONENTS OBSERVATIONS
