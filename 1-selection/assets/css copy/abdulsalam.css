@@ -1,0 +1,546 @@
+/* README FIRST!
+  (1) If you haven't done the readings, you're not ready to dive into this yet. :-) Be sure to do so and come back. You won't be able to barge your way through this material without some conceptual work first.
+
+  (2) This content is embedded within a CSS comment. All of the prompts will be within the comments. Please write your code after them.
+
+  (3) Delete any instructional comment, after you have completed the prompt. But, leave helpful headings to document your CSS.
+*/
+
+/* EXERCISE GOALS ================
+
+  1. Get acclimated to reading and writing CSS files in relationship with HTML.
+
+  2. Implement knowledge about the CASCADE, i.e., understanding why we write CSS starting with more __general selections__ (like simple type selections) to more __specific selections__ (like components.
+
+  3. Practice selection, selection, selection. Make sure to read the CSS selection reading, so you can figure out how to read the HTML and select the appropriate HTML element(s), such as
+      * CSS Nesting
+      * type
+      * class
+      * child and descendant combinators
+
+  4. Practice styling your HTML file with some basic properties. (We'll learn about more "properties" to use as we go.)
+
+==================================== */
+
+/* Amina's comment */
+
+/* II. ROOT & BODY SELECTION
+  ====================== */
+
+:root {
+  /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
+  font-size: 18px;
+  /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
+  background-color: black;
+
+  /* CSS variables can be defined on the root element, so you can use consistent values throguhout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+
+  /* SPACING VARIABLES */
+  --spacing-none: 0;
+  --spacing-extra-small: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 4rem;
+  --spacing-extra-extra-large: 8rem;
+  --spacing-extra-extra-extra-large: 16rem;
+
+  /* COLOR SCHEME VARIABLES */
+  --primaryColor: #c51350;
+  --primaryShade1: #ffd6b5;
+  --primaryShade2: #ffbc85;
+  --primaryShade3: #ffa053;
+  --primaryShade4: #e8751a;
+  --primaryShade5: #e46802;
+  --secondaryColor: #f44336;
+  --secondaryShade1: #ffdde0;
+  --secondaryShade2: #ffcdd2;
+  --secondaryShade3: #ef9a9a;
+  --secondaryShade4: #d32f2f;
+  --secondaryShade5: #b71c1c;
+  --accentColor: #fda403;
+  --accentShade1: #f9f1dc;
+  --accentShade2: #f4dea7;
+  --accentShade3: #f2cb69;
+  --accentShade4: #f0bb34;
+  --accentShade5: #b68300;
+  --accent2Color: #009688;
+  --accent2Shade1: #e0f2f1;
+  --accent2Shade2: #b2dfdb;
+  --accent2Shade3: #64babe;
+  --accent2Shade4: #429499;
+  --accent2Shade5: #1d7b80;
+  --accent3Color: #014980;
+  --accent3Shade1: #80c8ff;
+  --accent3Shade2: #46adfc;
+  --accent3Shade3: #2089d9;
+  --accent3Shade4: #0067b6;
+  --accent3Shade5: #02589b;
+  --neutralShade1: #f2f2f2;
+  --neutralShade2: #e8e9e9;
+  --neutralShade3: #d1d3d4;
+  --neutralShade4: #babdbf;
+  --neutralShade5: #808488;
+  --neutralShade6: #666a6d;
+  --neutralShade7: #4d5052;
+  --neutralShade8: #212122;
+
+  /* ROOT OBSERVATIONS
+    Write your observations in this commment.
+  ================== */
+
+  /* A lot of the elements on the page seem to have more specific styles that override the root styling. It's interesting that the root selector seems to be used more for defining specific constants/variables and less for actual styling */
+}
+
+/* 1. GENERAL */
+body {
+  /* Change my values and inspect the changes IN YOUR BROWSER to the body. Then, come back and note some of your observations in the comment below about the relationships between the rules in the :root and the rules for the body */
+
+  /* Be sure to select the <html> element, then scroll down and through all of the styles that are defined on it. The inspection tool will tell you the "Origin" of the style, whether it's from your stylesheet or the "user agent" */
+  font-size: 18px;
+
+  /* All elements have a property of `background-color`. Change the body's default background color from the default hex color value of white (#ffffff) to a sandy tan brown color of the hex value of #ffe9d7 ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
+  background-color: #ffe9d7;
+  /* All elements have a textual color property of `color`, which alters the color of the text. Change the body's default text color from the default value of black (#000000) to a hex value of #0d242f, which is a dark blue toned color. */
+  color: #0d242f;
+
+  /* Do you notice how there's a thin black box around the body element? Use your inspection tool to select the body element and view the "computed" styles of the body's box model. In Chrome, refer to this documentation for help: https://developer.chrome.com/docs/devtools/css/reference#computed. IF you use a different browser, it will be very similar, and it will display an elements box model with computed styles.  */
+  /* margin: 0; */
+
+  /* BODY OBSERVATIONS
+    Write your observations in this commment.
+  ==================
+  When I made changes in this selector, I started to actually see the changes take effect and show in the browser
+  ==================*/
+}
+
+/* 2. TYPOGRAPAHY */
+
+/* Sizing */
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 26px;
+}
+/* 
+   ==================
+  The size isn't changed because the size of the h3 elements are being overridden by a more specific selector later in the file, so that takes precedence
+  ========================= */
+h3 {
+  font-size: 24px;
+}
+
+/* H3 Font Size Observations
+  Write your observations in this commment.
+==================
+  The styling in this block seems to not be used at all, and it seems to be more of a fallback/default styling option
+================== */
+
+/* 3. LINKS */
+
+/* III. SKIP LINK SOLUTION
+======================= */
+
+.skiplink__sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+
+  /* SKIPLINK OBSERVATIONS
+  ==================
+    It looks like the skip link is hidden from users in the top left corner. The absolute position means that the element isn't arranged/affected by the rest of the document's flow or styling. This probably ensures that people using screenreaders can still access a skip link, but its not visible to users who are actually looking at the website
+  ================== */
+}
+
+/* 4. IMAGES */
+img {
+  /* We'll cover why I commented out this code in class together. */
+  /* display: block;
+  width: 100%;
+  height: 100%; */
+}
+
+/* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
+========================================= */
+
+/* Reusable Class Observations
+  IV.i. Write your observations in this commment.
+  The mt4 class is applied to the main element, it it primarily affects the padding on top of the elemtn. the --spacing-large variable, which was defined earlier in the :root selector, applies a padding of 2em on top of the main element
+
+  IV.ii. Write your observations in this commment.
+  I added a padding class to the h3 card name element for the first card. I made the left margin large and the right margin extra small. On the live HTML, I can see the disrepancy between the padding on both sides of the h3 element
+================== */
+
+/* 5. REUSABLE CLASSES */
+
+.pa3 {
+  padding: var(--spacing-medium);
+}
+
+.pt4 {
+  padding-top: var(--spacing-large);
+}
+
+.pv3 {
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
+}
+
+.pv4 {
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
+}
+
+.pv6 {
+  padding-top: var(--spacing-extra-extra-large);
+  padding-bottom: var(--spacing-extra-extra-large);
+}
+
+.ph3 {
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+}
+
+.ph4 {
+  padding-left: var(--spacing-large);
+  padding-right: var(--spacing-large);
+}
+
+.mb0 {
+  margin-bottom: var(--spacing-none);
+}
+
+.mb1 {
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.mb2 {
+  margin-bottom: var(--spacing-small);
+}
+
+.mb3 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.mb4 {
+  margin-bottom: var(--spacing-large);
+}
+
+.mt0 {
+  margin-top: var(--spacing-none);
+}
+
+.mt1 {
+  margin-top: var(--spacing-extra-small);
+}
+
+.mt2 {
+  margin-top: var(--spacing-small);
+}
+
+.mt3 {
+  margin-top: var(--spacing-medium);
+}
+
+.mt4 {
+  margin-top: var(--spacing-large);
+}
+
+.mt_remove {
+  margin-top: 0;
+}
+
+.abdulsalam_padding {
+  margin-left: var(--spacing-large);
+  margin-right: var(--spacing-extra-small);
+}
+
+/* 5. PAGE BANNER HEADER
+========================*/
+
+.banner__container {
+  max-width: 1080px;
+  margin: auto;
+
+  & img {
+    /* Uncomment each line with the hotkey:
+      - Mac: CMD+/
+      - Windows: CTRL+/
+     */
+    width: 100%;
+    height: 100%;
+  }
+
+  & h1 {
+    position: relative;
+    bottom: 100px;
+  }
+}
+
+/* V. Page Banner Class Observations
+==================================== */
+
+/* 6. MAIN
+========*/
+main {
+  max-width: 810px;
+  margin: auto;
+}
+
+/* VI. MAIN OBSERVATIONS
+  Write your observations in this commment.
+
+  It seems like "margin:auto" sets the left margins equal to the right margins, and same for the top and bottom margins, which makes the margins all around the main elemenr equal and therefore centers it on the page
+================== */
+
+/* 7. SECTIONs
+==================================== */
+
+section {
+  background-color: lightskyblue;
+  color: darkmagenta;
+}
+/* VII. PRACTICE READING CSS NESTING
+==================================== */
+
+/* 8. PAGE FOOTER
+================*/
+.footer_site__container {
+  background-color: #fda403;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--foregroundColor);
+  position: relative;
+  z-index: 1;
+
+  /* QUESTIONS
+    What does the ampersand `&` mean here?
+    A: It means descendant, so it applies to any row class that appears in the footer_site__container class
+
+    What type of selector is this: `& .row`?
+    A: Its a class selector 
+
+    How would you explain the selection condition in plain language?
+    A: Select any element with the row class thats within an element with the footer_site__container class
+  ================== */
+  & .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1080px;
+    margin: auto;
+
+    /* QUESTIONS
+      What type of selector type is this: `& > div:first-child`?
+      A: Its a type selector
+
+      What type of selector is `:first-child`?
+      A: Its a pseudo-selector
+
+      How would you explain this selection condition in plain language?
+      A: Choose the first div element thats directly contained in footer_site__container
+    ================== */
+    & > div:first-child {
+      flex: 1 0 300px;
+    }
+    & > :not(div:first-child()) {
+      flex: 0.1 1 240px;
+    }
+  }
+
+  & h2 {
+    color: var(--primaryColor);
+    font-size: 16px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+  }
+
+  & a {
+    text-decoration: underline;
+    color: var(--foregroundColor);
+    transition: 0.5s;
+    position: relative;
+
+    /* QUESTION
+      How would you explain this selection condition in plain language?
+      A: When you hover your mouse over an element in footer_site__container, apply this style
+    ================== */
+    &:hover {
+      color: var(--primaryColor);
+      text-decoration: none;
+      transition: 0.5s;
+    }
+  }
+
+  & ul {
+    padding-left: 0;
+    list-style: none;
+
+    & li {
+      display: block;
+      line-height: 1.15;
+      margin: 0;
+      padding: 0;
+
+      & a {
+        margin: 0;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  & hr {
+    border-top-color: var(--accent2Color);
+    opacity: 0.5;
+
+    /* QUESTIONS
+      What type of selector is this: `&.small`?
+      A: Class selector
+
+      How would you explain the selection condition in plain language?
+      A: Choose any element with both the footer_site__container and small classes
+    ================== */
+    &.small {
+      margin: 20px 0;
+    }
+  }
+}
+
+/* VIII. WHAT ARE COMPONENTS?
+===============*/
+*/
+
+/* 9. COMPONENTS
+===============*/
+
+/* 9.1. PAGE Cards Component */
+.card__sections {
+  .cards__main_external_wrapper {
+    h2 {
+      font-size: clamp(1.5rem, 2.5rem, 3rem);
+      line-height: 1.2em;
+    }
+
+    .cards__sub_container {
+      margin: 3rem 0 0 0;
+
+      .card__project_leads_container {
+        margin: 1rem;
+        margin-bottom: 2em;
+        padding: 1.25em;
+        background-color: var(--accentShade1);
+        box-shadow:
+          var(--secondaryShade3) 0px 1px 1px,
+          var(--secondaryShade5) 0px 0px 1px 1px;
+
+        h3.card__main_name {
+          font-size: 1.5rem;
+          margin-bottom: 0.25rem;
+
+          & > span {
+            font-size: 0.8rem;
+          }
+        }
+
+        p {
+          color: var(--neutralShade8);
+          font-size: 1rem;
+          line-height: 1.25;
+          margin: 1.15rem 0 1.15rem 0;
+        }
+
+        .card__main_name,
+        a {
+          color: var(--secondaryShade5);
+          font-weight: 600;
+        }
+
+        .partner_title,
+        .bio_container {
+          margin-top: 1rem;
+        }
+
+        .partner_title {
+          font-size: 1.15rem;
+        }
+
+        a {
+          transition: 0.3s;
+
+          &:hover {
+            text-decoration: none;
+            transition: 0.3s;
+          }
+        }
+
+        & picture,
+        img {
+          max-width: 190px;
+          min-width: 165px;
+          float: left;
+          margin: 1rem 1rem 1rem 0;
+          shape-outside: circle();
+          border-radius: 50%;
+          height: auto;
+
+          /* We'll learn about @media queries later! */
+          @media screen and (max-width: 600px) {
+            float: unset;
+            max-width: unset;
+            min-width: unset;
+            margin: 0;
+            shape-outside: unset;
+            border-radius: unset;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* VIII. COMPONENTS OBSERVATIONS
+  VIII.i. Write your observations in this commment.
+  By putting them under the card_sections selector, since its a more specific type of selector, the styles here would apply over styles defined in section.
+
+  VIII.ii. Write your observations in this commment.
+  There are five nested levels in this component. The deepest selectors are the span selector under the h3 element, @media selector and :hover selector
+
+  VIII.iii. Write your observations in this commment.
+  Selector types:
+
+  Class selector
+  .card__sections
+  .cards__main_external_wrapper
+  .cards__sub_container
+  .card__project_leads_container
+  .card__main_name
+  .card__main_name
+  .partner_title
+  .bio_container
+
+  Pseudo Selector
+  :hover
+
+  Type
+  picture
+  img
+  a (link)
+  p (paragraph)
+  h2
+  h3
+
+
+
+================== */
