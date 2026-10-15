@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units & Sizing</title>
+  <!-- RESOURCES -->
+  <link rel="stylesheet" href="css/shobert.css">
+
+</head>
+
+<body>
+
+  <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+  <section class="abs_rel_lengths__container">
+    <h2>1. Absolute vs. Relative Lengths</h2>
+    <div class="px__300">
+      <p>I am 300px wide - Absolute length (px)</p>
+    </div>
+    <div class="vw__30">
+      <p>I am 30vw wide - Relative to viewport width (vw)</p>
+    </div>
+    <div class="perc__30">
+      <p>I am 30% wide - Relative to parent container's width</p>
+    </div>
+    <div class="em__30">
+      <p>I am 30em wide - Relative to local element (em) font size</p>
+    </div>
+    <div class="rem__30">
+      <p>I am 30rem wide - Relative to :root element (rem) font size</p>
+    </div>
+  </section>
+
+  <!-- 2. IMAGE SIZING
+       Start and complete in Tuesday's class
+
+    Below, create the following HTML structure:
+
+    A <section> with the class "img_sizing__container"
+      - h2 - "1. Image Sizing"
+      - img with
+        - class: img_absolute_px
+        - src: "https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+      - img with
+        - class: img_relative_percentage
+        - src: "https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+      - img with
+        - class: img_relative_vw
+        - src: "https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+  -->
+  <section class="img_sizing__container">
+    <h2>1. Image Sizing</h2>
+    <img class="img_absolute_px" src="https://placehold.co/800x400?text=800+x+400\nAbsolute+Length" alt="" width="800"
+      height="400">
+    <img class="img_relative_percentage" src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+      alt="" width="800" height="400">
+    <img class="img_relative_vw" src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+      alt="" width="800" height="400">
+  </section>
+
+  <section class="recreate_container">
+    <h2>Recreate the design</h2>
+    <img class="img_recreate_design" src="https://placehold.co/400x500?text=400+x+500\nRecreate+the+Design" alt=""
+      width="400" height="500">
+    <div class="recreate_container__text">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam non corrupti, cum provident quae fuga
+        culpa
+        exercitationem doloribus velit natus nihil in! Labore cupiditate accusamus eum consequuntur aperiam adipisci hic
+        nihil nobis officiis cumque dicta rerum corrupti sint fuga eius dolore earum sed a possimus, unde velit.
+        Necessitatibus ipsam amet voluptates dolor, rerum excepturi blanditiis repudiandae beatae impedit molestias
+        minus
+        magnam deserunt hic ut minima culpa, nulla, reiciendis enim. Accusantium, commodi nisi, perspiciatis magnam rem
+        molestiae quod expedita, sequi illo vitae ab tenetur debitis enim voluptas sed eum exercitationem dolorem
+        corrupti
+        deserunt officia similique repellat nemo ratione? Reiciendis, tenetur eum? Lorem ipsum, dolor sit amet
+        consectetur
+        adipisicing elit. Animi, alias officia! Placeat mollitia laborum, unde deleniti non impedit aliquid eaque
+        possimus. Qui id laudantium cumque labore est perferendis nostrum voluptatem officia neque similique odio velit
+        amet provident fuga dolorem, reprehenderit excepturi ratione quae dolore consequuntur quia earum officiis at
+        incidunt. Officiis perspiciatis laborum saepe fugiat, tempore est sunt nihil minus voluptates! Accusamus tempora
+        laudantium, omnis voluptates obcaecati deleniti aperiam, iusto similique libero praesentium et odit quae.
+        Ratione
+        praesentium repellendus est eaque magnam nesciunt tempora, architecto, quod adipisci corrupti, animi voluptatum
+        quam. Harum excepturi, dolorem voluptas velit et enim quod quae neque vel inventore, aperiam maiores maxime iste
+        ipsa magnam exercitationem facere sunt sequi iusto quas illum ratione, accusantium distinctio! Eligendi quos
+        numquam explicabo quod ipsum, quisquam voluptates mollitia laborum eaque a, maxime et ea deleniti, provident
+        nisi
+        fugit. A voluptate non earum quo id sapiente, iure vel labore porro excepturi, incidunt reprehenderit! Eaque
+        adipisci, id dolorem aperiam nulla sit voluptatum quae vitae perspiciatis nesciunt, eum esse laudantium voluptas
+        dolor impedit autem ducimus modi consequuntur eius animi quasi commodi odit. Accusamus minima enim impedit error
+        ut vero corrupti harum quidem! Esse atque delectus laudantium facilis consequatur vero expedita reiciendis alias
+        possimus.</p>
+    </div>
+    <img class="img_recreate_design2" src="https://placehold.co/400x500?text=400+x+500\nRecreate+the+Design" alt=""
+      width="400" height="500">
+    <div class="recreate_container__text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repudiandae aperiam, saepe quo beatae
+        consequatur doloribus accusantium, fuga id repellat aliquid delectus voluptate? Hic quia quod a ipsam incidunt,
+        labore, voluptates esse, quaerat mollitia ipsum distinctio assumenda sapiente expedita. Neque architecto
+        pariatur nam nihil. Delectus officiis enim nobis, modi atque numquam fugit corrupti magnam adipisci in ipsum,
+        quos laborum rerum commodi eum consectetur harum expedita! Non, enim repellat explicabo sit laboriosam, delectus
+        quibusdam similique provident nulla vel doloremque veniam excepturi unde laborum, nemo voluptatem omnis sint ab
+        aut? Aut, iste quam. Enim vel omnis animi inventore at nihil ipsum ullam? Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. Veniam laudantium ad rerum ex perspiciatis recusandae officiis debitis inventore
+        aliquid necessitatibus ratione consectetur distinctio non id adipisci atque, totam illum aspernatur iusto! Culpa
+        quia corporis cupiditate voluptatem adipisci molestiae quam quae doloremque cumque repellendus sed, est minus
+        aspernatur earum a sequi doloribus iste distinctio quidem. Quidem esse excepturi nemo porro officia. Eveniet,
+        dolorum quidem repellendus eaque cumque fugiat aliquam rerum veniam assumenda cupiditate enim at harum
+        necessitatibus hic impedit obcaecati vitae iusto amet saepe architecto animi eius, illo, dicta alias. Porro
+        earum eaque voluptate ipsam nostrum laboriosam iure enim, velit vero?</p>
+    </div>
+  </section>
+
+
+  <!-- 3. RECREATE THE DESIGN
+    Start on Tuesday and complete during Thursday's class
+
+    3.1. Open the image in the 'images' folder.
+    3.2. Review the wireframe and outline your HTML
+    3.3. Recreate it by writing both the HTML and CSS with your newfound sizing knowledge.
+
+    Hint: You'll need to apply a float property and value to those images to change their default flow behavior.
+  -->
+
+</body>
+
+</html>
