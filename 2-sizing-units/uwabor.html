@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units & Sizing</title>
+    <link rel="stylesheet" href="css/uwabor.css" />
+    <!-- RESOURCES -->
+  </head>
+  <body>
+    <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+    <section class="abs_rel_lengths__container">
+      <h2>1. Absolute vs. Relative Lengths</h2>
+      <div class="px__300">
+        <p>I am 300px wide - Absolute length (px)</p>
+      </div>
+      <div class="vw__30">
+        <p>I am 30vw wide - Relative to viewport width (vw)</p>
+      </div>
+      <div class="perc__30">
+        <p>I am 30% wide - Relative to parent container's width</p>
+      </div>
+      <div class="em__30">
+        <p>I am 30em wide - Relative to local element (em) font size</p>
+      </div>
+      <div class="rem__30">
+        <p>I am 30rem wide - Relative to :root element (rem) font size</p>
+      </div>
+    </section>
+
+    <section class="img_sizing__container">
+      <h2>1. Image Sizing</h2>
+
+      <img
+        class="img_absolute_px"
+        src="https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+        width="800"
+        height="400"
+        alt="Example of an image sized with absolute lengths"
+      />
+
+      <img
+        class="img_relative_percentage"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+        width="800"
+        height="400"
+        alt="Example of an image sized with percentages"
+      />
+
+      <img
+        class="img_relative_vw"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+        width="800"
+        height="400"
+        alt="Example of an image sized with viewport width"
+      />
+    </section>
+
+    <!-- 3. Recreate the Wireframe Design -->
+    <section class="article-layout">
+      <h2>3. Recreate the Design</h2>
+
+      <h3>Article Heading</h3>
+
+      <img
+        class="main-image"
+        src="https://placehold.co/400x300?text=Main+Image"
+        width="400"
+        height="300"
+        alt="Main article image"
+      />
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorum
+        accusamus harum pariatur praesentium illo atque animi quam quasi facilis
+        obcaecati quibusdam ut laboriosam non, dolorem quidem consequatur
+        sapiente velit nihil reprehenderit voluptates laborum dolor? Incidunt
+        dolorem assumenda consequuntur eaque asperiores voluptates optio iusto.
+        Dolores quas fugit sit ipsam debitis.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nemo
+        nam, quo animi sunt quibusdam qui commodi voluptatibus, ipsum neque
+        provident maiores iusto atque consectetur officia facilis itaque soluta,
+        nisi eaque totam illum? Odio quam, quidem quasi architecto fugit fuga
+        consectetur illum, alias distinctio molestiae error nobis praesentium
+        reprehenderit iusto.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet porro
+        provident officiis aperiam corrupti asperiores cum animi libero facilis
+        deleniti.
+      </p>
+
+      <img
+        class="small-image"
+        src="https://placehold.co/250x150?text=Small+Image"
+        width="250"
+        height="150"
+        alt="Smaller image on the right side of the article"
+      />
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus,
+        numquam deserunt perspiciatis quia repellendus, harum totam cumque
+        voluptatum, a sit provident velit magni qui quam ipsam temporibus rerum
+        consequuntur unde iusto corrupti veniam aperiam quidem vel deleniti?
+        Possimus aliquid unde sit vel provident! Quibusdam, a incidunt impedit
+        suscipit est accusantium!
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate,
+        totam nulla laboriosam eligendi animi a vitae? Dicta voluptatem nemo,
+        exercitationem veniam optio ducimus labore, numquam qui odio ipsum, eius
+        molestiae.
+      </p>
+
+      <p class="last-paragraph">
+        This final paragraph appears below both images and spans the width of
+        the article.
+      </p>
+    </section>
+  </body>
+</html>
