@@ -38,43 +38,43 @@
 :root {
   --backgroundColor: #f8fbff;
   --foregroundColor: #102a43;
-
+  /* Primary Color Shades */
   --primaryColor: #1d4ed8;
   --primaryShade1: #dbeafe;
   --primaryShade2: #bfdbfe;
   --primaryShade3: #93c5fd;
   --primaryShade4: #3b82f6;
   --primaryShade5: #1e40af;
-
+  /* Secondary Color Shades */
   --secondaryColor: #0f766e;
   --secondaryShade1: #ccfbf1;
   --secondaryShade2: #99f6e4;
   --secondaryShade3: #5eead4;
   --secondaryShade4: #14b8a6;
   --secondaryShade5: #115e59;
-
+  /* Accent Color Shades */
   --accentColor: #fbbf24;
   --accentShade1: #fef3c7;
   --accentShade2: #fde68a;
   --accentShade3: #fcd34d;
   --accentShade4: #f59e0b;
   --accentShade5: #b45309;
-
+  /* Accent 2 Color Shades */ 
   --accent2Color: #2dd4bf;
   --accent2Shade1: #ccfbf1;
   --accent2Shade2: #99f6e4;
   --accent2Shade3: #5eead4;
   --accent2Shade4: #14b8a6;
   --accent2Shade5: #0f766e;
-
-  --neutralShade1: #f2f2f2;
-  --neutralShade2: #e8e9e9;
-  --neutralShade3: #d1d3d4;
-  --neutralShade4: #babdbf;
-  --neutralShade5: #808488;
-  --neutralShade6: #666a6d;
-  --neutralShade7: #4d5052;
-  --neutralShade8: #212122;
+  /* Neutral Color Shades */
+  --neutralShade1: #f8fafc;
+  --neutralShade2: #e2e8f0;
+  --neutralShade3: #cbd5e1;
+  --neutralShade4: #94a3b8;
+  --neutralShade5: #64748b;
+  --neutralShade6: #475569;
+  --neutralShade7: #334155;
+  --neutralShade8: #0f172a;
 
   --grayColor: #999;
   --lightGrayColor: #ddd;
@@ -87,7 +87,7 @@
 
   /* You can also use it for generally applied sizing and spacing. */
   --borderRadius: 6px;
-  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+  --boxShadow: 0 2px 5px rgba(#9e8fa2, 0.2);
 }
 
 /*
@@ -132,17 +132,17 @@ h1 {
   font-weight: 700;
   /* Check out the clamp() method! */
   font-size: clamp(2.5rem, 3rem, 3.5rem);
-  line-height: 1.2;
-  text-transform: uppercase;
+  line-height: 1.1;
+  text-transform: none;
 }
 h2 {
   font-weight: 500;
   font-size: clamp(1.75rem, 2rem, 2.5rem);
   line-height: 1.2;
-  text-transform: uppercase;
+  text-transform: none;
 }
 h3 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: clamp(1.25rem, 1.5rem, 1.75rem);
   line-height: 1.2;
 }
