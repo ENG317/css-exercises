@@ -1,6 +1,6 @@
 /* Root */
 :root {
-  font-size: 10px;
+  font-size: 20pt;
 }
 
 /*=======================================
@@ -15,32 +15,6 @@
 
   Be sure to understand the difference between padding and margins and how to write the shorthand versions.
 */
-.abs_rel_lengths__container {
-  font-size: 20px;
-  width: 50%;
-  border: black solid 2px;
-
-  & > div {
-    background: purple;
-    color: white;
-    font-weight: 900;
-  }
-}
-.px__300 {
-  width: 300px;
-}
-.vw__30 {
-  width: 30vw;
-}
-.em__30 {
-  width: 30em;
-}
-.rem__30 {
-  width: 30rem;
-}
-.perc__30 {
-  width: 30%;
-}
 
 /*===============
   2. IMAGE SIZING
@@ -64,18 +38,6 @@
     - AS you do so, also hover over the HTML of those images to compare their box dimensions and see if you understand why their size is as it is.
 */
 
-.img_sizing__container {
-  width: 65vw;
-}
-.img_absolute_px {
-  length: 100px;
-}
-.img_relative_percentage {
-  length: 30%;
-}
-.img_relative_vw {
-  length: 45vw;
-}
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
@@ -84,3 +46,19 @@
 
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
+
+.placeholder_1 {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.placeholder_2 {
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.placeholder_2 {
+  clear: both;
+}
