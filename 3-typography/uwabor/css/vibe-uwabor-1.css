@@ -3,12 +3,6 @@
 */
 
 /*============
-  IMPORT FONTS
-  1. Import your own fonts via https://fonts.google.com. Be sure to revise the family names in the CSS and in the HTML
-==============*/
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-/*============
   COLOR SCHEME
 
   2. Define the color scheme within the root element by using CSS variables:
@@ -79,16 +73,13 @@
   --lightGrayColor: #ddd;
 
   /* Fonts */
-  --copyFontFamily: "Raleway", sans-serif;
-  --headingFontFamily: "Patua One", serif;
-  /* Change default root font size (16px), if desired */
+  --copyFontFamily: "Slabo 13px", sans-serif;
+  --headingFontFamily: "Montserrat", serif;
   font-size: 18px;
 
-  /* You can also use it for generally applied sizing and spacing. */
   --borderRadius: 6px;
-  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+  --boxShadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 
 /*
   After you define your color schemes above, revise the color and typography rulesets below in accordance with your desired new font families, weights, line-heights, etc. You can even modify which variables are being used.
@@ -98,6 +89,9 @@
 body {
   background: var(--backgroundColor);
   color: var(--foregroundColor);
+  font-family: var(--copyFontFamily);
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 /*==========
@@ -105,12 +99,22 @@ body {
 ===========*/
 
 /* Font Families */
-body { font-family: var(--copyFontFamily); }
-h1,h2,h3 { font-family: var(--headingFontFamily); }
+body {
+  font-family: var(--copyFontFamily);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--headingFontFamily);
+}
 
 /* Emphasis and Bolding */
-strong { font-weight: 500; }
-em { font-style: italic; }
+strong {
+  font-weight: 500;
+}
+em {
+  font-style: italic;
+}
 
 /* Font Weight, Sizing & Spacing */
 body {
@@ -121,24 +125,24 @@ body {
 h1 {
   font-weight: 700;
   /* Check out the clamp() method! */
-  font-size: clamp(2.5rem,3rem,3.5rem);
+  font-size: clamp(2.5rem, 3rem, 3.5rem);
   line-height: 1.2;
   text-transform: uppercase;
 }
 h2 {
   font-weight: 500;
-  font-size: clamp(1.75rem,2rem,2.5rem);
+  font-size: clamp(1.75rem, 2rem, 2.5rem);
   line-height: 1.2;
   text-transform: uppercase;
 }
 h3 {
   font-weight: 500;
-  font-size: clamp(1.25rem,1.5rem,1.75rem);
+  font-size: clamp(1.25rem, 1.5rem, 1.75rem);
   line-height: 1.2;
 }
 h4 {
   font-weight: 300;
-  font-size: clamp(1.25rem,1.5rem,1.75rem);
+  font-size: clamp(1.25rem, 1.5rem, 1.75rem);
   line-height: 1.2;
   font-style: italic;
 }
@@ -153,7 +157,9 @@ h6 {
   line-height: 1.2;
 }
 
-a { font-weight: 500; }
+a {
+  font-weight: 500;
+}
 
 /* Default Font Colors & Styling */
 
@@ -198,7 +204,6 @@ a.secondary:hover {
   transition: 0.4s;
 }
 
-
 /*##########################################
 
   !!!!IGNORE!!!!
@@ -223,35 +228,52 @@ main {
   width: 90%;
   margin: 3em auto;
   display: grid;
-  grid-template-columns: 30ch repeat(5, minmax(50px,1fr));
+  grid-template-columns: 30ch repeat(5, minmax(50px, 1fr));
   grid-template-areas:
-  "colors typography typography typography headlines headlines"
-  "colors bodyex bodyex bodyex links links";
+    "colors typography typography typography headlines headlines"
+    "colors bodyex bodyex bodyex links links";
   color: var(--foregroundColor);
   text-align: left;
 
-  &> section:not(:first-child) {
+  & > section:not(:first-child) {
     box-shadow: 1px 1px 2px 0px var(--primaryColor);
   }
 
   /* Grid Areas */
-  .colors { grid-area: colors; background-color: var(--secondaryShade1); box-shadow: 2px 2px 3px -1px var(--secondaryShade2);}
-  .typography { grid-area: typography; }
-  .headlines { grid-area: headlines; }
-  .body_text_example { grid-area: bodyex; }
-  .links { grid-area: links; }
+  .colors {
+    grid-area: colors;
+    background-color: var(--secondaryShade1);
+    box-shadow: 2px 2px 3px -1px var(--secondaryShade2);
+  }
+  .typography {
+    grid-area: typography;
+  }
+  .headlines {
+    grid-area: headlines;
+  }
+  .body_text_example {
+    grid-area: bodyex;
+  }
+  .links {
+    grid-area: links;
+  }
 
-  .colors,.typography,.headlines,.body_text_example,.links {
+  .colors,
+  .typography,
+  .headlines,
+  .body_text_example,
+  .links {
     padding: 1rem;
   }
-  .links > div { margin: 2rem 0; }
+  .links > div {
+    margin: 2rem 0;
+  }
 
   /*=============================
     COLOR PALLETTE
     DO NOT change anything below!
   ==============================*/
   .colors {
-
     .palette {
       display: grid;
       grid: 80px 45px min-content/repeat(5, minmax(50px, 1fr));
@@ -401,21 +423,39 @@ main {
   }
 
   /* First Level Font */
-  .font__first-level { font-family: var(--headingFontFamily); }
-  .font__first-level > span { font-size: 1rem; }
+  .font__first-level {
+    font-family: var(--headingFontFamily);
+  }
+  .font__first-level > span {
+    font-size: 1rem;
+  }
 
   /* Second Level Font */
-  .font__second-level { font-family: var(--copyFontFamily);}
-  .font__second-level > span { font-size: 0.8rem; }
+  .font__second-level {
+    font-family: var(--copyFontFamily);
+  }
+  .font__second-level > span {
+    font-size: 0.8rem;
+  }
 
   /* Display Level Font */
-  .font__display-level { font-family: var(--displayFontFamily);}
-  .font__display-level > span { font-size: 0.8rem; }
+  .font__display-level {
+    font-family: var(--displayFontFamily);
+  }
+  .font__display-level > span {
+    font-size: 0.8rem;
+  }
 
   /* General Font Weights */
-  .font-family-bold > * { font-weight: 900; }
-  .font-family-medium > * { font-weight: 500; }
-  .font-family-light > * { font-weight: 300; }
+  .font-family-bold > * {
+    font-weight: 900;
+  }
+  .font-family-medium > * {
+    font-weight: 500;
+  }
+  .font-family-light > * {
+    font-weight: 300;
+  }
 
   .font-example {
     display: flex;
@@ -440,12 +480,11 @@ main {
     width: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "colors colors"
-    "typography typography"
-    "headlines headlines"
-    "bodyex bodyex"
-    "links links"
-    ;
+      "colors colors"
+      "typography typography"
+      "headlines headlines"
+      "bodyex bodyex"
+      "links links";
   }
 
   .colors {
@@ -459,15 +498,19 @@ main {
   }
 
   .palette {
-    grid: 80px 45px min-content/repeat(5, minmax(10px,50px));
+    grid: 80px 45px min-content/repeat(5, minmax(10px, 50px));
     box-shadow: 1px 1px 1px 1px var(--primaryShade5);
   }
 
   .palette.neutrals {
-    grid-template-columns: repeat(5, minmax(10px,50px));
+    grid-template-columns: repeat(5, minmax(10px, 50px));
   }
 
-  .colors, .typography, .headlines, .body_text_example, .links {
+  .colors,
+  .typography,
+  .headlines,
+  .body_text_example,
+  .links {
     padding: 1rem 8px;
   }
 }
@@ -477,9 +520,9 @@ main {
   main {
     grid-template-columns: 30ch auto auto;
     grid-template-areas:
-    "colors typography typography"
-    "colors headlines headlines"
-    "colors bodyex links";
+      "colors typography typography"
+      "colors headlines headlines"
+      "colors bodyex links";
   }
 
   .typography {
