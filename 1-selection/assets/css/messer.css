@@ -179,7 +179,7 @@ h3 { font-size: 24px; }
 
   /* SKIPLINK OBSERVATIONS
     Write your observations in this commment.
-    The skip link is hidden from the page, but it is still accessible to screen readers. The skip link is positioned off the page and has a width and height of 1px. The overflow is hidden and the clip property is set to rect(0, 0, 0, 0) which means that the element is not visible. The white-space property is set to nowrap which means that the text will not wrap to the next line. The border-width is set to 0 which means that there is no border around the element.
+    The skip link is hidden from the page, but it is still made accessible to screen readers. The skip link has a width and height of 1px and the overflow is hidden. 
     HINT: Lookup 'position' on MDN.
   ================== */
 }
@@ -415,13 +415,13 @@ main {
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A: The ampersand `&` is a reference to the parent selector. It allows you to nest selectors within each other.
+    A: The ampersand `&` is related to the parent selector and allows you to nest selectors within each other.
 
     What type of selector is this: `& .row`?
-    A: This is a descendant selector, which targets elements with the class "row" that are descendants of the parent element.
+    A: This is a "descendant selector" that targets elements with the class "row" that are descendants of the parent element.
 
     How would you explain the selection condition in plain language?
-    A: This selects all elements with the class "row" that are descendants of the element with the class "footer_site__container".
+    A: Selects all elements with the class "row" that are descendants of the element with the class "footer_site__container".
   ================== */
   & .row {
     display: flex;
@@ -432,13 +432,13 @@ main {
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A: This is a child selector combined with a pseudo-class selector.
+      A: Child selector combined with a pseudo-class selector.
 
       What type of selector is `:first-child`?
-      A: This is a pseudo-class selector.
+      A: Pseudo-class selector.
 
       How would you explain this selection condition in plain language?
-      A: This selects the first child div element that is a direct child of the element with the class "footer_site__container".
+      A: Selects the "first child" div element that is a direct child of the element with the class "footer_site__container".
     ================== */
     & > div:first-child {
       flex: 1 0 300px;
@@ -463,7 +463,7 @@ main {
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A: This selects the anchor element that is a child of the element with the class "footer_site__container" and is being hovered over.
+      A: Selects the anchor element that is a "child" of the element with the class "footer_site__container" and is being hovered over.
     ================== */
     &:hover {
       color: var(--primaryColor);
@@ -495,10 +495,10 @@ main {
 
     /* QUESTIONS
       What type of selector is this: `&.small`?
-      A: This is a class selector.
+      A: Class selector.
 
       How would you explain the selection condition in plain language?
-      A: This selects the element with the class "footer_site__container" that also has the class "small".
+      A: Selects the element with the class "footer_site__container" that also has the class "small".
     ================== */
     &.small {
       margin: 20px 0;
@@ -619,10 +619,10 @@ main {
 
 /* VIII. COMPONENTS OBSERVATIONS
   VIII.i. Write your observations in this commment.
-  The styles for the card__sections component are not placed under the "sections" area because they are specific to the card__sections component and not applicable to all sections on the page. Placing them under the "sections" area would make it harder to maintain and understand the styles for this specific component.
-
+  Styles for the "card__sections" component aren't placed under the "sections" area. This is because they are specific to the card__sections component making them not applicable to all sections on the page. 
+  
   VIII.ii. Write your observations in this commment.
-  There are 5 nested levels in this component. 
+  There are 5 nested levels to this component. 
     
   VIII.iii. Write your observations in this commment.
   The selector types in this component are: Class selectors: .card__sections, .cards__main_external_wrapper, .cards__sub_container, .card__project_leads_container, .partner_title, .bio_container
