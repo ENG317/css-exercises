@@ -117,10 +117,11 @@ h2 {
    will help you solve this mystery.
 ========================= */
 h3 {
+  font-size: 24px;
 }
 
 /* H3 Font Size Observations
-  Write your observations in this commment.
+  I notice that the h3 elements' font size is not changing because there may be a more specific CSS rule or a class applied to the h3 elements that overrides the general h3 selector. 
 ================== */
 
 /* 3. LINKS */
@@ -140,7 +141,7 @@ h3 {
   border-width: 0;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this commment.
+    I notice that the skip link is visually hidden from the page, but it is still accessible to screen readers. 
     HINT: Lookup 'position' on MDN.
   ================== */
 }
@@ -170,9 +171,8 @@ img {
 ==================================== */
 
 /* Reusable Class Observations
-  IV.i. Write your observations in this commment.
-
-  IV.ii. Write your observations in this commment.
+  IV.i. I notice that the `mt4` class is being used to add a margin-top of 2rem to the element it is applied to.
+  IV.ii. I notice that the `pa3` class is being used to add padding of 1rem to all sides of the element it is applied to.
 ================== */
 
 /* 5. REUSABLE CLASSES */
@@ -302,11 +302,11 @@ img {
 }
 
 /* V. Page Banner Class Observations
-  V.i. Write your observations in this commment.
+  V.i. I notice that the CSS nesting allows us to target specific elements within the `.banner__container` class, such as the `img` and `h1` elements. 
 
-  V.ii. Write your observations in this commment.
+  V.ii. I notice that when we set the `width` and `height` properties of the `img` element to `100%`, it scales the image to fit the width of its parent container, maintaining its aspect ratio.
 
-  V.iii. Write your observations in this commment.
+  V.iii. I notice that the `h1` element is positioned relative to its normal position, and moving it down by 100px causes it to overlap with other content.
 ================== */
 
 /* VI. WRITE YOUR OWN CSS NOW
@@ -372,10 +372,10 @@ img {
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A:
+      A: Selector type is a child combinator with a pseudo-class selector.
 
       What type of selector is `:first-child`?
-      A:
+      A: Pseudo-class selector.
 
       How would you explain this selection condition in plain language?
       A:
@@ -403,7 +403,7 @@ img {
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A:
+      A: This selection condition applies styles to anchor elements that are descendants of the .footer_site__container class.
     ================== */
     &:hover {
       color: var(--primaryColor);
@@ -455,10 +455,12 @@ img {
   Instead, focus on the CSS Nesting work. Use the observations area to reflect about the following questions/prompts.
 
   VIII.i. Why wouldn't we put these styles under the "sections" area instead?
-
+ Maybe because the styles for the .card__sections component are specific to this component and may not apply to other sections on the page.
   VIII.ii. How many nested levels are there in this component? Which selectors are in the deepest level of .card__sections?
-
+There are 5 nested levels in this component. The selectors in the deepest level of .card__sections are `& picture` and `img`.
   VIII.iii. Name all the selector types in this component. List the selections under their particular selector type.
+  All the selector types in this component are:
+  - Class selectors: .card__sections, .cards__main_external_wrapper, .cards__sub_container, .card__project_leads_container, .partner_title, .bio_container
 
 ==================================== */
 
@@ -555,10 +557,6 @@ img {
 }
 
 /* VIII. COMPONENTS OBSERVATIONS
-  VIII.i. Write your observations in this commment.
-
-  VIII.ii. Write your observations in this commment.
-
-  VIII.iii. Write your observations in this commment.
+  VIII.i. I notice that the styles for the .card__sections component are separated from the general "sections" area because they are specific to this component and may not apply to other sections on the page. 
 
 ================== */
