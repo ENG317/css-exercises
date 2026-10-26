@@ -22,4 +22,4 @@ Learn how to write CSS to modify the following properties by creating a typograp
 5. Once you create the vibes, name them and use that name to rename the files respectively with the following prepended scheme: `sg-vibenamehere.html` and `sg-vibenamehere.css`.
 <!-- Update this instructions -->
 6. Apply any additional changes to any typographic elements in the respective CSS stylesheet to elements, such as links.
-6. Add any and all additional classes/styles to your new pages AFTER the typography scheme code, BUT before the "Layout" CSS code. Document the part of the CSS code with a new comment heading.
+7. Add any and all additional classes/styles to your new pages AFTER the typography scheme code, BUT before the "Layout" CSS code. Document the part of the CSS code with a new comment heading.
