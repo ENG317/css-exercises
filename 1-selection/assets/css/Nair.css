@@ -21,7 +21,7 @@
   --spacing-extra-extra-large: 8rem;
   --spacing-extra-extra-extra-large: 16rem;
 
-  /* COLOR VARIABLES */
+  /* COLOR SCHEME VARIABLES */
   --primaryColor: #c51350;
   --primaryShade1: #ffd6b5;
   --primaryShade2: #ffbc85;
@@ -72,20 +72,23 @@
   ROOT OBSERVATIONS
 
   The :root selector selects the HTML root element.
-  The root font size is 18px, and its background is black.
+  Its font size is 18px, and its background color is black.
 
-  Custom properties store reusable spacing and color values.
-  They can be accessed elsewhere using var(), such as
-  var(--spacing-medium) and var(--primaryColor).
+  The custom properties store reusable spacing and color values.
+  They can be reused throughout the stylesheet using var().
+  For example, var(--spacing-medium) refers to 1rem, and
+  var(--primaryColor) refers to #c51350.
 
-  The rem unit is based on the root font size.
-  Therefore, 1rem equals 18px in this document.
+  The rem unit is based on the root font size, so 1rem equals
+  18px in this document.
   */
 }
 
 /* =========================================
    II. GENERAL TYPE SELECTORS
    ========================================= */
+
+/* 1. GENERAL */
 
 body {
   font-size: 18px;
@@ -96,20 +99,23 @@ body {
   BODY OBSERVATIONS
 
   The body has a sandy tan background and dark blue text.
-  Its font size is 18px, matching the root font size.
+  Its font size is 18px, matching the font size on :root.
 
-  Descendants can inherit properties such as color and font size.
-  A more specific rule may override an inherited value.
+  Text-related properties, including color and font size,
+  can be inherited by descendant elements unless a different
+  rule overrides them.
 
-  The browser's default body margin is normally 8px.
-  Because the root background is black, a thin black edge may
-  be visible around the body.
+  The browser normally applies an 8px default margin to body.
+  Because the root background is black, a thin black area
+  can appear around the edges of the body.
   */
 }
 
 /* =========================================
-   III. TYPOGRAPHY
+   2. TYPOGRAPHY
    ========================================= */
+
+/* General heading sizes */
 
 h1 {
   font-size: 32px;
@@ -119,6 +125,24 @@ h2 {
   font-size: 26px;
 }
 
+/*
+II.iii. CASCADE QUESTION
+
+Add a font-size below like 24px.
+Now, check an h3 in the inspection tool.
+Explain why the h3 font size is NOT changing.
+
+ANSWER:
+
+The general h3 selector sets the font size to 24px.
+However, the team card headings also match the more specific
+selector h3.card__main_name inside .card__sections.
+
+That more specific selector later sets the font size to 1.5rem.
+Because it has greater specificity, it overrides the general
+h3 font-size declaration for those card headings.
+*/
+
 h3 {
   font-size: 24px;
 }
@@ -126,18 +150,17 @@ h3 {
 /*
 H3 FONT SIZE OBSERVATIONS
 
-The general h3 selector sets the font size to 24px.
-However, the card headings also match the more specific
-selector h3.card__main_name inside .card__sections.
-
-That more specific selector sets the font size to 1.5rem.
-It overrides the general h3 rule for those card headings
-because it has greater specificity.
+The general h3 rule applies to all h3 elements unless another
+rule overrides it. The card headings have a more specific
+selector, h3.card__main_name, nested within .card__sections.
+The more specific declaration takes precedence.
 */
 
 /* =========================================
-   IV. LINKS AND SKIP LINK
+   3. LINKS
    ========================================= */
+
+/* III. SKIP LINK SOLUTION */
 
 .skiplink__sr_only {
   position: absolute;
@@ -149,9 +172,22 @@ because it has greater specificity.
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-}
 
-/* Make the skip link visible when focused */
+  /*
+  SKIPLINK OBSERVATIONS
+
+  The position property removes the skip link from the normal
+  document flow and positions it absolutely.
+
+  The tiny width and height, clipping, negative margin, and
+  hidden overflow prevent it from being visually displayed.
+  It remains in the document for keyboard and assistive
+  technology users.
+
+  When the link receives keyboard focus, the following
+  :focus rule makes it visible.
+  */
+}
 
 .skiplink__sr_only:focus {
   position: absolute;
@@ -168,31 +204,19 @@ because it has greater specificity.
   clip: auto;
   white-space: normal;
 
-  border: 2px solid var(--primaryColor);
-  background-color: white;
   color: var(--foregroundColor);
+  background-color: white;
+  border: 2px solid var(--primaryColor);
 }
 
-/*
-SKIPLINK OBSERVATIONS
-
-The skip link is visually hidden using absolute positioning,
-a tiny width and height, clipping, and hidden overflow.
-
-It remains available in the HTML for keyboard users.
-The :focus selector makes it visible when a user tabs to it.
-
-This lets users skip directly to the main content.
-*/
-
 /* =========================================
-   V. IMAGES
+   4. IMAGES
    ========================================= */
 
 img {
   /*
-  The following declarations remain commented out
-  for the instructor's demonstration.
+  The original starter code leaves these rules commented out
+  so their effects can be explored during the exercise.
 
   display: block;
   width: 100%;
@@ -201,7 +225,30 @@ img {
 }
 
 /* =========================================
-   VI. REUSABLE CLASSES
+   IV. CLASSES AND REUSABLE STYLES
+   ========================================= */
+
+/*
+IV.i. OBSERVE THE mt4 CLASS
+
+The mt4 class is applied to the main element in the HTML.
+It sets margin-top using var(--spacing-large).
+
+The variable stores 2rem. Since the root font size is 18px,
+2rem equals 36px.
+
+IV.ii. ADD AND OBSERVE A PADDING CLASS
+
+The pa3 class is applied to main in the HTML.
+It adds padding on all four sides using
+var(--spacing-medium), which equals 1rem or 18px.
+
+CSS variables allow these spacing values to be reused
+consistently across different elements.
+*/
+
+/* =========================================
+   5. REUSABLE CLASSES
    ========================================= */
 
 /* Padding */
@@ -287,23 +334,36 @@ img {
   margin-top: 0;
 }
 
+/* =========================================
+   V. CSS NESTING AND PAGE BANNER
+   ========================================= */
+
 /*
-REUSABLE CLASS OBSERVATIONS
+V.i. CSS NESTING OBSERVATIONS
 
-VI.i. The mt4 class is applied to the main element.
-     It sets margin-top using var(--spacing-large).
-     The value is 2rem, or 36px with the 18px root font size.
+The .banner__container selector targets the banner container.
+Inside it, the & img selector selects images inside that
+container, and the & h1 selector selects its h1 descendants.
 
-VI.ii. The pa3 class applies padding to all four sides.
-      It uses var(--spacing-medium), which equals 1rem or 18px.
+The ampersand (&) represents the parent selector.
+Nesting keeps related selectors grouped inside one ruleset,
+making the relationship between the HTML and CSS easier to see.
 
-      Variables make it possible to reuse consistent spacing
-      values across many different elements.
+V.ii. IMAGE WIDTH AND HEIGHT
+
+Setting the image width and height to 100% tells it to fill
+the available dimensions of its containing block. The result
+depends on the size of the container and the image's proportions.
+
+V.iii. HEADING POSITION
+
+The h1 has position: relative and bottom: 100px.
+This visually moves the heading upward by 100px without
+removing its original space from the normal document flow.
+It can therefore overlap the banner image.
 */
 
-/* =========================================
-   VII. PAGE BANNER HEADER
-   ========================================= */
+/* 5. PAGE BANNER HEADER */
 
 .banner__container {
   max-width: 1080px;
@@ -324,29 +384,26 @@ VI.ii. The pa3 class applies padding to all four sides.
   }
 }
 
-/*
-PAGE BANNER OBSERVATIONS
-
-VII.i. CSS nesting lets us write descendant rules inside
-      the parent .banner__container selector.
-
-      The & represents the parent selector.
-      The nested & img selector selects banner images.
-      The nested & h1 selector selects banner headings.
-
-VII.ii. A width and height of 100% tell the image to fill
-       the available dimensions of its containing block.
-       The actual result depends on the container's dimensions.
-
-VII.iii. position: relative and bottom: 100px move the
-        heading visually upward by 100px. The heading keeps
-        its original space in the document layout, so it
-        can overlap the banner image.
-*/
-
 /* =========================================
-   VIII. MAIN ELEMENT
+   VI. MAIN ELEMENT
    ========================================= */
+
+/*
+PROMPT
+
+Select the main element.
+Apply a max-width of 810px.
+Center main horizontally using margin: auto.
+
+Why does this work?
+
+ANSWER:
+
+The max-width property limits the main element to 810px wide.
+When the containing area is wider than that, margin: auto
+distributes the remaining horizontal space evenly on both
+sides, centering the element.
+*/
 
 main {
   max-width: 810px;
@@ -356,16 +413,28 @@ main {
 /*
 MAIN OBSERVATIONS
 
-The max-width property limits the main element to 810px.
+The max-width declaration limits the content width without
+forcing main to remain 810px wide on smaller screens.
 
-The margin: auto declaration distributes extra horizontal
-space evenly on both sides when the viewport is wider than
-the main element. This centers main horizontally.
+The margin: auto declaration centers main horizontally
+when there is extra space on either side.
 */
 
 /* =========================================
-   IX. PAGE FOOTER
+   7. SECTIONS
    ========================================= */
+
+/*
+This area can be used for optional styles affecting sections
+and their contents. The specific team-card component styles
+are defined below under .card__sections.
+*/
+
+/* =========================================
+   VII. READING CSS NESTING: PAGE FOOTER
+   ========================================= */
+
+/* 8. PAGE FOOTER */
 
 .footer_site__container {
   background-color: #fda403;
@@ -376,7 +445,26 @@ the main element. This centers main horizontally.
   position: relative;
   z-index: 1;
 
-  /* Footer rows */
+  /*
+  QUESTION: What does the ampersand & mean here?
+
+  ANSWER:
+  In CSS nesting, & represents the parent selector.
+  It lets us refer to the selector surrounding the nested rule.
+  */
+
+  /*
+  QUESTION: What type of selector is & .row?
+
+  ANSWER:
+  A descendant selector.
+
+  QUESTION: Explain this selection condition in plain language.
+
+  ANSWER:
+  Select any element with the class row that appears anywhere
+  inside an element with the class footer_site__container.
+  */
 
   & .row {
     display: flex;
@@ -384,6 +472,25 @@ the main element. This centers main horizontally.
     gap: 1.5rem;
     max-width: 1080px;
     margin: auto;
+
+    /*
+    QUESTION: What type of selector is & > div:first-child?
+
+    ANSWER:
+    It combines a direct-child combinator, a type selector,
+    and a structural pseudo-class.
+
+    QUESTION: What type of selector is :first-child?
+
+    ANSWER:
+    A structural pseudo-class.
+
+    QUESTION: Explain this selection condition in plain language.
+
+    ANSWER:
+    Select a div that is a direct child of .row and is the
+    first child of its parent.
+    */
 
     & > div:first-child {
       flex: 1 0 300px;
@@ -410,6 +517,14 @@ the main element. This centers main horizontally.
     color: var(--foregroundColor);
     transition: 0.5s;
     position: relative;
+
+    /*
+    QUESTION: Explain this selection condition in plain language.
+
+    ANSWER:
+    The & a selector selects all links that are descendants
+    of the footer container.
+    */
 
     &:hover {
       color: var(--primaryColor);
@@ -443,78 +558,96 @@ the main element. This centers main horizontally.
     border-top-color: var(--accent2Color);
     opacity: 0.5;
 
+    /*
+    QUESTION: What type of selector is &.small?
+
+    ANSWER:
+    It is a compound selector. There is no space between
+    & and .small, so both conditions apply to the same element.
+
+    QUESTION: Explain this selection condition in plain language.
+
+    ANSWER:
+    Select an hr element inside the footer that also has
+    the class small.
+    */
+
     &.small {
       margin: 20px 0;
     }
   }
 }
 
+/* =========================================
+   VIII. COMPONENTS
+   ========================================= */
+
 /*
-FOOTER SELECTOR QUESTIONS
+VIII.i. WHY KEEP THESE STYLES UNDER .card__sections?
 
-What does the ampersand (&) mean here?
+ANSWER:
 
-Answer:
-The ampersand represents the parent selector inside
-a nested CSS rule.
+These rules describe a specific page component: the project
+partner cards. Keeping them under .card__sections scopes the
+styles to that component rather than applying them to every
+section on the website.
 
-
-What type of selector is & .row?
-
-Answer:
-A descendant selector.
+This helps prevent unintended styling of unrelated sections.
 
 
-How would you explain the selection condition in plain language?
+VIII.ii. HOW MANY NESTED LEVELS ARE THERE?
 
-Answer:
-Select an element with the class row anywhere inside
-the footer container.
+ANSWER:
 
+There are five nested selector levels beneath .card__sections
+along the deepest selector path:
 
-What type of selector is & > div:first-child?
+1. .cards__main_external_wrapper
+2. .cards__sub_container
+3. .card__project_leads_container
+4. h3.card__main_name
+5. span
 
-Answer:
-A direct-child combinator combined with a type selector
-and a structural pseudo-class.
-
-
-What type of selector is :first-child?
-
-Answer:
-A structural pseudo-class.
+The deepest selector in that path is the span element directly
+inside the h3.card__main_name heading.
 
 
-How would you explain the selection condition in plain language?
+VIII.iii. NAME THE SELECTOR TYPES IN THIS COMPONENT.
 
-Answer:
-Select a div that is a direct child of the row and
-is the first child of its parent.
+ANSWER:
 
+Class selectors:
+.card__sections
+.cards__main_external_wrapper
+.cards__sub_container
+.card__project_leads_container
+.card__main_name
+.partner_title
+.bio_container
 
-How would you explain the footer link selection?
+Type selectors:
+h2, h3, span, p, a, picture, img
 
-Answer:
-The & a selector selects links that are descendants
-of the footer container.
+Compound selector:
+h3.card__main_name
 
+Child combinator:
+& > span
 
-What type of selector is &.small?
+Grouped selectors:
+.partner_title, a
+.partner_title, .bio_container
+& picture, & img
 
-Answer:
-A compound selector. The ampersand and .small have
-no space between them, so they refer to the same element.
+Pseudo-class:
+&:hover
 
-
-How would you explain the selection condition in plain language?
-
-Answer:
-Select an hr element inside the footer that also
-has the class small.
+Media query:
+@media screen and (max-width: 600px)
 */
 
 /* =========================================
-   X. PROJECT PARTNER CARD COMPONENT
+   9. COMPONENTS: PROJECT PARTNER CARDS
    ========================================= */
 
 .card__sections {
@@ -522,7 +655,6 @@ has the class small.
     h2 {
       font-size: clamp(1.5rem, 2.5rem, 3rem);
       line-height: 1.2em;
-      text-align: center;
     }
 
     .cards__sub_container {
@@ -532,7 +664,6 @@ has the class small.
         margin: 1rem;
         margin-bottom: 2em;
         padding: 1.25em;
-
         background-color: var(--accentShade1);
 
         box-shadow:
@@ -589,19 +720,21 @@ has the class small.
           border-radius: 50%;
           height: auto;
 
-          /* Responsive image styles */
+          /*
+          The following media query adjusts images when the
+          viewport is 600px wide or narrower.
+          */
 
           @media screen and (max-width: 600px) {
             float: unset;
-            display: block;
-            max-width: 100%;
-            min-width: 0;
-            width: 100%;
-            height: auto;
-            margin: 0.75rem 0;
+            max-width: unset;
+            min-width: unset;
+            margin: 0;
             shape-outside: unset;
-            border-radius: 0;
-            object-fit: contain;
+            border-radius: unset;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
           }
         }
@@ -610,66 +743,17 @@ has the class small.
   }
 }
 
-/*
-COMPONENT OBSERVATIONS
-
-X.i. These styles are placed under .card__sections because
-     they describe one specific page component and its
-     descendants. Scoping them prevents the styles from
-     unintentionally affecting unrelated page sections.
-
-
-X.ii. The deepest selector path beneath .card__sections is:
-
-     .cards__main_external_wrapper
-     .cards__sub_container
-     .card__project_leads_container
-     h3.card__main_name
-     span
-
-     This path has five nested selector levels beneath
-     .card__sections.
-
-
-X.iii. Selector types used in the component include:
-
-      Class selectors:
-      .card__sections
-      .cards__main_external_wrapper
-      .cards__sub_container
-      .card__project_leads_container
-      .card__main_name
-      .partner_title
-      .bio_container
-
-      Type selectors:
-      h2, h3, span, p, a, picture, img
-
-      Compound selector:
-      h3.card__main_name
-
-      Child combinator:
-      & > span
-
-      Grouped selectors:
-      .partner_title, a
-      .partner_title, .bio_container
-      & picture, & img
-
-      Pseudo-class:
-      &:hover
-
-      Media query:
-      @media screen and (max-width: 600px)
-*/
-
 /* =========================================
-   XI. SMALL-SCREEN LAYOUT
+   IX. ADDITIONAL SMALL-SCREEN ADJUSTMENTS
    ========================================= */
 
-@media screen and (max-width: 600px) {
-  /* Banner */
+/*
+This breakpoint keeps the overall page and footer within
+the viewport on screens narrower than or equal to 600px.
+The card images are handled by the nested media query above.
+*/
 
+@media screen and (max-width: 600px) {
   .banner__container {
     width: 100%;
     max-width: 1080px;
@@ -694,26 +778,22 @@ X.iii. Selector types used in the component include:
     overflow-wrap: break-word;
   }
 
-  /* Main content */
-
   main {
     width: 100%;
     max-width: 810px;
     margin: 0 auto;
+    box-sizing: border-box;
     padding: 0.5rem;
   }
 
   .card__sections .cards__main_external_wrapper h2 {
     font-size: 1.5rem;
     line-height: 1.2;
-    text-align: center;
   }
 
   .card__sections .cards__sub_container {
     margin-top: 1.5rem;
   }
-
-  /* Stack the team cards vertically */
 
   .card__sections .card__project_leads_container {
     width: auto;
@@ -723,38 +803,25 @@ X.iii. Selector types used in the component include:
     background-color: var(--accentShade1);
   }
 
-  /* Images fill the available card width */
-
   .card__sections .card__project_leads_container img,
   .card__sections .card__project_leads_container picture {
-    display: block;
     float: none;
+    display: block;
     width: 100%;
     max-width: 100%;
     min-width: 0;
     height: auto;
     margin: 0.75rem 0;
-    border-radius: 0;
     shape-outside: unset;
+    border-radius: 0;
     object-fit: contain;
     object-position: center;
   }
 
-  /* Keep text readable */
-
-  .card__project_leads_container h3 {
-    overflow-wrap: break-word;
-  }
-
+  .card__project_leads_container h3,
   .card__project_leads_container p {
     overflow-wrap: break-word;
   }
-
-  .card__project_leads_container .partner_title {
-    font-size: 1rem;
-  }
-
-  /* Footer */
 
   .footer_site__container {
     padding: 1.5rem 1rem;
