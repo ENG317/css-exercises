@@ -42,20 +42,8 @@
 
   You can also collapse/close a multiline comment, if you format it in this particular way. Hover over/around the top/start of this comment to reveal the dropdown button. Practice opening and closing it a few times.
 
-  Notice how you can still see the first line of the comment after you collapse it. That's a handy feature, as you can use comments to create "headings" to document your code.
-*/
+/* comment work from Connor to test hotkey combination. Use Ctrl + Forward slash / to make this hotkey work. */
 
-/* I.iv. Quick Comment Creation
-  Easily create the opening and closing scope with a simple hotkey combination:
-  - Mac: cmd + /
-  - Windows: ctrl + /
-*/
-
-/* I.v. You Try
-  Create a new comment after this one by using the hotkey combo on the next line
-*/
-
-/* OK, clean up a bit by deleting this comment and the above comments about comments above and get started! */
 
 /* II. ROOT & BODY SELECTION
   ====================== */
@@ -75,7 +63,7 @@
 
 :root {
   /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
-  font-size: 18px;
+  font-size: 1000px;
   /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
   background-color: black;
 
@@ -132,8 +120,7 @@
   --neutralShade8: #212122;
 
   /* ROOT OBSERVATIONS
-    Write your observations in this commment.
-    Roots control the general look and design. 
+    Root values allow consistent spread. Roots control the general look and design by being the progenitors of all the elements.
   ================== */
 }
 
@@ -167,6 +154,7 @@ body {
 
   /* BODY OBSERVATIONS
     Write your observations in this comment.
+    not really getting it 
   ================== */
 }
 
@@ -215,6 +203,8 @@ h3 {
   /* SKIPLINK OBSERVATIONS
     Write your observations in this comment.
     HINT: Lookup 'position' on MDN.
+
+
   ================== */
 }
 
@@ -244,8 +234,9 @@ img {
 
 /* Reusable Class Observations
   IV.i. Write your observations in this comment.
-
+Not sure
   IV.ii. Write your observations in this comment.
+  nor sure
 ================== */
 
 /* 5. REUSABLE CLASSES */
@@ -423,7 +414,7 @@ main{
 /* 8. PAGE FOOTER
 ================*/
 .footer_site__container {
-  background-color: #fda403;
+  background-color: #291ec4;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
@@ -433,13 +424,13 @@ main{
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A:
+    A: parent element selector
 
     What type of selector is this: `& .row`?
-    A:
+    A: combinator
 
     How would you explain the selection condition in plain language?
-    A:
+    A: slectiong other elements with "row" i beleive
   ================== */
   & .row {
     display: flex;
@@ -513,10 +504,10 @@ main{
 
     /* QUESTIONS
       What type of selector is this: `&.small`?
-      A:
+      A: class
 
       How would you explain the selection condition in plain language?
-      A:
+      A: slects all selectors with same class
     ================== */
     &.small {
       margin: 20px 0;
