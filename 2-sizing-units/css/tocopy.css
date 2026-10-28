@@ -61,6 +61,9 @@
 /*
   Recreate the wireframe design in the images folder.
 
+  Use CSS Nesting to create this solution as a component,
+  so the section should have a class name of "wf_recreation_container".
+
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
 
