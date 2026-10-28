@@ -1,38 +1,3 @@
-/* README FIRST!
-  (1) If you haven't done the readings, you're not ready to dive into this yet. :-) Be sure to do so and come back. You won't be able to barge your way through this material without some conceptual work first.
-
-  (2) This content is embedded within a CSS comment. All of the prompts will be within the comments. Please write your code after them.
-
-  (3) Delete any instructional comment, after you have completed the prompt. But, leave helpful headings to document your CSS.
-*/
-
-/* EXERCISE GOALS ================
-
-  1. Get acclimated to reading and writing CSS files in relationship with HTML.
-
-  2. Implement knowledge about the CASCADE, i.e., understanding why we write CSS starting with more __general selections__ (like simple type selections) to more __specific selections__ (like components.
-
-  3. Practice selection, selection, selection. Make sure to read the CSS selection reading, so you can figure out how to read the HTML and select the appropriate HTML element(s), such as
-      * CSS Nesting
-      * type
-      * class
-      * child and descendant combinators
-
-  4. Practice styling your HTML file with some basic properties. (We'll learn about more "properties" to use as we go.)
-
-==================================== */
-
-/* I. ON COMMENTS
-  =============== */
-
-/* I.i. Comment Scope
-  Comments have scope like HTML elements. But, instead of opening and closing tags, note the opening and closing syntax that uses the asterisk and forward-slash characters.
-
-  Everything within this defined scope is ignored by the browser, when applying new declaration rulesets to your project.
-*/
-
-/* I.ii. Comments can be all on one line */
-
 /* I.iii. Multiline Comments
 
   line
@@ -42,20 +7,12 @@
 
   You can also collapse/close a multiline comment, if you format it in this particular way. Hover over/around the top/start of this comment to reveal the dropdown button. Practice opening and closing it a few times.
 
-  Notice how you can still see the first line of the comment after you collapse it. That's a handy feature, as you can use comments to create "headings" to document your code.
-*/
-
-/* I.iv. Quick Comment Creation
-  Easily create the opening and closing scope with a simple hotkey combination:
-  - Mac: cmd + /
-  - Windows: ctrl + /
-*/
-
-/* I.v. You Try
-  Create a new comment after this one by using the hotkey combo on the next line
-*/
-
-/* OK, clean up a bit by deleting this comment and the above comments about comments above and get started! */
+/* comment work from Connor to test hotkey combination. Use Ctrl + Forward slash / to make this hotkey work. */
+/* line
+another line
+another line
+final line
+ */
 
 /* II. ROOT & BODY SELECTION
   ====================== */
@@ -74,12 +31,8 @@
 ==================================== */
 
 :root {
-  /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
-  font-size: 18px;
-  /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
-  background-color: black;
-
-  /* CSS variables can be defined on the root element, so you can use consistent values throughout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+  font-size: 23px;
+  background-color: grey;
 
   /* SPACING VARIABLES */
   --spacing-none: 0;
@@ -131,9 +84,8 @@
   --neutralShade7: #4d5052;
   --neutralShade8: #212122;
 
-  /* ROOT OBSERVATIONS
-    Write your observations in this commment.
-    Roots control the general look and design. 
+  /* ROOT OBSERVATIONS:
+    Root values allow consistent spread. Roots control the general look and design by being the progenitors of all the elements.
   ================== */
 }
 
@@ -152,48 +104,25 @@
 
 /* 1. GENERAL */
 body {
-  /* Change my values and inspect the changes IN YOUR BROWSER to the body. Then, come back and note some of your observations in the comment below about the relationships between the rules in the :root and the rules for the body */
-
-  /* Be sure to select the <html> element, then scroll down and through all of the styles that are defined on it. The inspection tool will tell you the "Origin" of the style, whether it's from your stylesheet or the "user agent" */
-  font-size: 18px;
-
-  /* All elements have a property of `background-color`. Change the body's default background color from the default hex color value of white (#ffffff) to a sandy tan brown color of the hex value of #ffe9d7 ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
-  background-color: #ffe9d7;
-  /* All elements have a textual color property of `color`, which alters the color of the text. Change the body's default text color from the default value of black (#000000) to a hex value of #0d242f, which is a dark blue toned color. */
-  color: #0d242f;
-
-  /* Do you notice how there's a thin black box around the body element? Use your inspection tool to select the body element and view the "computed" styles of the body's box model. In Chrome, refer to this documentation for help: https://developer.chrome.com/docs/devtools/css/reference#computed. IF you use a different browser, it will be very similar, and it will display an elements box model with computed styles.  */
-  /* margin: 0; */
-
-  /* BODY OBSERVATIONS
-    Write your observations in this comment.
-  ================== */
+  font-size: 22px;
+  background-color: grey;
+  color: black;
 }
 
 /* 2. TYPOGRAPHY */
 
 /* Sizing */
 h1 {
-  font-size: 32px;
+  font-size: 25px;
 }
 h2 {
-  font-size: 26px;
+  font-size: 23px;
 }
-/* II.iii. Cascade Question!
-   Add a font-size below like 24px.
-   Now, check an h3 in your inspection tool.
-   In the reflection area provided below,
-   explain why the h3 elements' font size
-   is **NOT** changing.
-
-   HINT: Your inspection tool's CSS panel
-   will help you solve this mystery.
-========================= */
 h3 {
+  font-size: 21px;
 }
 
-/* H3 Font Size Observations
-  Write your observations in this comment.
+/* h3 has chnaged to be smaller as it is level 3 compared to the top lines.
 ================== */
 
 /* 3. LINKS */
@@ -203,27 +132,25 @@ h3 {
 /* Here's a skip link class that we can apply to all skip links. Use the inspection tool to find the skip link on this page. What do you think is happening with the rewritten properties below. Share your thoughts in the observations area below. */
 .skiplink__sr_only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 3px;
+  height: 3px;
   padding: 0;
-  margin: -1px;
+  margin: 1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border-width: 0;
+  border-width: 3px;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this comment.
-    HINT: Lookup 'position' on MDN.
+    Skip link makes it invisible to others while still being accessible to screen readers. 
   ================== */
 }
 
 /* 4. IMAGES */
 img {
-  /* We'll cover why I commented out this code in class together. */
-  /* display: block;
+  display: block;
   width: 100%;
-  height: 100%; */
+  height: 100%;
 }
 
 /* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
@@ -244,8 +171,9 @@ img {
 
 /* Reusable Class Observations
   IV.i. Write your observations in this comment.
-
+Not sure
   IV.ii. Write your observations in this comment.
+  nor sure
 ================== */
 
 /* 5. REUSABLE CLASSES */
@@ -327,31 +255,6 @@ img {
   margin-top: 0;
 }
 
-/*
-  Ok, we've written some more general rules that can be applied in numerous places. Now, let's use the Position rule to our advantage and write our CSS in relationship to the position of the HTML source order:
-    - Header
-    - Main
-    - Section
-    - Footer
- */
-
-/* V. READING DESCENDANT SELECTORS WITH CSS NESTING
-  Note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
-
-  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
-
-  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
-
-  Respond to the prompts below in the space provided for section V.
-
-  V.i. Note how I am selecting the header with its class name, but also how I am using CSS Nesting to write a "descendant combinator" that selects any descendant img inside of this `.banner__container` class and any descendant `h1` element. Reflect on your observations about how CSS nesting works in practice, noting any syntax and example ways to format/indent the code too.
-
-  V.ii. Update the `width` and `height` properties of this specific img element to a percentage value of `100%`. Reflect on what behavior changes, if any.
-
-  V.iii. Now, tinker and reflect on the h1. What's your best guess as to why the h1 element is behaving like this?
-
-================================================= */
-
 /* 5. PAGE BANNER HEADER
 ========================*/
 
@@ -366,8 +269,8 @@ img {
      */
     /* width: 100%; */
     /* height: 100%; */
-  width: 100%
-  height: 100%
+    width: 100%;
+    height: 100%;
   }
 
   & h1 {
@@ -395,7 +298,7 @@ img {
 
 /* 6. MAIN
 ========*/
-main{
+main {
   max-width: 810px;
   margin: auto;
 }
@@ -404,26 +307,15 @@ main{
 ================== */
 
 /* 7. SECTIONs =====================
-  Once you've completed all of the prompts, come back here.
-  And, iff you'd like to do so, select and style anything regarding the sections on the page and their contents within this portion of the CSS document.
-
-  I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
 ==================================== */
 
 /* VII. PRACTICE READING CSS NESTING
-  Again, note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
-
-  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
-
-  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
-
-  Below, I ask you a series of questions to respond to about the different types of selectors used in this footer class.
 ==================================== */
 
 /* 8. PAGE FOOTER
 ================*/
 .footer_site__container {
-  background-color: #fda403;
+  background-color: maroon;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
@@ -433,13 +325,13 @@ main{
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A:
+    A: parent element selector that makes all things of that descendant do that thing
 
     What type of selector is this: `& .row`?
-    A:
+    A: class selector
 
     How would you explain the selection condition in plain language?
-    A:
+    A: selecting other elements with "row" i believe
   ================== */
   & .row {
     display: flex;
@@ -450,13 +342,13 @@ main{
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A:
+      A: Type selector
 
       What type of selector is `:first-child`?
-      A:
+      A: qsuedo 
 
       How would you explain this selection condition in plain language?
-      A:
+      A: choosing the first div in footer
     ================== */
     & > div:first-child {
       flex: 1 0 300px;
@@ -481,7 +373,7 @@ main{
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A:
+      A: apply style for footer section
     ================== */
     &:hover {
       color: var(--primaryColor);
@@ -513,10 +405,10 @@ main{
 
     /* QUESTIONS
       What type of selector is this: `&.small`?
-      A:
+      A: class
 
       How would you explain the selection condition in plain language?
-      A:
+      A: slects all selectors with same class
     ================== */
     &.small {
       margin: 20px 0;
@@ -634,9 +526,28 @@ main{
 
 /* VIII. COMPONENTS OBSERVATIONS
   VIII.i. Write your observations in this comment.
+  placed in styles and selectors and by selecting it it would do it to them all. 
 
   VIII.ii. Write your observations in this comment.
+  five levels in total 
 
   VIII.iii. Write your observations in this comment.
-
+Class selector:
+  .card__sections
+  .cards__main_external_wrapper
+  .cards__sub_container
+  .card__project_leads_container
+  .card__main_name
+  .card__main_name
+  .partner_title
+  .bio_container
+----
+  pseudo-selectors:
+ - :hover
+ - Type
+ - picture
+ - img
+ - a
+ - p
+ - h2 - h3
 ================== */
