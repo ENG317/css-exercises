@@ -369,13 +369,13 @@ There is a lot of nesting. */
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A: It is a nesting selector.
+    A: It is a nesting selector meaning that it can affect the arrangement and organization of css elements, especially when they have shared class names. 
 
     What type of selector is this: `& .row`?
-    A: Nested descendant selector.
+    A: Nested descendant selector; organizing the element's style rule.
 
     How would you explain the selection condition in plain language?
-    A: It is the parent selector to the rest of the code. 
+    A: It is the parent selector to the rest of the code and affects how the style codes are arranged. 
   ================== */
   & .row {
     display: flex;
@@ -417,7 +417,7 @@ There is a lot of nesting. */
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A: The hover controls the rest of the child selectors until the child selectors are told to behave differently.
+      A: The hover controls how an html element appears when the user hovers their cursor over the element.
     ================== */
     &:hover {
       color: var(--primaryColor);
@@ -449,10 +449,10 @@ There is a lot of nesting. */
 
     /* QUESTIONS
       What type of selector is this: `&.small`?
-      A: The .small targets class selectors with "small".
+      A: The .small without a space in between the & and . means that the parents element also needs to have the .small class.
 
       How would you explain the selection condition in plain language?
-      A: It's basically a reference number.
+      A: It's basically a reference code telling the parents how to interact with the children selectors. 
     ================== */
     &.small {
       margin: 20px 0;
