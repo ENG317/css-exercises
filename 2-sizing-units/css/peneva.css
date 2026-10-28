@@ -62,22 +62,30 @@ h2 {
 
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
-.wireframe_imagep {
-  float: left;
-  width: 30%;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-.wireframe_imagex {
-  float: right;
-  width: 30%;
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
+
+/* Add this class to any element you desire to reset the float behavior. */
+.clear_fix { clear: both; }
+
 .wireframe_container {
-  text-align: justify;
-}
-.wireframe_container p {
-  font-size: 30px;
-  padding: 30px;
+
+  /* Shouldn't need to adjust text sizes to do so, but arguably the line-height looks like double-spaced. */
+  p {
+    line-height: 2;
+    /* font-size: 30px; */
+    /* padding: 30px; */
+  }
+
+  & .imagep {
+    float: left;
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  & .imagex {
+    float: right;
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
 }
