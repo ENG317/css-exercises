@@ -1,6 +1,6 @@
 /* Root */
 :root {
-  font-size: 10px;
+  font-size: 18px;
 }
 
 /*=======================================
@@ -76,20 +76,26 @@
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
 
-.design_image_left {
-  float: left;
-  width: 300px;
-  height: auto;
-  margin-right: 20px;
-  margin-bottom: 15px;
+/* FEEDBACK
+
+  - Used CSS nesting to scope the design solution more clearly
+  - removed WxH props, since they aren't needed
+  - created a general utility clear_fix class instead and applied it to the image instead of the paragraph
+  - removed the paragraph class/styles, since they're not needed.
+*/
+
+.clear_fix { clear: both; }
+
+.recreate_design {
+  .design_image_left {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+  }
+  .design_image_right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
 }
-.design_image_right {
-  float: right;
-  width: 200px;
-  height: auto;
-  margin-left: 20px;
-  margin-bottom: 15px;
-}
-.design_bottom_text {
-  clear: both;
-}
+
