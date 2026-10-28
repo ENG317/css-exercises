@@ -1,38 +1,3 @@
-/* README FIRST!
-  (1) If you haven't done the readings, you're not ready to dive into this yet. :-) Be sure to do so and come back. You won't be able to barge your way through this material without some conceptual work first.
-
-  (2) This content is embedded within a CSS comment. All of the prompts will be within the comments. Please write your code after them.
-
-  (3) Delete any instructional comment, after you have completed the prompt. But, leave helpful headings to document your CSS.
-*/
-
-/* EXERCISE GOALS ================
-
-  1. Get acclimated to reading and writing CSS files in relationship with HTML.
-
-  2. Implement knowledge about the CASCADE, i.e., understanding why we write CSS starting with more __general selections__ (like simple type selections) to more __specific selections__ (like components.
-
-  3. Practice selection, selection, selection. Make sure to read the CSS selection reading, so you can figure out how to read the HTML and select the appropriate HTML element(s), such as
-      * CSS Nesting
-      * type
-      * class
-      * child and descendant combinators
-
-  4. Practice styling your HTML file with some basic properties. (We'll learn about more "properties" to use as we go.)
-
-==================================== */
-
-/* I. ON COMMENTS
-  =============== */
-
-/* I.i. Comment Scope
-  Comments have scope like HTML elements. But, instead of opening and closing tags, note the opening and closing syntax that uses the asterisk and forward-slash characters.
-
-  Everything within this defined scope is ignored by the browser, when applying new declaration rulesets to your project.
-*/
-
-/* I.ii. Comments can be all on one line */
-
 /* I.iii. Multiline Comments
 
   line
@@ -342,20 +307,9 @@ main {
 ================== */
 
 /* 7. SECTIONs =====================
-  Once you've completed all of the prompts, come back here.
-  And, iff you'd like to do so, select and style anything regarding the sections on the page and their contents within this portion of the CSS document.
-
-  I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
 ==================================== */
 
 /* VII. PRACTICE READING CSS NESTING
-  Again, note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
-
-  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
-
-  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
-
-  Below, I ask you a series of questions to respond to about the different types of selectors used in this footer class.
 ==================================== */
 
 /* 8. PAGE FOOTER
@@ -371,13 +325,13 @@ main {
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A: parent element selector
+    A: parent element selector that makes all things of that descendant do that thing
 
     What type of selector is this: `& .row`?
-    A: combinator
+    A: class selector
 
     How would you explain the selection condition in plain language?
-    A: slectiong other elements with "row" i beleive
+    A: selecting other elements with "row" i believe
   ================== */
   & .row {
     display: flex;
@@ -388,13 +342,13 @@ main {
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A:
+      A: Type selector
 
       What type of selector is `:first-child`?
-      A:
+      A: qsuedo 
 
       How would you explain this selection condition in plain language?
-      A:
+      A: choosing the first div in footer
     ================== */
     & > div:first-child {
       flex: 1 0 300px;
@@ -419,7 +373,7 @@ main {
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A:
+      A: apply style for footer section
     ================== */
     &:hover {
       color: var(--primaryColor);
@@ -572,9 +526,28 @@ main {
 
 /* VIII. COMPONENTS OBSERVATIONS
   VIII.i. Write your observations in this comment.
+  placed in styles and selectors and by selecting it it would do it to them all. 
 
   VIII.ii. Write your observations in this comment.
+  five levels in total 
 
   VIII.iii. Write your observations in this comment.
-
+Class selector:
+  .card__sections
+  .cards__main_external_wrapper
+  .cards__sub_container
+  .card__project_leads_container
+  .card__main_name
+  .card__main_name
+  .partner_title
+  .bio_container
+----
+  pseudo-selectors:
+ - :hover
+ - Type
+ - picture
+ - img
+ - a
+ - p
+ - h2 - h3
 ================== */
