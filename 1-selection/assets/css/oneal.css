@@ -43,7 +43,11 @@
   You can also collapse/close a multiline comment, if you format it in this particular way. Hover over/around the top/start of this comment to reveal the dropdown button. Practice opening and closing it a few times.
 
 /* comment work from Connor to test hotkey combination. Use Ctrl + Forward slash / to make this hotkey work. */
-
+/* line
+another line
+another line
+final line
+ */
 
 /* II. ROOT & BODY SELECTION
   ====================== */
@@ -62,12 +66,8 @@
 ==================================== */
 
 :root {
-  /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
-  font-size: 1000px;
-  /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
-  background-color: black;
-
-  /* CSS variables can be defined on the root element, so you can use consistent values throughout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+  font-size: 23px;
+  background-color: grey;
 
   /* SPACING VARIABLES */
   --spacing-none: 0;
@@ -119,7 +119,7 @@
   --neutralShade7: #4d5052;
   --neutralShade8: #212122;
 
-  /* ROOT OBSERVATIONS
+  /* ROOT OBSERVATIONS:
     Root values allow consistent spread. Roots control the general look and design by being the progenitors of all the elements.
   ================== */
 }
@@ -139,49 +139,25 @@
 
 /* 1. GENERAL */
 body {
-  /* Change my values and inspect the changes IN YOUR BROWSER to the body. Then, come back and note some of your observations in the comment below about the relationships between the rules in the :root and the rules for the body */
-
-  /* Be sure to select the <html> element, then scroll down and through all of the styles that are defined on it. The inspection tool will tell you the "Origin" of the style, whether it's from your stylesheet or the "user agent" */
-  font-size: 18px;
-
-  /* All elements have a property of `background-color`. Change the body's default background color from the default hex color value of white (#ffffff) to a sandy tan brown color of the hex value of #ffe9d7 ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
-  background-color: #ffe9d7;
-  /* All elements have a textual color property of `color`, which alters the color of the text. Change the body's default text color from the default value of black (#000000) to a hex value of #0d242f, which is a dark blue toned color. */
-  color: #0d242f;
-
-  /* Do you notice how there's a thin black box around the body element? Use your inspection tool to select the body element and view the "computed" styles of the body's box model. In Chrome, refer to this documentation for help: https://developer.chrome.com/docs/devtools/css/reference#computed. IF you use a different browser, it will be very similar, and it will display an elements box model with computed styles.  */
-  /* margin: 0; */
-
-  /* BODY OBSERVATIONS
-    Write your observations in this comment.
-    not really getting it 
-  ================== */
+  font-size: 22px;
+  background-color: grey;
+  color: black;
 }
 
 /* 2. TYPOGRAPHY */
 
 /* Sizing */
 h1 {
-  font-size: 32px;
+  font-size: 25px;
 }
 h2 {
-  font-size: 26px;
+  font-size: 23px;
 }
-/* II.iii. Cascade Question!
-   Add a font-size below like 24px.
-   Now, check an h3 in your inspection tool.
-   In the reflection area provided below,
-   explain why the h3 elements' font size
-   is **NOT** changing.
-
-   HINT: Your inspection tool's CSS panel
-   will help you solve this mystery.
-========================= */
 h3 {
+  font-size: 21px;
 }
 
-/* H3 Font Size Observations
-  Write your observations in this comment.
+/* h3 has chnaged to be smaller as it is level 3 compared to the top lines.
 ================== */
 
 /* 3. LINKS */
@@ -191,29 +167,25 @@ h3 {
 /* Here's a skip link class that we can apply to all skip links. Use the inspection tool to find the skip link on this page. What do you think is happening with the rewritten properties below. Share your thoughts in the observations area below. */
 .skiplink__sr_only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 3px;
+  height: 3px;
   padding: 0;
-  margin: -1px;
+  margin: 1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border-width: 0;
+  border-width: 3px;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this comment.
-    HINT: Lookup 'position' on MDN.
-
-
+    Skip link makes it invisible to others while still being accessible to screen readers. 
   ================== */
 }
 
 /* 4. IMAGES */
 img {
-  /* We'll cover why I commented out this code in class together. */
-  /* display: block;
+  display: block;
   width: 100%;
-  height: 100%; */
+  height: 100%;
 }
 
 /* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
@@ -318,31 +290,6 @@ Not sure
   margin-top: 0;
 }
 
-/*
-  Ok, we've written some more general rules that can be applied in numerous places. Now, let's use the Position rule to our advantage and write our CSS in relationship to the position of the HTML source order:
-    - Header
-    - Main
-    - Section
-    - Footer
- */
-
-/* V. READING DESCENDANT SELECTORS WITH CSS NESTING
-  Note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
-
-  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
-
-  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
-
-  Respond to the prompts below in the space provided for section V.
-
-  V.i. Note how I am selecting the header with its class name, but also how I am using CSS Nesting to write a "descendant combinator" that selects any descendant img inside of this `.banner__container` class and any descendant `h1` element. Reflect on your observations about how CSS nesting works in practice, noting any syntax and example ways to format/indent the code too.
-
-  V.ii. Update the `width` and `height` properties of this specific img element to a percentage value of `100%`. Reflect on what behavior changes, if any.
-
-  V.iii. Now, tinker and reflect on the h1. What's your best guess as to why the h1 element is behaving like this?
-
-================================================= */
-
 /* 5. PAGE BANNER HEADER
 ========================*/
 
@@ -357,8 +304,8 @@ Not sure
      */
     /* width: 100%; */
     /* height: 100%; */
-  width: 100%
-  height: 100%
+    width: 100%;
+    height: 100%;
   }
 
   & h1 {
@@ -386,7 +333,7 @@ Not sure
 
 /* 6. MAIN
 ========*/
-main{
+main {
   max-width: 810px;
   margin: auto;
 }
@@ -414,7 +361,7 @@ main{
 /* 8. PAGE FOOTER
 ================*/
 .footer_site__container {
-  background-color: #291ec4;
+  background-color: maroon;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
