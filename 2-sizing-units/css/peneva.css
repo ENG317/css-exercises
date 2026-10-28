@@ -63,7 +63,7 @@ h2 {
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
 
-/* Add this class to any element you desire to reset the float behavior. */
+/* Add this class to any element you desire to reset the float behavior. If you move this class to the paragraph after the image, see what happens too. */
 .clear_fix { clear: both; }
 
 .wireframe_container {
