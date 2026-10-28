@@ -61,6 +61,12 @@
 /*
   Recreate the wireframe design in the images folder.
 
-  HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
+  Use CSS Nesting to create this solution as a component,
+  so the section should have a class name of "wf_recreation_container".
+
+  HINTS:
+    - You will need to use floats and a clear fix. (See reading #4 in Week 8)
+    - The viewport should be about 950px wide for testing.
+    - Use 2 paragraphs, and use a line-height of 2 for paragraphs in this container.
 */
 

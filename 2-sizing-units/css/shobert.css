@@ -94,29 +94,36 @@
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
 
-.img_recreate_design {
-  width: 33%;
-  float: left;
-  border: 1px solid black;
-}
+/* FEEDBACK
 
-.img_recreate_design2 {
-  width: 33%;
-  float: right;
-  border: 1px solid black;
-}
+  - Used CSS nesting for scoping out the solution
+  - commented out code that isn't needed.
+  - Honestly, I forgot to revise the assignment direction a little, so the clearfix is a tricky part of this one. I'll cover it more in class, when we have some time.
 
+*/
 .recreate_container {
+  font-size: 18px;
+
+  .img_recreate_design {
+    width: 33%;
+    height: auto; /* To maintain aspect ratio */
+    float: left;
+  }
+
+  .img_recreate_design2 {
+    width: 33%;
+    height: auto;
+    float: right;
+  }
+}
+
+/* .recreate_container {
   text-align: justify;
   overflow: hidden;
 }
 
 .recreate_container p {
   font-size: 25px;
-}
+} */
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.clearfix { clear: both; }
