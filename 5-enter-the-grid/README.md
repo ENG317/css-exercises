@@ -14,32 +14,6 @@
 
 You can use placeholder content and images (see [https://placehold.co/](https://placehold.co/)), if you'd like.
 
-**Learning Objectives**:
-
-Learn grid terminology and practice applying `grid-template-columns` &amp; new grid values (`fr`, `min` and `max` content, `minmax()`, and `repeat()`)
-
-1. Learn the following terms:
-   * grid container and items
-   * grid lines and line numbers
-   * grid tracks
-   * grid cells vs. areas
-   * implicit vs. explicit grids
-   * grid gaps
-   * New values: `fr`, `min-content`, `max-content`, `minmax()`, `repeat()`
-2. Learn how to setup a grid container with grid items.
-3. Learn how to infer from your layout source, what HTML structure and content will create a *grid_container* --> *grid_items* (children) relationship appropriate for your design concept.
-4. Apply at least the following rules to create your concept in CSS with grid:
-   * `grid-template-columns`
-      * Values for `grid-template-columns`: use some variation, as needed, with the new `fr` unit, perhaps some other sizing unit (px, %, em, rem, vw, etc.) and the `repeat()` and `minmax()` notation.
-   * `grid-template-rows` is optional, due to "implicit" grids.
-   * `gap`: Apply spacing between grid items.
-
-In addition to those requirements above, feel free to bring in one of your web typography vibes, if you'd like to spice it up. Or, you can add flex or other sizing and position techniques *within your grid*, as you so desire. But, be sure to first complete the learning objectives.
-
-Your grid layout doesn't need to be super flexible yet on smaller, mobile screens. However, **be careful where and how you apply absolute values to elements. Absolute values _fix_ the size, so if you're not thinking and testing your design, some elements may "break" out of their containers**.
-
-Overall, though, if it looks great on a laptop-size screen, you're good for now. We will spend some time working on grid flexibility with `@media` queries soon!
-
 ## Folder Setup
 
 Follow this procedure to setup your coding folder:
@@ -52,8 +26,38 @@ Follow this procedure to setup your coding folder:
 5. Inside `css`, create `grids.css` to link to `index.html`.
 6. `※\(^o^)/※` Start writing some code! `※\(^o^)/※`
 
-## Other Considerations
+## IMPORTANT! Workflow Requirement
 
+You must iterate your design via multiple commits. This is essential, because I want you to prove to me that it hasn't been developed with generative AI tools.
+
+**Learning Objectives**:
+
+Learn grid terminology and practice applying `grid-template-columns` &amp; new grid values (`fr`, `min` and `max` content, `minmax()`, and `repeat()`)
+
+1. Apply the following terms:
+   * grid container and items
+   * grid lines and line numbers
+   * grid tracks
+   * grid cells vs. areas
+   * implicit vs. explicit grids
+   * grid gaps
+   * New values: `fr`, `min-content`, `max-content`, `minmax()`, `repeat()`
+2. Setup a grid container with grid items.
+3. Infer from your layout source, what HTML structure and content will create a *grid_container* --> *grid_items* (children) relationship appropriate for your design concept.
+4. Apply at least the following rules to create your concept in CSS with grid:
+   1. `grid-template-columns`
+      * Values for `grid-template-columns`: use some variation, as needed, with the new `fr` unit, perhaps some other sizing unit (px, %, em, rem, vw, etc.) and the `repeat()` and `minmax()` notation.
+   2. `grid-template-rows` is optional, due to "implicit" grids.
+   3. `gap`: Apply spacing between grid items.
+
+Your grid layout doesn't need to be super flexible yet on smaller, mobile screens. However, **be careful where and how you apply absolute values to elements. Absolute values _fix_ the size, so if you're not thinking and testing your design, some elements may "break" out of their containers**.
+
+Overall, though, if it looks great on a laptop-size screen, you're good for now. We will spend some time working on grid flexibility with `@media` queries soon!
+
+## Important Tips & Considerations
+
+- Bcareful where and how you apply **absolute values** to elements. Absolute values _fix_ the size, so if you're not thinking and testing your design, some elements may "break" out of their containers.
+- Open your site with the live server tool in your browser.
 - Practice using the browser's specific grid inspection tool.
 - If you'd like to spice it up with your own flare, feel free to practice some basic typography and color schemes.
 - Keep practicing the art of documenting your code and writing your CSS from more general rules to more specific in the HTML source order.
