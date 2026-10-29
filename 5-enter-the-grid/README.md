@@ -64,7 +64,6 @@ Learn grid terminology and practice applying `grid-template-columns` &amp; new g
 
 - **Grid-Making Formula**: Grids require a parent (grid container) that contains the number of grid items (child elements). So, you should first consider count how many grid items you need, so you know how many children elements to create within the containing parent element.
    - Creating a grid that needs 12 grid items ==> Create 12 direct children elements of a grid container element.
-- Grid Item Placement:
 - Open your site with the live server tool in your browser.
 - Practice using the browser's specific grid inspection tool.
 - Keep practicing the art of documenting your code and writing your CSS from more general rules to more specific in the HTML source order.
