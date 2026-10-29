@@ -16,7 +16,7 @@ Past students have recreated the layout scheme that they inferred by deconstruct
 
 You can use placeholder content and images (see [https://placehold.co/](https://placehold.co/)), if you'd like.
 
-## IMPORTANT! Workflow Requirement
+## Version Control Requirement
 
 You must iterate your design via multiple commits that prove you are not using generative AI to create this assignment. This is essential, because I want you to learn how to develop layouts on your own. I want you to learn this technique, not prompt a computer how to potentially do it for you.
 
