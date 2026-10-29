@@ -46,24 +46,34 @@ Learn grid terminology and practice applying `grid-template-columns` &amp; new g
    * implicit vs. explicit grids
    * grid gaps
    * New values: `fr`, `min-content`, `max-content`, `minmax()`, `repeat()`
-2. Setup a grid container with grid items.
+2. Setup a grid template via a container with grid items.
 3. Infer from your layout source, what HTML structure and content will create a *grid_container* --> *grid_items* (children) relationship appropriate for your design concept.
 4. Apply at least the following rules to create your concept in CSS with grid:
    1. `grid-template-columns`
       * Values for `grid-template-columns`: use some variation, as needed, with the new `fr` unit, perhaps some other sizing unit (px, %, em, rem, vw, etc.) and the `repeat()` and `minmax()` notation.
    2. `grid-template-rows` is optional, due to "implicit" grids.
    3. `gap`: Apply spacing between grid items.
+5. Adapt grid cells and areas to varying content-sizing conditions:
+   * Use at least two images of different sizes.
+   * Use different amounts of textual content and elements, e.g., some combination of headings and paragraphs.
+   * Use grid alignment techniques to make your content more appealing and aligned with your design goals.
 
 ## Important Warnings & Tips
 
-### Warnings
-
-- Be careful where and how you apply **absolute values** to elements.
-   - Absolute values **fix the size**.
-   - If you shrink the viewport width, some elements may break your grid cell/area.
-
 ### Tips
 
+- **Grid-Making Formula**: Grids require a parent (grid container) that contains the number of grid items (child elements). So, you should first consider count how many grid items you need, so you know how many children elements to create within the containing parent element.
+   - Creating a grid that needs 12 grid items ==> Create 12 direct children elements of a grid container element.
+- Grid Item Placement:
 - Open your site with the live server tool in your browser.
 - Practice using the browser's specific grid inspection tool.
 - Keep practicing the art of documenting your code and writing your CSS from more general rules to more specific in the HTML source order.
+
+### Warnings
+
+- **Content-Sizing**: Your grid items (children elements) will vary in size when you add different types and amounts of content within them.
+   * Images: Contain them within a generic div; Use CSS to control the sizing of such images.
+- **Content Alignment**: Use your knowledge of aligning content to make your final product more appealing too.
+- Be careful where and how you apply **absolute values** to elements.
+   - Absolute values **fix the size**.
+   - If you shrink the viewport width, some elements may break your grid cell/area.
