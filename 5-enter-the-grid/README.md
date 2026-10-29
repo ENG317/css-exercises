@@ -2,7 +2,7 @@
 
 **FIRST: Open this README in Preview mode**
 
-**Goal**: Recreate a layout that you find in the wilds of the world with CSS `grid`. Wireframe it or snap it as an image, and include it in your project folder. If your rendering looks great on a laptop-size screen, you're good for now. We will spend some time working on grid flexibility with `@media` queries soon!
+**Goal**: Create 2 layouts that you find in the wilds of the world with CSS `grid`. Wireframe it or snap it as an image, and include it in your project folder. If your rendering looks great on a laptop-size screen, you're good for now. We will spend some time working on grid flexibility with `@media` queries soon!
 
 Past students have recreated the layout scheme that they inferred by deconstructing:
 
@@ -28,11 +28,13 @@ Follow this procedure to setup your coding folder:
 
 1. Within this root folder, create a new folder with your lastname.
    - **NOTE** `lastname` is your last name. Mine would be: `lindgren`.
-2. Inside the root of *your personal coding folder*, create the an HTMl file named `index.html`.
+2. Inside the root of *your personal coding folder*, create 2 `.html` files with a meaningfuly label to match the grid.
+   - **EXAMPLE**: If you create a grid based on a wall of posters, you could name the file `posters.html`.
 3. Again, inside the root of *your personal coding folder*, create an `assets` folder.
-4. Inside `assets`, create a `.keep` file, add your wireframe image, and create a `css` folder.
-5. Inside `css`, create `grids.css` to link to `index.html`.
-6. `※\(^o^)/※` Start writing some code! `※\(^o^)/※`
+4. Inside `assets`, add your wireframes/images, and create a `css` folder.
+5. Inside `css`, create `grids.css` to link to your `html` files.
+6. Link your stylesheets to your HTML docs.
+7. `※\(^o^)/※` Start writing some code! `※\(^o^)/※`
 
 **Learning Objectives**:
 
