@@ -14,7 +14,7 @@ Past students have recreated the layout scheme that they inferred by deconstruct
 * a star constellation,
 * and so on ...
 
-You can use placeholder content and images (see [https://placehold.co/](https://placehold.co/)), if you'd like.
+**Optional**: You can use placeholder content and images (see [https://placehold.co/](https://placehold.co/)). If you'd like to spice it up with your own flare, feel free to practice implementing a basic typography and color scheme like we practiced in exercise 3.
 
 ## Version Control Requirement
 
@@ -66,5 +66,4 @@ Learn grid terminology and practice applying `grid-template-columns` &amp; new g
 
 - Open your site with the live server tool in your browser.
 - Practice using the browser's specific grid inspection tool.
-- If you'd like to spice it up with your own flare, feel free to practice some basic typography and color schemes.
 - Keep practicing the art of documenting your code and writing your CSS from more general rules to more specific in the HTML source order.
