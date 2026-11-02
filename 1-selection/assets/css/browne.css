@@ -400,13 +400,13 @@ There was a bit of a gap at the top of the image, but when I changed the width a
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A:  child
+      A:  child combinator selector
 
       What type of selector is `:first-child`?
-      A: pseudo-class
+      A: Pseudo-class.
 
       How would you explain this selection condition in plain language?
-      A: The first child div element within the .row class.
+      A: The children of the parent selector that selects all div elements with the specific/pseudo class of first-child.
     ================== */
     & > div:first-child {
       flex: 1 0 300px;
@@ -431,7 +431,7 @@ There was a bit of a gap at the top of the image, but when I changed the width a
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A:
+      A: The ampersand represents applying the code to the parent. The &a selects all a elements and applies to following code.
     ================== */
     &:hover {
       color: var(--primaryColor);
