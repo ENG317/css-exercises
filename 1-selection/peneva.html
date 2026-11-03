@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- metadata -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selection Practice</title>
+
+    <!-- 1. Use the link element to link your CSS file to this HTML document -->
+    <link rel="stylesheet" href="assets/css/peneva.css" />
+  </head>
+  <body>
+    <a class="skiplink__sr_only" href="#main-content">Skip to main content</a>
+
+    <header class="banner__container" role="banner">
+      <div class="banner__media_container">
+        <img
+          src="https://placehold.co/840x300"
+          alt="A placeholder image."
+          width="840"
+          height="300"
+        />
+      </div>
+      <div class="banner__text_container">
+        <h1>The Rematriation Project - Meet the Team</h1>
+      </div>
+    </header>
+
+    <main role="main" id="main-content" class="mt4">
+      <!-- COMMENTS AS HEADINGS:
+      Remember that we can use comments as headings
+    -->
+      <!-- REMA PARTNER BIOS -->
+      <section
+        role="region"
+        aria-labelledby="project_partners"
+        class="card__sections"
+      >
+        <!-- IDs:
+       Note how IDs must be unique with one value only and now whitespace
+      -->
+        <div id="current_partners" class="cards__main_external_wrapper">
+          <h2 id="project_partners">Project Partners</h2>
+
+          <!-- CLASSES:
+         Note how you can add more than one class to an element with a single space inbetween names
+        -->
+          <div class="cards__sub_container project_partners">
+            <!-- CARD - CANA -->
+            <div class="card__project_leads_container">
+              <h3 class="card__main_name">
+                Dr. Cana Uluak Itchuaqiyaq <span>She/They</span>
+              </h3>
+              <p><em>Iñupiaq, Noorvik Native Community</em></p>
+
+              <!-- Card image container -->
+              <div class="card__main_image_wrapper">
+                <img
+                  src="assets/images/rematriation-logo-new.svg"
+                  width="400"
+                  height="400"
+                  alt="rematriation logo"
+                />
+              </div>
+
+              <!-- Card description wrapper -->
+              <div class="card__desc_wrapper">
+                <p class="partner_title">
+                  <em
+                    >Associate Professor of Technical &amp; Scientific
+                    Communication at Virginia Tech</em
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://www.itchuaqiyaq.com"
+                    target="_blank"
+                    rel="nopenner noreferrer"
+                    >itchuaqiyaq.com</a
+                  >
+                </p>
+                <p class="bio_container">
+                  Cana Uluak Itchuaqiyaq is an Iñupiaq scholar, an Aqqaluk Trust
+                  PhD alum, and a member of the Noorvik Native Community. Her
+                  goal as a scholar is to use the skills she developed through
+                  her academic and cultural education to directly benefit the
+                  Iñupiat of Alaska. Cana uses her skills as a technical
+                  communicator, grant writer, and education strategist to help
+                  coordinate the Rematriation Project. As the daughter of Caleb
+                  Lumen Pungowiyi, Cana also coordinates with her family and
+                  research team to assure Caleb's legacy is documented
+                  respectfully and accurately.
+                </p>
+              </div>
+            </div>
+
+            <!-- CARD - AVIÑÑAQ -->
+            <div class="card__project_leads_container">
+              <h3 class="card__main_name">
+                Lucy Aviññaq Boyd <span>She/Her</span>
+              </h3>
+              <p><em>Iñupiaq, Buckland Native Community</em></p>
+
+              <div class="card__main_image_wrapper">
+                <img
+                  src="assets/images/rematriation-logo-new.svg"
+                  width="400"
+                  height="400"
+                  alt="rematriation logo"
+                />
+              </div>
+
+              <div class="card__desc_wrapper">
+                <p class="partner_title">
+                  <em>Iñuunialiqput Director at Aqqaluk Trust</em>
+                </p>
+                <p>
+                  <a
+                    href="https://www.aqqaluktrust.com"
+                    target="_blank"
+                    rel="nopenner noreferrer"
+                    >aqqaluktrust.com</a
+                  >
+                </p>
+                <p class="bio_container">
+                  Lucy Aviññaq Boyd is from Buckland where she grew up "on the
+                  knee" and listening to the stories of NANA from her
+                  grandfather, Lester Hadley Sr., who helped raise her. She
+                  earned her degree in Accounting &amp;amp; Alaska Native
+                  Studies, and her mission is to help Native Alaskan communities
+                  grow, develop, and sustain our cultures and Native language—to
+                  not just survive but thrive. She serves as the team's main
+                  liaison between the team and Aqqaluk Trust.
+                </p>
+              </div>
+            </div>
+
+            <!-- CARD - KARA -->
+            <div class="card__project_leads_container">
+              <h3 class="card__main_name">Kara Long <span>She/Her</span></h3>
+
+              <!-- Card image container -->
+              <div class="card__main_image_wrapper">
+                <img
+                  src="assets/images/rematriation-logo-new.svg"
+                  width="400"
+                  height="400"
+                  alt="rematriation logo"
+                />
+              </div>
+
+              <!-- Card description container -->
+              <div class="card__desc_wrapper">
+                <p class="partner_title">
+                  <em
+                    >Assistant Director of Library Metadata Services at Virginia
+                    Tech</em
+                  >
+                </p>
+                <p class="bio_container">
+                  Kara actively supports the creation, documentation, and
+                  maintenance of digital collection metadata. Her research
+                  interests include adapting interview techniques to better
+                  understand domain-specific metadata needs; crosswalks between
+                  born-digital and traditional descriptive cataloging; and
+                  sustainable digital collections. She will use her expertise to
+                  support the quality, discoverability, and accessibility of the
+                  collection data, and document and contextualize the
+                  descriptive work.
+                </p>
+              </div>
+            </div>
+            <p>this is a pargaraph thats talking about something</p>
+            <div class="ph3">
+              Random information blah blah blah blah blah please work oh my god.
+              CREATE SPACE
+            </div>
+            <p>this is more of the paragraph.</p>
+
+            <!-- CARD - ANDI -->
+            <div class="card__project_leads_container">
+              <h3 class="card__main_name">Andi Ogier <span>She/Her</span></h3>
+
+              <!-- Card image container -->
+              <div class="card__main_image_wrapper">
+                <img
+                  src="assets/images/rematriation-logo-new.svg"
+                  width="400"
+                  height="400"
+                  alt="rematriation logo"
+                />
+              </div>
+
+              <!-- Card description container -->
+              <div class="card__desc_wrapper">
+                <p class="partner_title">
+                  <em
+                    >Assistant Dean and Director of Data Services at Virginia
+                    Tech</em
+                  >
+                </p>
+                <p class="bio_container">
+                  Andi (she/her) is a librarian who has worked in libraries for
+                  over twenty years, and has worked at Virginia Tech since 2008.
+                  She currently serves as Assistant Dean for Data Services and
+                  Faculty Affairs in the University Libraries at Virginia Tech.
+                  She brings her knowledge of data services, university funding,
+                  and more to support the team's work to develop a community
+                  model of digital archiving. She enjoys knitting, helping
+                  people find things, and hanging out in the Arctic. She has
+                  eaten maktak in Alaska and Greenland, and really wants to
+                  learn how to cure and smoke salmon.
+                </p>
+              </div>
+            </div>
+
+            <!-- CARD - CHRIS -->
+            <div class="card__project_leads_container">
+              <h3 class="card__main_name">
+                Chris Lindgren <span>He/Him</span>
+              </h3>
+
+              <div class="card__main_image_wrapper">
+                <img
+                  src="assets/images/rematriation-logo-new.svg"
+                  width="400"
+                  height="400"
+                  alt="rematriation logo"
+                />
+              </div>
+
+              <div class="card__desc_wrapper">
+                <p class="partner_title">
+                  <em
+                    >Associate Professor of Technical Communication at North
+                    Carolina State University</em
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://www.clndgrn.com"
+                    target="_blank"
+                    rel="nopenner noreferrer"
+                    >clndgrn.com</a
+                  >
+                </p>
+                <p class="bio_container">
+                  Chris is originally from a family farm just north of Fargo,
+                  North Dakota—ancestral lands of the Ashinabek Nation and
+                  Dakota-Lakota-Nakota Nation. He's excited to share his joy for
+                  learning about data with the communities in the NANA region,
+                  and learn more about how data can support their
+                  self-determination. He brings his specialities in
+                  communicating with data, computer coding, and digital
+                  technologies to help design the online interface and help
+                  coordinate other technological aspects of this project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer_site__container" role="contentinfo">
+      <div class="container">
+        <div class="row">
+          <!-- About container -->
+          <div class="about__container">
+            <h2>About</h2>
+            <p>
+              The Rematriation Project is a digital archiving project directed
+              by an Iñupiaq-led and serving tribal organization, Aqqaluk Trust,
+              in Kotzebue, Alaska. Our project's aim is to create capacity for
+              and access to digital archives related to Inuit cultural, tribal,
+              scientific knowledges, and history to assist tribes and
+              communities. In partnership with a team of scholars (itself led by
+              an Iñupiaq scholar from Kotzebue) from Virginia Tech and North
+              Carolina State University, we operate on a foundation of
+              community-first, community-led decision making. We seek to empower
+              Indigenous communities with self-determined data and research
+              sovereignty to collect, control, interpret, and benefit from data
+              that originates from their communities.
+            </p>
+          </div>
+
+          <!-- Tags container -->
+          <div class="categories__container">
+            <h2>Categories</h2>
+            <ul class="footer-links">
+              <li>
+                <a href="/tags/community-engaged-research/"
+                  >Community-Engaged Research</a
+                >
+                (6)
+              </li>
+              <li><a href="/tags/idsov/">IDSov</a> (4)</li>
+              <li><a href="/tags/pungowiyi/">Pungowiyi</a> (3)</li>
+              <li><a href="/tags/resource/">Resource</a> (3)</li>
+              <li><a href="/tags/archive/">Archive</a> (2)</li>
+              <li><a href="/tags/awards/">Awards</a> (2)</li>
+              <li><a href="/tags/data-literacies/">Data Literacies</a> (2)</li>
+            </ul>
+          </div>
+
+          <!-- Secondary nav container -->
+          <div class="quick_links__container">
+            <h2>Quick Links</h2>
+            <nav
+              role="navigation"
+              aria-label="Secondary menu"
+              class="nav__main_menu slide close"
+            >
+              <ul>
+                <li><a class="pa3 no-underline db" href="/">Home</a></li>
+                <li>
+                  <a
+                    class="pa3 no-underline db"
+                    aria-current="page"
+                    href="/about/"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a class="pa3 no-underline db" href="/sponsors/">Sponsors</a>
+                </li>
+                <li>
+                  <a class="pa3 no-underline db" href="/projects/">Projects</a>
+                </li>
+                <li><a class="pa3 no-underline db" href="/news/">News</a></li>
+                <li>
+                  <a class="pa3 no-underline db" href="/rema/"
+                    >Tracing Rematriation</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <!-- Copyright container -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright © 2026 All Rights Reserved by The Rematriation Project.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

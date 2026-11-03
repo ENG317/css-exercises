@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units & Sizing</title>
+
+    <!-- RESOURCES -->
+    <link rel="stylesheet" href="css/peneva.css" />
+  </head>
+  <body>
+    <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+    <section class="abs_rel_lengths__container">
+      <h1>1. Absolute vs. Relative Lengths</h1>
+      <div class="px__300">
+        <p>I am 300px wide - Absolute length (px)</p>
+      </div>
+      <div class="vw__30">
+        <p>I am 30vw wide - Relative to viewport width (vw)</p>
+      </div>
+      <div class="perc__30">
+        <p>I am 30% wide - Relative to parent container's width</p>
+      </div>
+      <div class="em__30">
+        <p>I am 30em wide - Relative to local element (em) font size</p>
+      </div>
+      <div class="rem__30">
+        <p>I am 30rem wide - Relative to :root element (rem) font size</p>
+      </div>
+    </section>
+
+    <section class="img_sizing__container">
+      <h2>2. Image Sizing</h2>
+      <img
+        class="img_absolute_px"
+        src="https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+        alt=""
+        width="800"
+        height="400"
+      />
+      <img
+        class="img_relative_percentage"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+        alt=""
+        width="800"
+        height="400"
+      />
+      <img
+        class="img_relative_vw"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+        alt=""
+        width="800"
+        height="400"
+      />
+    </section>
+
+    <section>
+      <h2>3. Recreating Wireframe</h2>
+      <div class="wireframe_container">
+        <img class="imagep" src="https://placehold.co/600x600" alt="" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus esse labore aperiam ratione natus cumque molestias numquam unde voluptatum accusantium deserunt accusamus adipisci dolore placeat qui. Ut, tempora soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <img class="imagex clear_fix" src="https://placehold.co/400x400" alt="" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, possimus esse labore aperiam ratione natus cumque molestias numquam unde voluptatum accusantium deserunt accusamus adipisci dolore placeat qui. Ut, tempora soluta. Aperiam ratione natus cumque molestias numquam unde voluptatum accusantium deserunt accusamus adipisci dolore placeat qui. Ut, tempora soluta. Culpa, possimus esse labore aperiam ratione natus cumque molestias numquam unde voluptatum accusantium deserunt accusamus adipisci dolore placeat qui. Ut, tempora soluta.</p>
+      </div>
+    </section>
+  </body>
+</html>
+
+    <!-- 3. RECREATE THE DESIGN
+    Start on Tuesday and complete during Thursday's class
+
+    3.1. Open the image in the 'images' folder.
+    3.2. Review the wireframe and outline your HTML
+    3.3. Recreate it by writing both the HTML and CSS with your newfound sizing knowledge.
+
+    Hint: You'll need to apply a float property and value to those images to change their default flow behavior.

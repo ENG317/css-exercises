@@ -1,0 +1,636 @@
+/* README FIRST!
+  (1) If you haven't done the readings, you're not ready to dive into this yet. :-) Be sure to do so and come back. You won't be able to barge your way through this material without some conceptual work first.
+
+  (2) This content is embedded within a CSS comment. All of the prompts will be within the comments. Please write your code after them.
+
+  (3) Delete any instructional comment, after you have completed the prompt. But, leave helpful headings to document your CSS.
+*/
+
+/* EXERCISE GOALS ================
+
+  1. Get acclimated to reading and writing CSS files in relationship with HTML.
+
+  2. Implement knowledge about the CASCADE, i.e., understanding why we write CSS starting with more __general selections__ (like simple type selections) to more __specific selections__ (like components.
+
+  3. Practice selection, selection, selection. Make sure to read the CSS selection reading, so you can figure out how to read the HTML and select the appropriate HTML element(s), such as
+      * CSS Nesting
+      * type
+      * class
+      * child and descendant combinators
+
+  4. Practice styling your HTML file with some basic properties. (We'll learn about more "properties" to use as we go.)
+
+==================================== */
+
+/* II. ROOT & BODY SELECTION
+  ====================== */
+
+/* II.i. Inherited Styles via General Selection
+
+  The most general selections possible are any elements with lots of scope, such as the root <html> and <body> elements. Why? Because they contain ALL of the content, so all of the elements can inherit any styled properties defined on them.
+
+  To select the ROOT, i.e., the <html> element, of the page, you use the following special selector: `:root`. (See it used below).
+
+  When you select the :root, and write rules to it, you will begin to learn how the genetic inheritance metaphor of HTML elements becomes much more literal. Why? Because if <html> is the progenitor of all that it contains, then you should recognize now that all elements can potentially inherit the root's properties that you apply to it.
+
+  The same goes for the other widely scoped container: the <body>. Consider how all of the elements within the <body> are either direct children or descendants of the <body>. So, if you change the default properties of the <body>, like its 'background-color' property, then all of the HTML elements within the body will inherit that new property, unless you define it otherwise in a more specific selection condition.
+
+  The beauty of these general rules is that you can define a new default style that all child and descendat elements will inherit. From there, you can write more specific rules, based on new HTML patterns/contexts/scopes. Indeed, you'll see how, further on down, you will write rules that select more specific elements with classes and combinators.
+==================================== */
+
+:root {
+  /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
+  font-size: 18px;
+  /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
+  background-color: black;
+
+  /* CSS variables can be defined on the root element, so you can use consistent values throguhout your CSS file. **We'll learn about these later**, but locate where these variables are being used and share your observations about how they seem to work below. Read more about them, if you'd like, at MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+
+  /* SPACING VARIABLES */
+  --spacing-none: 0;
+  --spacing-extra-small: .25rem;
+  --spacing-small: .5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 4rem;
+  --spacing-extra-extra-large: 8rem;
+  --spacing-extra-extra-extra-large: 16rem;
+
+  /* COLOR SCHEME VARIABLES */
+  --primaryColor: #c51350;
+  --primaryShade1: #ffd6b5;
+  --primaryShade2: #ffbc85;
+  --primaryShade3: #ffa053;
+  --primaryShade4: #e8751a;
+  --primaryShade5: #e46802;
+  --secondaryColor: #f44336;
+  --secondaryShade1: #ffdde0;
+  --secondaryShade2: #ffcdd2;
+  --secondaryShade3: #ef9a9a;
+  --secondaryShade4: #d32f2f;
+  --secondaryShade5: #b71c1c;
+  --accentColor: #fda403;
+  --accentShade1: #f9f1dc;
+  --accentShade2: #f4dea7;
+  --accentShade3: #f2cb69;
+  --accentShade4: #f0bb34;
+  --accentShade5: #b68300;
+  --accent2Color: #009688;
+  --accent2Shade1: #e0f2f1;
+  --accent2Shade2: #b2dfdb;
+  --accent2Shade3: #64babe;
+  --accent2Shade4: #429499;
+  --accent2Shade5: #1d7b80;
+  --accent3Color: #014980;
+  --accent3Shade1: #80c8ff;
+  --accent3Shade2: #46adfc;
+  --accent3Shade3: #2089d9;
+  --accent3Shade4: #0067b6;
+  --accent3Shade5: #02589b;
+  --neutralShade1: #f2f2f2;
+  --neutralShade2: #e8e9e9;
+  --neutralShade3: #d1d3d4;
+  --neutralShade4: #babdbf;
+  --neutralShade5: #808488;
+  --neutralShade6: #666a6d;
+  --neutralShade7: #4d5052;
+  --neutralShade8: #212122;
+
+  /* ROOT OBSERVATIONS
+    Write your observations in this commment.
+  I can definitely see how each of these variables is being used throughout the CSS file. I can see the consistent color theme and spacing throughout the page. Although, I see that the background color is changed to black, however I don't see where that is coming through. Does the color scheme overide the black background color?
+    ================== */
+}
+
+/* II.ii. General Selection with Type Selectors
+
+  Beyond the :root and body, GENERAL SELECTION typically refers to the simplest selection technique, which uses the the TYPE selector.
+
+  TYPE selectors are just the names of the HTML elements. So, to select ALL
+    - paragraphs on a page, write p
+    - sections on a page, write section
+    - blockquotes on the page, blockquote
+    - etc.
+
+  The beauty of these general rules is that you can define a new default style that elements will use. From there, you can write more specific rules, based on new HTML patterns/contexts/scopes. Indeed, you'll see how, further on down, you will write rules that select more specific elements with classes and combinators.
+============================================ */
+
+/* 1. GENERAL */
+body {
+  /* Change my values and inspect the changes IN YOUR BROWSER to the body. Then, come back and note some of your observations in the comment below about the relationships between the rules in the :root and the rules for the body */
+
+  /* Be sure to select the <html> element, then scroll down and through all of the styles that are defined on it. The inspection tool will tell you the "Origin" of the style, whether it's from your stylesheet or the "user agent" */
+  font-size: 18px;
+
+  /* All elements have a property of `background-color`. Change the body's default background color from the default hex color value of white (#ffffff) to a sandy tan brown color of the hex value of #ffe9d7 ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
+  background-color: #ffe9d7;
+  /* All elements have a textual color property of `color`, which alters the color of the text. Change the body's default text color from the default value of black (#000000) to a hex value of #0d242f, which is a dark blue toned color. */
+  color: #0d242f;
+
+  /* Do you notice how there's a thin black box around the body element? Use your inspection tool to select the body element and view the "computed" styles of the body's box model. In Chrome, refer to this documentation for help: https://developer.chrome.com/docs/devtools/css/reference#computed. IF you use a different browser, it will be very similar, and it will display an elements box model with computed styles.  */
+  /* margin: 0; */
+
+  /* BODY OBSERVATIONS
+    Write your observations in this commment.
+    At first I didn't see the outline until I went in and inspected the page. Now I can see that the outline is just around the body. I also went in and experimented with the margins which then made the outline go away which made it even more clear.
+  ================== */
+}
+
+/* 2. TYPOGRAPAHY */
+
+/* Sizing */
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+/* II.iii. Cascade Question!
+   Add a font-size below like 24px.
+   Now, check an h3 in your inspection tool.
+   In the reflection area provided below,
+   explain why the h3 elements' font size
+   is **NOT** changing.
+
+   HINT: Your inspection tool's CSS panel
+   will help you solve this mystery.
+========================= */
+h3 {
+  font-size: 24px;
+}
+
+/* H3 Font Size Observations
+  The font size isn't changing because of the class selector it is labeled as. We have to identify the card name and the class in order to change the font size. Then select it and put in the font size we want.
+  Write your observations in this commment.
+================== */
+
+/* 3. LINKS */
+
+/* III. SKIP LINK SOLUTION
+======================= */
+/* Here's a skip link class that we can apply to all skip links. Use the inspection tool to find the skip link on this page. What do you think is happenning with the rewritten properties below. Share your thoughts in the observations area below. */
+.skiplink__sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+
+  /* SKIPLINK OBSERVATIONS
+    Write your observations in this commment.
+    HINT: Lookup 'position' on MDN.
+    Position: absolute causes CSS to layer any other existing elements on top of the skip link. It is still there, however it is hidden behind other elements.
+  ================== */
+}
+
+/* 4. IMAGES */
+img {
+  /* We'll cover why I commented out this code in class together. */
+  /* display: block;
+  width: 100%;
+  height: 100%; */
+}
+
+
+/* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
+========================================= */
+
+/*
+  Classes are meant to be used interchangeably and across multiple elements in sophisticated ways.
+
+  Unlike the `id` attribute, a class attribute on an element can contain multiple class values by simply separating them out with a whitespace.
+
+  Note how you write classes differently in HTML vs. CSS. In HTML, you simply write the name of the class, such as `class="mt4"` on the `main` element. In CSS, when you create a class, you prepend it with a period character, such as `.mt4`.
+
+  IV.i. Take stock of where the `mt4` class is being used in the HTML. Use the inspection tool to observe its behavior and reflect on your observations in the provided space. Be sure to discuss the values being applid with the var() syntax.
+  
+
+  IV.ii. Add a padding class in the HTML. Use the inspection tool to observe its behavior. Then, reflect on your observations in the provided space. Be sure to discuss the values being applid with the var() syntax.
+==================================== */
+
+
+/* Reusable Class Observations
+  IV.i. Write your observations in this commment.
+Honestly, I'm not too sure what it is doing here. I inspected it and it looks like it is only adding space to the top of the main element. Is that all it is supposed to be doing?
+  IV.ii. Write your observations in this commment.
+  I can see the spacing being applied to the top and bottom of the main element.
+================== */
+
+/* 5. REUSABLE CLASSES */
+
+.pa3 {
+  padding: var(--spacing-medium)
+}
+
+.pt4 {
+  padding-top: var(--spacing-large)
+}
+
+.pv3 {
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
+}
+
+.pv4 {
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
+}
+
+.pv6 {
+  padding-top: var(--spacing-extra-extra-large);
+  padding-bottom: var(--spacing-extra-extra-large);
+}
+
+.ph3 {
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+}
+
+.ph4 {
+  padding-left: var(--spacing-large);
+  padding-right: var(--spacing-large);
+}
+
+.mb0 {
+  margin-bottom: var(--spacing-none);
+}
+
+.mb1 {
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.mb2 {
+  margin-bottom: var(--spacing-small);
+}
+
+.mb3 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.mb4 {
+  margin-bottom: var(--spacing-large);
+}
+
+.mt0 {
+  margin-top: var(--spacing-none);
+}
+
+.mt1 {
+  margin-top: var(--spacing-extra-small);
+}
+
+.mt2 {
+  margin-top: var(--spacing-small);
+}
+
+.mt3 {
+  margin-top: var(--spacing-medium);
+}
+
+.mt4 {
+  margin-top: var(--spacing-large);
+}
+
+.mt_remove {
+  margin-top: 0;
+}
+
+
+/*
+  Ok, we've written some more general rules that can be applied in numerous places. Now, let's use the Position rule to our advantage and write our CSS in relationship to the position of the HTML source order:
+    - Header
+    - Main
+    - Section
+    - Footer
+ */
+
+/* V. READING DESCENDANT SELECTORS WITH CSS NESTING
+  Note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
+
+  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
+
+  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
+
+  Respond to the prompts below in the space provided for section V.
+
+  V.i. Note how I am selecting the header with its class name, but also how I am using CSS Nesting to write a "descendant combinator" that selects any descendant img inside of this `.banner__container` class and any descendant `h1` element. Reflect on your observations about how CSS nesting works in practice, noting any syntax and example ways to format/indent the code too.
+
+  V.ii. Update the `width` and `height` properties of this specific img element to a percentage value of `100%`. Reflect on what behavior changes, if any.
+
+  V.iii. Now, tinker and reflect on the h1. What's your best guess as to why the h1 element is behaving like this?
+
+================================================= */
+
+/* 5. PAGE BANNER HEADER
+========================*/
+
+.banner__container {
+  max-width: 1080px;
+  margin: auto;
+
+  & img {
+    /* Uncomment each line with the hotkey:
+      - Mac: CMD+/
+      - Windows: CTRL+/
+     */
+    width: 100%;
+    height: 100%;
+  }
+
+  & h1 {
+    position: relative;
+    bottom: 100px;
+  }
+}
+
+/* V. Page Banner Class Observations
+  V.i. Write your observations in this commment.
+I'm glad we discussed this in class because I feel like I have a really good understadning of how nesting works now.
+  V.ii. Write your observations in this commment.
+I notice without the width and height set to 100% the image is not responsive. When I set it to 100% it is responsive and resizes with the page.
+  V.iii. Write your observations in this commment.
+  I think it acts this way because it defaults to whatever its usual size is. It is not responsive to the page size. When we set it to 100% it becomes responsive and resizes with the page.
+================== */
+
+
+
+/* VI. WRITE YOUR OWN CSS NOW
+
+  1. Select the main element.
+  2. Apply a `max-width` of 810px.
+  3. Center the main along the horizontal axis with the box model's `margin` as follows: `margin: auto;`
+
+  Research into this solution. Why does it work? Respond in the observations area below.
+==================================== */
+
+/* 6. MAIN
+========*/
+main {
+  max-width: 810px;
+  margin: auto;
+}
+
+
+/* VI. MAIN OBSERVATIONS
+  Write your observations in this commment.
+  Since we set the max-width to 810px, it will not exceed that width. The margin: auto; centers the main element horizontally within its parent container.
+================== */
+
+
+
+/* 7. SECTIONs =====================
+  Once you've completed all of the prompts, come back here.
+  And, iff you'd like to do so, select and style anything regarding the sections on the page and their contents within this portion of the CSS document.
+
+  I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
+==================================== */
+
+
+
+/* VII. PRACTICE READING CSS NESTING
+  Again, note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
+
+  Review the CSS Tricks reading for a refresher: https://css-tricks.com/css-selectors/#nesting-selectors
+
+  Ignore much of the property rules for now. Instead, focus on understanding how the scoping work follows the hierarchy defined by the HTML.
+
+  Below, I ask you a series of questions to respond to about the different types of selectors used in this footer class.
+==================================== */
+
+/* 8. PAGE FOOTER
+================*/
+.footer_site__container {
+  background-color: #fda403;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--foregroundColor);
+  position: relative;
+  z-index: 1;
+
+  /* QUESTIONS
+    What does the ampersand `&` mean here?
+    A: It means that the selector is referring to the parent element.
+
+    What type of selector is this: `& .row`?
+    A: It is a descendant combinator selector.
+
+    How would you explain the selection condition in plain language?
+    A: It means that the selector is selecting any element with the class "row" that is a descendant of the parent element with the class "footer_site__container".
+  ================== */
+  & .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1080px;
+    margin: auto;
+
+    /* QUESTIONS
+      What type of selector type is this: `& > div:first-child`?
+      A: It is a child combinator selector.
+
+      What type of selector is `:first-child`?
+      A: It is a pseudo-class selector.
+
+      How would you explain this selection condition in plain language?
+      A: It means that the selector is selecting the first child div element that is a direct child of the parent element with the class "row".
+    ================== */
+    &>div:first-child {
+      flex: 1 0 300px;
+    }
+
+    &> :not(div:first-child()) {
+      flex: 0.1 1 240px;
+    }
+  }
+
+  & h2 {
+    color: var(--primaryColor);
+    font-size: 16px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+  }
+
+  & a {
+    text-decoration: underline;
+    color: var(--foregroundColor);
+    transition: .5s;
+    position: relative;
+
+    /* QUESTION
+      How would you explain this selection condition in plain language?
+      A: It means that the selector is selecting the anchor element when it is being hovered over.
+    ================== */
+    &:hover {
+      color: var(--primaryColor);
+      text-decoration: none;
+      transition: .5s;
+    }
+  }
+
+  & ul {
+    padding-left: 0;
+    list-style: none;
+
+    & li {
+      display: block;
+      line-height: 1.15;
+      margin: 0;
+      padding: 0;
+
+      & a {
+        margin: 0;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  & hr {
+    border-top-color: var(--accent2Color);
+    opacity: 0.5;
+
+    /* QUESTIONS
+      What type of selector is this: `&.small`?
+      A: It is a class selector.
+
+      How would you explain the selection condition in plain language?
+      A: It means that the selector is selecting any element with the class "small" that is a descendant of the parent element.
+    ================== */
+    &.small {
+      margin: 20px 0;
+    }
+  }
+}
+
+/* VIII. WHAT ARE COMPONENTS?
+
+  Components are any specific HTML-CSS patterns that you wish to reuse across your website pages. For this example, read and inspect the `card__sections` component.
+
+  Don't worry about tinkering and understanding all of the property rules and values. That'll come with time.
+
+  Instead, focus on the CSS Nesting work. Use the observations area to reflect about the following questions/prompts.
+
+  VIII.i. Why wouldn't we put these styles under the "sections" area instead?
+
+
+  VIII.ii. How many nested levels are there in this component? Which selectors are in the deepest level of .card__sections?
+
+  VIII.iii. Name all the selector types in this component. List the selections under their particular selector type.
+
+
+==================================== */
+
+/* 9. COMPONENTS
+===============*/
+
+/* 9.1. PAGE Cards Component */
+.card__sections {
+
+  .cards__main_external_wrapper {
+
+    h2 {
+      font-size: clamp(1.5rem, 2.5rem, 3rem);
+      line-height: 1.2em;
+    }
+
+    .cards__sub_container {
+      margin: 3rem 0 0 0;
+
+      .card__project_leads_container {
+        margin: 1rem;
+        margin-bottom: 2em;
+        padding: 1.25em;
+        background-color: var(--accentShade1);
+        box-shadow:
+          var(--secondaryShade3) 0px 1px 1px,
+          var(--secondaryShade5) 0px 0px 1px 1px;
+
+        h3.card__main_name {
+          font-size: 1.5rem;
+          margin-bottom: 0.25rem;
+
+          &>span {
+            font-size: 0.8rem;
+          }
+        }
+
+        p {
+          color: var(--neutralShade8);
+          font-size: 1rem;
+          line-height: 1.25;
+          margin: 1.15rem 0 1.15rem 0;
+        }
+
+        .partner_title,
+        a {
+          color: var(--secondaryShade5);
+          font-weight: 600;
+        }
+
+        .partner_title,
+        .bio_container {
+          margin-top: 1rem;
+        }
+
+        .partner_title {
+          font-size: 1.15rem;
+        }
+
+        a {
+          transition: 0.3s;
+
+          &:hover {
+            text-decoration: none;
+            transition: 0.3s;
+          }
+        }
+
+        & picture,
+        img {
+          max-width: 190px;
+          min-width: 165px;
+          float: left;
+          margin: 1rem 1rem 1rem 0;
+          shape-outside: circle();
+          border-radius: 50%;
+          height: auto;
+
+          /* We'll learn about @media queries later! */
+          @media screen and (max-width: 600px) {
+            float: unset;
+            max-width: unset;
+            min-width: unset;
+            margin: 0;
+            shape-outside: unset;
+            border-radius: unset;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* VIII. COMPONENTS OBSERVATIONS
+  VIII.i. Write your observations in this commment.
+  The reason we wouldn't put these styles under the "sections" area is because the component is a specific pattern that is used in multiple places on the website. By keeping it separate, we can reuse and maintain the styles for this component without affecting other sections of the website.
+  VIII.ii. Write your observations in this commment.
+  There are 6 nested levels in this component. The selectors in the deepest level of .card__sections are: .partner_title, a, .bio_container, & picture, img
+  VIII.iii. Write your observations in this commment.
+    The selector types are:
+  - Type selectors: h2, h3, p, a, picture, img
+  - Class selectors: .card__sections, .cards__main_external_wrapper, .cards__sub_container, .card__project_leads_container, .partner_title, .bio_container
+  - Pseudo-classes: :hover
+  - Descendant combinators: , 
+  - Child combinators: > 
+================== */

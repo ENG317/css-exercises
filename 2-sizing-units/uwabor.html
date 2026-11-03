@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units & Sizing</title>
+    <link rel="stylesheet" href="css/uwabor.css" />
+    <!-- RESOURCES -->
+  </head>
+  <body>
+    <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+    <section class="abs_rel_lengths__container">
+      <h2>1. Absolute vs. Relative Lengths</h2>
+      <div class="px__300">
+        <p>I am 300px wide - Absolute length (px)</p>
+      </div>
+      <div class="vw__30">
+        <p>I am 30vw wide - Relative to viewport width (vw)</p>
+      </div>
+      <div class="perc__30">
+        <p>I am 30% wide - Relative to parent container's width</p>
+      </div>
+      <div class="em__30">
+        <p>I am 30em wide - Relative to local element (em) font size</p>
+      </div>
+      <div class="rem__30">
+        <p>I am 30rem wide - Relative to :root element (rem) font size</p>
+      </div>
+    </section>
+
+    <section class="img_sizing__container">
+      <h2>1. Image Sizing</h2>
+
+      <img
+        class="img_absolute_px"
+        src="https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+        width="800"
+        height="400"
+        alt="Example of an image sized with absolute lengths"
+      />
+
+      <img
+        class="img_relative_percentage"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+        width="800"
+        height="400"
+        alt="Example of an image sized with percentages"
+      />
+
+      <img
+        class="img_relative_vw"
+        src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+        width="800"
+        height="400"
+        alt="Example of an image sized with viewport width"
+      />
+    </section>
+
+    <!-- 3. Recreate the Wireframe Design -->
+    <section class="article-layout">
+      <h2>3. Recreate the Design</h2>
+
+      <h3>Article Heading</h3>
+
+      <img
+        class="img_float_left"
+        src="https://placehold.co/375x300?text=Main+Image"
+        width="375"
+        height="300"
+        alt="Main article image"
+      />
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quod consectetur dolores iusto, labore voluptatum, facere quia iste veniam expedita deserunt vel sint laborum ut delectus eos harum natus sapiente!
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi itaque molestias non, autem aspernatur dolores soluta in esse veritatis officiis dignissimos accusantium quo. Dolore amet ut qui cum accusamus. Eius?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nisi commodi, minima tenetur tempore officiis sunt inventore, quisquam doloribus similique quaerat praesentium. In maiores quae ab, recusandae eos reprehenderit odit.
+      </p>
+
+      <img
+        class="img_float_right"
+        src="https://placehold.co/250x150?text=Small+Image"
+        width="250"
+        height="150"
+        alt="Smaller image on the right side of the article"
+      />
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero velit dolores nemo reiciendis amet at provident maxime, labore quidem aspernatur perspiciatis adipisci temporibus et. Iusto pariatur recusandae soluta modi accusamus.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam suscipit aliquid illo deserunt, optio tenetur! Maxime, nisi aliquam placeat tempora id tenetur dicta similique fugiat, eaque quos, commodi obcaecati ipsam.
+      </p>
+
+      <p class="clear_fix">
+        This final paragraph appears below both images and spans the width of the article.
+      </p>
+    </section>
+  </body>
+</html>

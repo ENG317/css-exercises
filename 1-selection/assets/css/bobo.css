@@ -1,0 +1,489 @@
+
+/* I.v. You Try
+  Create a new comment after this one by using the hotkey combo on the next line
+*/
+
+/* Comment practice by sydney */
+
+/* more practice 
+one 
+two 
+three
+ */
+
+/* II. ROOT & BODY SELECTION
+  ====================== */
+
+/* II.i. Inherited Styles via General Selection
+==================================== */
+
+:root {
+
+  font-size: 16px;
+  background-color: black;
+
+  /* SPACING VARIABLES */
+  --spacing-none: 0;
+  --spacing-extra-small: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 4rem;
+  --spacing-extra-extra-large: 8rem;
+  --spacing-extra-extra-extra-large: 16rem;
+
+  /* COLOR SCHEME VARIABLES */
+  --primaryColor: #c51350;
+  --primaryShade1: #ffd6b5;
+  --primaryShade2: #ffbc85;
+  --primaryShade3: #ffa053;
+  --primaryShade4: #e8751a;
+  --primaryShade5: #e46802;
+  --secondaryColor: #f44336;
+  --secondaryShade1: #ffdde0;
+  --secondaryShade2: #ffcdd2;
+  --secondaryShade3: #ef9a9a;
+  --secondaryShade4: #d32f2f;
+  --secondaryShade5: #b71c1c;
+  --accentColor: #fda403;
+  --accentShade1: #f9f1dc;
+  --accentShade2: #f4dea7;
+  --accentShade3: #f2cb69;
+  --accentShade4: #f0bb34;
+  --accentShade5: #b68300;
+  --accent2Color: #009688;
+  --accent2Shade1: #e0f2f1;
+  --accent2Shade2: #b2dfdb;
+  --accent2Shade3: #64babe;
+  --accent2Shade4: #429499;
+  --accent2Shade5: #1d7b80;
+  --accent3Color: #014980;
+  --accent3Shade1: #80c8ff;
+  --accent3Shade2: #46adfc;
+  --accent3Shade3: #2089d9;
+  --accent3Shade4: #0067b6;
+  --accent3Shade5: #02589b;
+  --neutralShade1: #f2f2f2;
+  --neutralShade2: #e8e9e9;
+  --neutralShade3: #d1d3d4;
+  --neutralShade4: #babdbf;
+  --neutralShade5: #808488;
+  --neutralShade6: #666a6d;
+  --neutralShade7: #4d5052;
+  --neutralShade8: #212122;
+
+  /* ROOT OBSERVATIONS
+   The root: is a powerful tool on html. It sets heavily repeated settings like the color and font size to be repeated for every element on the webpage if need be. 
+  ================== */
+}
+
+/* II.ii. General Selection with Type Selectors
+
+
+/* 1. GENERAL */
+body {
+
+  font-size: 16px;
+  background-color: pink;
+  color: darkgreen;
+
+  /* BODY OBSERVATIONS
+  For font-size, it alters the legibility of the page. Making the font too small makes the words difficult to read and making them too large does the same. 
+  For background-color, changing it changes the bodys color so unless later specified, this color may take up most of the page.
+  The color root which is underneath background-color sets the headings as a different color beside the default black. 
+ */
+}
+
+/* 2. TYPOGRAPHY */
+
+/* Sizing */
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* H3 Font Size Observations
+  The h3 font size is not changing when added because another CSS rule has priority over it and that rule is going into effect instead. When inspected, the h3 font-size of 24 shows with a line crossing it out and a .card_sections more specific rule that goes down to a h3 wins.  */
+
+/* 3. LINKS */
+
+/* III. SKIP LINK SOLUTION
+======================= */
+
+.skiplink__sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+
+  /* SKIPLINK OBSERVATIONS
+  Using .skiplink_sr_only makes it so that a link is hidden from all users who can view the webpage but is available to users who are unable to view it and instead rely on screen readers. All of the properties make it so that the link is fully hidden on the webpage.*/
+}
+
+/* 4. IMAGES */
+img {
+  /* We'll cover why I commented out this code in class together. */
+  /* display: block;
+  width: 100%;
+  height: 100%; */
+}
+
+/* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
+========================================= */
+
+/* Reusable Class Observations
+  IV.i. The 'mt4' class is beign used in the <main> of html. It creates separation vertically by adding spacing above the main section. The values applied with the var() syntax makes it so that the code looks back at the variable defined in the root. Instead of having to retype something over and over again it uses var(--spacing-large) to take a value from the root.
+
+  IV.ii. Adding a padding class in the html adds spacing. Using var() along with a padding class adds spacing but keeps the same format going all the way down.
+================== */
+
+/* 5. REUSABLE CLASSES */
+
+.pa3 {
+  padding: var(--spacing-medium);
+}
+
+.pt4 {
+  padding-top: var(--spacing-large);
+}
+
+.pv3 {
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
+}
+
+.pv4 {
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
+}
+
+.pv6 {
+  padding-top: var(--spacing-extra-extra-large);
+  padding-bottom: var(--spacing-extra-extra-large);
+}
+
+.ph3 {
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
+}
+
+.ph4 {
+  padding-left: var(--spacing-large);
+  padding-right: var(--spacing-large);
+}
+
+.mb0 {
+  margin-bottom: var(--spacing-none);
+}
+
+.mb1 {
+  margin-bottom: var(--spacing-extra-small);
+}
+
+.mb2 {
+  margin-bottom: var(--spacing-small);
+}
+
+.mb3 {
+  margin-bottom: var(--spacing-medium);
+}
+
+.mb4 {
+  margin-bottom: var(--spacing-large);
+}
+
+.mt0 {
+  margin-top: var(--spacing-none);
+}
+
+.mt1 {
+  margin-top: var(--spacing-extra-small);
+}
+
+.mt2 {
+  margin-top: var(--spacing-small);
+}
+
+.mt3 {
+  margin-top: var(--spacing-medium);
+}
+
+.mt4 {
+  margin-top: var(--spacing-large);
+}
+
+.mt_remove {
+  margin-top: 0;
+}
+
+/* V. READING DESCENDANT SELECTORS WITH CSS NESTING
+
+/* 5. PAGE BANNER HEADER
+========================*/
+
+.banner__container {
+  max-width: 1080px;
+  margin: auto;
+
+  & img {
+    /* Uncomment each line with the hotkey:
+      - Mac: CMD+/
+      - Windows: CTRL+/
+     */
+    width: 100%;
+    height: 100%;
+  }
+
+  & h1 {
+    position: relative;
+    bottom: 100px;
+  }
+}
+
+/* V. Page Banner Class Observations
+  V.i. Based on the page banner, I can see that .banner_container is the parent and 'img' as well as 'h1' is the child, which is why they are indented more than the .banner_container. When writing CSS nesting you have to ensure the child properties are inside the parent, this goes to include making sure they are inside of the parent curly brackets {}.
+
+  V.ii. When I set the width and height to be 100%, it increased the size of the image (or it appeared that way) and it centered the image on the website.
+
+  V.iii. h1 has the properties of 'relative' and '100px'. The position relative makes it go where it would as normal and then the bottom property further helps the spacing to move it from where it would go on its own.
+================== */
+
+/* VI. WRITE YOUR OWN CSS NOW
+
+/* 6. MAIN
+========*/
+main {
+  max-width: 810px;
+  margin: auto;
+}
+/* VI. MAIN OBSERVATIONS
+  The main css above works to center because the main selects most of the content since it is one of our opening elements. Once main is selected we set it to 810px max width to prevent it from spanning 100% out across the page. I researched more on the margin and setting it to auto forces it to divide leftover space equally between left and right margins which in turn pushes the element to the center of the page.
+================== */
+
+/* 7. SECTIONS =====================
+  Once you've completed all of the prompts, come back here.
+  And, if you'd like to do so, select and style anything regarding the sections on the page and their contents within this portion of the CSS document.
+
+  I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
+==================================== */
+
+/* VII. PRACTICE READING CSS NESTING
+
+/* 8. PAGE FOOTER
+================*/
+.footer_site__container {
+  background-color: #fda403;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--foregroundColor);
+  position: relative;
+  z-index: 1;
+
+  /* QUESTIONS
+    What does the ampersand `&` mean here?
+    A: The '&' means it is a parent selector and it references the outside .footer_site_container selector.
+
+    What type of selector is this: `& .row`?
+    A: '& .row' is a compound selector and it targets elements that have both classes, .footer_site_container and .row.
+
+    How would you explain the selection condition in plain language?
+    A: The selection condition here selects two classes at the same time and we know they are classes because they both start with a period. 
+  ================== */
+  & .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1080px;
+    margin: auto;
+
+    /* QUESTIONS
+      What type of selector type is this: `& > div:first-child`?
+      A: This is a complex selector that combines both a child and an element and an pseudo-class.
+
+      What type of selector is `:first-child`?
+      A: A pseudo-class selector that targets elements based on their position.
+
+      How would you explain this selection condition in plain language?
+      A: The condition selects the first div that is inside the class .footer_site_container.
+    ================== */
+    & > div:first-child {
+      flex: 1 0 300px;
+    }
+    & > :not(div:first-child()) {
+      flex: 0.1 1 240px;
+    }
+  }
+
+  & h2 {
+    color: var(--primaryColor);
+    font-size: 16px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+  }
+
+  & a {
+    text-decoration: underline;
+    color: var(--foregroundColor);
+    transition: 0.5s;
+    position: relative;
+
+    /* QUESTION
+      How would you explain this selection condition in plain language?
+      A: The selection condition changes the style of links inside the footer container. The condition applies a set of styles to the parent element whe you hover a cursor over that specific element. 
+    ================== */
+    &:hover {
+      color: var(--primaryColor);
+      text-decoration: none;
+      transition: 0.5s;
+    }
+  }
+
+  & ul {
+    padding-left: 0;
+    list-style: none;
+
+    & li {
+      display: block;
+      line-height: 1.15;
+      margin: 0;
+      padding: 0;
+
+      & a {
+        margin: 0;
+        padding: 0 !important;
+      }
+    }
+  }
+
+  & hr {
+    border-top-color: var(--accent2Color);
+    opacity: 0.5;
+
+    /* QUESTIONS
+      What type of selector is this: `&.small`?
+      A: This selector is a compound selector since it is a class that contains '&'. It combines both the parent selector (.footer_site_container) with the .small class to be read like .footer_site_container.small.
+
+      How would you explain the selection condition in plain language?
+      A: The condition selects the footer container element if it also has the class name small with it.
+    ================== */
+    &.small {
+      margin: 20px 0;
+    }
+  }
+}
+
+/* VIII. WHAT ARE COMPONENTS?
+==================================== */
+
+/* 9. COMPONENTS
+===============*/
+
+/* 9.1. PAGE Cards Component */
+.card__sections {
+  .cards__main_external_wrapper {
+    h2 {
+      font-size: clamp(1.5rem, 2.5rem, 3rem);
+      line-height: 1.2em;
+    }
+
+    .cards__sub_container {
+      margin: 3rem 0 0 0;
+
+      .card__project_leads_container {
+        margin: 1rem;
+        margin-bottom: 2em;
+        padding: 1.25em;
+        background-color: var(--accentShade1);
+        box-shadow:
+          var(--secondaryShade3) 0px 1px 1px,
+          var(--secondaryShade5) 0px 0px 1px 1px;
+
+        h3.card__main_name {
+          font-size: 1.5rem;
+          margin-bottom: 0.25rem;
+
+          & > span {
+            font-size: 0.8rem;
+          }
+        }
+
+        p {
+          color: var(--neutralShade8);
+          font-size: 1rem;
+          line-height: 1.25;
+          margin: 1.15rem 0 1.15rem 0;
+        }
+
+        .partner_title,
+        a {
+          color: var(--secondaryShade5);
+          font-weight: 600;
+        }
+
+        .partner_title,
+        .bio_container {
+          margin-top: 1rem;
+        }
+
+        .partner_title {
+          font-size: 1.15rem;
+        }
+
+        a {
+          transition: 0.3s;
+
+          &:hover {
+            text-decoration: none;
+            transition: 0.3s;
+          }
+        }
+
+        & picture,
+        img {
+          max-width: 190px;
+          min-width: 165px;
+          float: left;
+          margin: 1rem 1rem 1rem 0;
+          shape-outside: circle();
+          border-radius: 50%;
+          height: auto;
+
+          /* We'll learn about @media queries later! */
+          @media screen and (max-width: 600px) {
+            float: unset;
+            max-width: unset;
+            min-width: unset;
+            margin: 0;
+            shape-outside: unset;
+            border-radius: unset;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* VIII. COMPONENTS OBSERVATIONS
+  VIII.i. We don't put these styles under sections because they are supposed to be for cards and elements. Putting them under sections instead would not keep the CSS organized.
+
+  VIII.ii. There are six levels of nested elements and I confirmed this by counting the number of closing brackets at the end. The deepest level can be found in the most inner bracket which is '& span >' and the ':hover' selectors.
+
+  VIII.iii. The selectors include elements, class, nesting, pseduo-class, and grouped selectors. Under the element selectors are h2, p, a, img. Under the class selectors selections all start with a period (.). Nesting selectors have '&' selections under them. Pseduo-class selectors have :hover here as their selection. Grouped selectors have commas separating the selectors but also to combine them so that the same style tools can be applied at once.
+
+================== */

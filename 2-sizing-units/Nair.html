@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CSS Units & Sizing</title>
+
+    <!-- LINK CSS FILE -->
+    <link rel="stylesheet" href="css/Nair.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+      <section class="abs_rel_lengths__container">
+        <h2>1. Absolute vs. Relative Lengths</h2>
+
+        <div class="px__300">
+          <p>I am 300px wide - Absolute length (px)</p>
+        </div>
+
+        <div class="vw__30">
+          <p>I am 30vw wide - Relative to viewport width (vw)</p>
+        </div>
+
+        <div class="perc__30">
+          <p>I am 30% wide - Relative to parent container's width</p>
+        </div>
+
+        <div class="em__30">
+          <p>I am 30em wide - Relative to local element (em) font size</p>
+        </div>
+
+        <div class="rem__30">
+          <p>I am 30rem wide - Relative to root element (rem) font size</p>
+        </div>
+      </section>
+
+      <!-- 2. IMAGE SIZING -->
+      <section class="img_sizing__container">
+        <h2>2. Image Sizing</h2>
+
+        <!-- Absolute length: 100 pixels wide -->
+        <img
+          class="img_absolute_px"
+          src="https://placehold.co/800x400?text=Absolute+Length"
+          width="800"
+          height="400"
+          alt=""
+        />
+
+        <!-- Relative length: percentage of parent container -->
+        <img
+          class="img_relative_percentage"
+          src="https://placehold.co/800x400?text=Relative+Percentage"
+          width="800"
+          height="400"
+          alt=""
+        />
+
+        <!-- Relative length: viewport width -->
+        <img
+          class="img_relative_vw"
+          src="https://placehold.co/800x400?text=Viewport+Width"
+          width="800"
+          height="400"
+          alt=""
+        />
+      </section>
+
+      <!-- 3. RECREATE THE DESIGN -->
+      <section class="design__container">
+        <h2>3. Recreate the Design</h2>
+
+        <div class="design__page">
+          <!-- Page header -->
+          <header class="design__header">
+            <h3>FEATURED STORIES</h3>
+            <p>NEWS | ARTICLES | STORIES</p>
+          </header>
+
+          <!-- Main article with image floated left -->
+          <article class="design__article">
+            <img
+              class="design__image--large"
+              src="https://placehold.co/600x450?text=Main+Image"
+              width="600"
+              height="450"
+              alt="Main feature image"
+            />
+
+            <h3>Design and Layout</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              vitae neque at erat tincidunt consequat. Vestibulum ante ipsum
+              primis in faucibus orci luctus et ultrices posuere cubilia curae.
+            </p>
+
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur
+              et. Donec sed odio dui. Integer posuere erat a ante venenatis
+              dapibus posuere velit aliquet.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              facilisi. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
+              venenatis vestibulum.
+            </p>
+          </article>
+
+          <!-- Secondary article with image floated right -->
+          <article class="design__article--secondary">
+            <img
+              class="design__image--small"
+              src="https://placehold.co/300x220?text=Small+Image"
+              width="300"
+              height="220"
+              alt="Secondary feature image"
+            />
+
+            <h3>More Stories</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              posuere consectetur est at lobortis. Aenean lacinia bibendum nulla
+              sed consectetur.
+            </p>
+
+            <p>
+              Integer posuere erat a ante venenatis dapibus posuere velit
+              aliquet. Cras mattis consectetur purus sit amet fermentum. Donec
+              ullamcorper nulla non metus auctor fringilla.
+            </p>
+          </article>
+
+          <!-- Full-width text underneath the articles -->
+          <section class="design__bottom">
+            <h3>More Information</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+            </p>
+
+            <p>
+              Maecenas faucibus mollis interdum. Morbi leo risus, porta ac
+              consectetur ac, vestibulum at eros.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
