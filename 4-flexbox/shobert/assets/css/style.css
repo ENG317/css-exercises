@@ -1,0 +1,43 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+}
+
+.flex-container1 {
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 400px;
+  height: 300px;
+}
+
+.flex-container2 {
+  align-self: center;
+  justify-content: space-between;
+  width: 600px;
+  height: 300px;
+}
+
+.flex-container3 {
+  align-self: flex-end;
+  justify-content: space-between;
+  width: 400px;
+  height: 300px;
+}
+
+/* Starting Part 2 */
+
+.flex-container4 {
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 400px;
+  height: 300px;
+}
+
+.flex-container5 {
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 400px;
+  height: 300px;
+}
