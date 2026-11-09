@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  grid-template-rows: repeat(13, 1fr);
+  grid-template-columns: repeat(13, 1fr);
+}
+
+.box {
+  width: 25px;
+  height: 25px;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.white {
+  background-color: ivory;
+}
