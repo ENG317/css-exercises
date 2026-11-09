@@ -384,12 +384,18 @@ There was a bit of a gap at the top of the image, but when I changed the width a
   /* QUESTIONS
     What does the ampersand `&` mean here?
     A: The & means that the selector is a child of the parent selector. It means that the .row class is a child of the .footer_site__container.
+      LINDGREN: Close. It's a shorthand for representing the entire selector just prior to its level.
+                So, in this case, it's simply the class selector of `.footer_site__container`.
+                Also, this isn't a child combinator. It's a descendant, since it uses a space and not a `>`.
 
     What type of selector is this: `& .row`?
     A: child
+      LINDGREN: Nope. See the above note: It's a descendant, since it uses a space and not a `>`.
 
     How would you explain the selection condition in plain language?
     A: The .footer_site__container class has a child class of .row. This means that the parent has authority over the child.
+      LINDGREN: Not so much authority, but describe the selection condition:
+        -
   ================== */
   & .row {
     display: flex;
@@ -432,6 +438,7 @@ There was a bit of a gap at the top of the image, but when I changed the width a
     /* QUESTION
       How would you explain this selection condition in plain language?
       A: The ampersand represents applying the code to the parent. The &a selects all a elements and applies to following code.
+        LINDGREN: Not quite. See my note above.
     ================== */
     &:hover {
       color: var(--primaryColor);
@@ -467,6 +474,8 @@ There was a bit of a gap at the top of the image, but when I changed the width a
 
       How would you explain the selection condition in plain language?
       A: The parent will only be targeted if the class contains the class of small.
+        LINDGREN: Not quite. Read it like this: "If an `hr` element has the class of `small`, apply these properties."
+          So, you're close, but the parent language is slightly incorrect.
     ================== */
     &.small {
       margin: 20px 0;
