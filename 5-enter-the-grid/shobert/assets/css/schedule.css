@@ -1,0 +1,100 @@
+/* grid */
+.time-slot1 {
+  grid-area: a1;
+}
+
+.time-slot2 {
+  grid-area: a2;
+}
+
+.time-slot3 {
+  grid-area: a3;
+}
+
+.time-slot4 {
+  grid-area: a4;
+}
+
+.time-slot5 {
+  grid-area: a5;
+}
+
+.time-slot6 {
+  grid-area: a6;
+}
+
+.time-slot7 {
+  grid-area: a7;
+}
+
+.time-slot8 {
+  grid-area: a8;
+}
+
+.time-slot9 {
+  grid-area: a9;
+}
+
+.time-slot10 {
+  grid-area: a10;
+}
+
+.day-column1 {
+  grid-area: b1;
+}
+
+.day-column2 {
+  grid-area: b2;
+}
+
+.day-column3 {
+  grid-area: b3;
+}
+
+.day-column4 {
+  grid-area: b4;
+}
+
+.day-column5 {
+  grid-area: b5;
+}
+
+.class1 {
+  grid-area: c1;
+}
+
+.class2 {
+  grid-area: c2;
+}
+
+.class3 {
+  grid-area: c3;
+}
+
+.class4 {
+  grid-area: c4;
+}
+
+.class5 {
+  grid-area: c5;
+}
+
+.schedule-grid {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 2.5ch repeat(6, 1fr) 2.5ch;
+  grid-template-areas:
+    ". b1 b2 b3 b4 b5"
+    "a1 . . . . ."
+    "a2 . . . . ."
+    "a3 . . . . ."
+    "a4 . . . . ."
+    "a5 . . . . ."
+    "a6 . . . . ."
+    "a7 . . . . ."
+    "a8 . . . . ."
+    "a9 . . . . ."
+    "a10 . . . . ."
+}
