@@ -4,3 +4,7 @@
   grid-template-rows: repeat(6, 1fr);
   max-width: 1200px;
 }
+
+.text-box {
+  grid-column: 2 / 4;
+}
