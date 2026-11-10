@@ -17,7 +17,7 @@
 */
 .abs_rel_lengths__container {
   font-size: 20px;
-  width: 50%;
+  width: 100%;
   border: black solid 2px;
 
   & > div {
@@ -26,21 +26,12 @@
     font-weight: 900;
   }
 }
-.px__300 {
-  width: 300px;
-}
-.vw__30 {
-  width: 30vw;
-}
-.em__30 {
-  width: 30em;
-}
-.rem__30 {
-  width: 30rem;
-}
-.perc__30 {
-  width: 30%;
-}
+.px__300 { width: 300px; }
+.vw__30 { width: 30vw; }
+.em__30 { width: 30em; }
+.rem__30 { width: 30rem; }
+.perc__30 { width: 30%; }
+
 
 /*===============
   2. IMAGE SIZING
@@ -62,11 +53,20 @@
     - AS you do so, also hover over the HTML of those images to compare their box dimensions and see if you understand why their size is as it is.
 */
 
+
+
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
 /*
   Recreate the wireframe design in the images folder.
 
-  HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
+  Use CSS Nesting to create this solution as a component,
+  so the section should have a class name of "wf_recreation_container".
+
+  HINTS:
+    - You will need to use floats and a clear fix. (See reading #4 in Week 8)
+    - The viewport should be about 950px wide for testing.
+    - Use 2 paragraphs, and use a line-height of 2 for paragraphs in this container.
 */
+
