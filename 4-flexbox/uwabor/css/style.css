@@ -1,0 +1,36 @@
+/** DESIGN ONE **/
+
+.design-one {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.image-top {
+  align-self: flex-start;
+}
+
+.text-box {
+  align-self: center;
+
+  width: 350px;
+  padding: 1rem;
+
+  border: 1px solid black;
+
+  margin: 3rem 0;
+}
+
+.image-bottom {
+  align-self: flex-end;
+}
+
+.image-top img,
+.image-bottom img {
+  display: block;
+  width: 350px;
+  height: auto;
+}
