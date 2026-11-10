@@ -1,3 +1,8 @@
+
+/* this is cool to do a comment on  */
+
+/* OK, clean up a bit by deleting this comment and the above comments about comments above and get started! */
+
 /* II. ROOT & BODY SELECTION
   ====================== */
 
@@ -16,7 +21,7 @@
 
 :root {
   /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
-  font-size: 18px;
+  font-size: 20px;
   /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
   background-color: black;
 
@@ -24,8 +29,8 @@
 
   /* SPACING VARIABLES */
   --spacing-none: 0;
-  --spacing-extra-small: 0.25rem;
-  --spacing-small: 0.5rem;
+  --spacing-extra-small: .25rem;
+  --spacing-small: .5rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
   --spacing-extra-large: 4rem;
@@ -74,7 +79,8 @@
 
   /* ROOT OBSERVATIONS
     Write your observations in this commment.
-  It seems to me that the root acts as a parent function in the CSS document so that everything else cascades below it. */
+
+  /* Chi comments: I found that the comment function works some of the timeI noticed that the colors coorelate with a set of numbers and letters acter either accent shade or neutral shade is shown.*/ 
 }
 
 /* II.ii. General Selection with Type Selectors
@@ -106,19 +112,14 @@ body {
   /* margin: 0; */
 
   /* BODY OBSERVATIONS
-    Write your observations in this commment.
-  One thing I noticed was playing around with the margin size and seeing the differences in how it affects the layout of the website. */
+     CHI comments: Woah that is so cool how the linked ref link created the changes through out the html document.*/
 }
 
 /* 2. TYPOGRAPAHY */
 
 /* Sizing */
-h1 {
-  font-size: 32px;
-}
-h2 {
-  font-size: 26px;
-}
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
 /* II.iii. Cascade Question!
    Add a font-size below like 24px.
    Now, check an h3 in your inspection tool.
@@ -129,13 +130,11 @@ h2 {
    HINT: Your inspection tool's CSS panel
    will help you solve this mystery.
 ========================= */
-h3 {
-  font-size: 20px;
-}
+h3 { font-size: 24px;}
 
 /* H3 Font Size Observations
   Write your observations in this commment.
-It is important to add the "px" when labeling the font size. Without font size, the default becomes boring. */
+ChI comments: I have no clue why I could also not find the font size as talked about using the inspect tool */
 
 /* 3. LINKS */
 
@@ -154,9 +153,9 @@ It is important to add the "px" when labeling the font size. Without font size, 
   border-width: 0;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this commment.
+    Chi comments: I tried looking up position and still was stumped unfortunately but my guess as to why the position is set to absolute when I previewed using the inspect tool. I found that the set positon allows also for no wrap which fixes the properities in place. 
     HINT: Lookup 'position' on MDN.
-  I think with the rewritten properties, it removes the element from the overall document flow. */
+  ================== */
 }
 
 /* 4. IMAGES */
@@ -167,8 +166,9 @@ img {
   height: 100%; */
 }
 
+
 /* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
-Classes are reusable style attributes unlike ids which can only be used once.  */
+========================================= */
 
 /*
   Classes are meant to be used interchangeably and across multiple elements in sophisticated ways.
@@ -185,18 +185,19 @@ Classes are reusable style attributes unlike ids which can only be used once.  *
 
 /* Reusable Class Observations
   IV.i. Write your observations in this commment.
-I honestly wasn't able to find it.
+  CHi comments: my observations when looking at the class observatoins is use of mt4 is for margin top spacing large mainly ans seems to fit or correspond to the padding top pt4. 
+
   IV.ii. Write your observations in this commment.
-I couldn't find where to add the padding. I think my inspection tool is messed up. */
+================== */
 
 /* 5. REUSABLE CLASSES */
 
 .pa3 {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-medium)
 }
 
 .pt4 {
-  padding-top: var(--spacing-large);
+  padding-top: var(--spacing-large)
 }
 
 .pv3 {
@@ -268,6 +269,7 @@ I couldn't find where to add the padding. I think my inspection tool is messed u
   margin-top: 0;
 }
 
+
 /*
   Ok, we've written some more general rules that can be applied in numerous places. Now, let's use the Position rule to our advantage and write our CSS in relationship to the position of the HTML source order:
     - Header
@@ -297,31 +299,36 @@ I couldn't find where to add the padding. I think my inspection tool is messed u
 ========================*/
 
 .banner__container {
-  max-width: 810px;
-  margin: auto;
+  max-width: 1080px;
+  margin: auto; width: 100%; height: 100%;
 
   & img {
     /* Uncomment each line with the hotkey:
       - Mac: CMD+/
       - Windows: CTRL+/
      */
-    /* width: ; */
-    /* height: ; */
+    /* width: 100% ; */
+    /* height: 100%; */
   }
 
   & h1 {
     position: relative;
-    bottom: 100px;
+    bottom: 100px; width: 100%; 
   }
 }
 
 /* V. Page Banner Class Observations
-  V.i. Write your observations in this commment.
-It's important to make sure that the parent is not nested underneath its child function.
+  V.i. Write your observations in this commment. 
+
+  Chi Comments: I found that the banner stayed the same unless I toggled with the wrong 100% but the banner became slightly bigger and on the side. 
+
   V.ii. Write your observations in this commment.
-Things get more squished or stretched depending on what values i put in.
+  CHi comments: the banner got slightly angled to the side more. 
+
   V.iii. Write your observations in this commment.
-It is behaving like this due to where it falls in the code's nesting. */
+Chi comments: I am unsure as to which comment I was supposed to write other than the first observation I found.  */
+
+
 
 /* VI. WRITE YOUR OWN CSS NOW
 
@@ -330,14 +337,21 @@ It is behaving like this due to where it falls in the code's nesting. */
   3. Center the main along the horizontal axis with the box model's `margin` as follows: `margin: auto;`
 
   Research into this solution. Why does it work? Respond in the observations area below.
-It works because the margin auto fits. */
+==================================== */
 
 /* 6. MAIN
-========*/
+Chi comments: unsure if I did this right. */
+
+main{
+  root; max: width 810px; margin: auto
+}
+
 
 /* VI. MAIN OBSERVATIONS
   Write your observations in this commment.
-There is a lot of nesting. */
+I found that the banner became more centered  */
+
+
 
 /* 7. SECTIONs =====================
   Once you've completed all of the prompts, come back here.
@@ -345,6 +359,8 @@ There is a lot of nesting. */
 
   I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
 ==================================== */
+
+
 
 /* VII. PRACTICE READING CSS NESTING
   Again, note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
@@ -359,7 +375,7 @@ There is a lot of nesting. */
 /* 8. PAGE FOOTER
 ================*/
 .footer_site__container {
-  background-color: #fda403;
+  background-color: indianred;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
@@ -369,13 +385,13 @@ There is a lot of nesting. */
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A: It is a nesting selector meaning that it can affect the arrangement and organization of css elements, especially when they have shared class names. 
+    A: The ampersand & means selecting for parent function or relaying back to the parent funciton
 
     What type of selector is this: `& .row`?
-    A: Nested descendant selector; organizing the element's style rule.
+    A: the & is a continuing what the parent function did prior. 
 
     How would you explain the selection condition in plain language?
-    A: It is the parent selector to the rest of the code and affects how the style codes are arranged. 
+    A: I would explain the selection condition as a continuation of the parent function much like a descendent. 
   ================== */
   & .row {
     display: flex;
@@ -386,13 +402,13 @@ There is a lot of nesting. */
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A: Direct child combinator.
+      A: this is the first child relaying back to the original parent out of the siblings.
 
       What type of selector is `:first-child`?
-      A: Pseudo class selector.
+      A: the type of selector is apart of the siblings or the first child created by the parent.
 
       How would you explain this selection condition in plain language?
-      A: The child to the parent selector.
+      A: the child function is similar to the descendents of a family line or calling back to the line as a new addition to the line of code. 
     ================== */
     & > div:first-child {
       flex: 1 0 300px;
@@ -412,17 +428,17 @@ There is a lot of nesting. */
   & a {
     text-decoration: underline;
     color: var(--foregroundColor);
-    transition: 0.5s;
+    transition: .5s;
     position: relative;
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A: The hover controls how an html element appears when the user hovers their cursor over the element.
+      A:  I would explain that these are to select the color and set in the structure for the rest of the code. 
     ================== */
     &:hover {
       color: var(--primaryColor);
       text-decoration: none;
-      transition: 0.5s;
+      transition: .5s;
     }
   }
 
@@ -449,10 +465,10 @@ There is a lot of nesting. */
 
     /* QUESTIONS
       What type of selector is this: `&.small`?
-      A: The .small without a space in between the & and . means that the parents element also needs to have the .small class.
+      A: this is referencing to a line of code and seting the margins to 20px 
 
       How would you explain the selection condition in plain language?
-      A: It's basically a reference code telling the parents how to interact with the children selectors. 
+      A: the & function works similar to a page citation except that the selection would be greater than. 
     ================== */
     &.small {
       margin: 20px 0;
@@ -481,7 +497,9 @@ There is a lot of nesting. */
 
 /* 9.1. PAGE Cards Component */
 .card__sections {
+
   .cards__main_external_wrapper {
+
     h2 {
       font-size: clamp(1.5rem, 2.5rem, 3rem);
       line-height: 1.2em;
@@ -501,7 +519,7 @@ There is a lot of nesting. */
 
         h3.card__main_name {
           font-size: 1.5rem;
-          margin-bottom: 0.25rem;
+          margin-bottom: 0.25rem; max-width: 810px; margin: auto
 
           & > span {
             font-size: 0.8rem;
@@ -566,13 +584,17 @@ There is a lot of nesting. */
       }
     }
   }
+
 }
 
 /* VIII. COMPONENTS OBSERVATIONS
-  VIII.i. Write your observations in this commment.
-  It makes the styles easier to use and more accessible. 
+  VIII.i. Write your observations in this commment. 
+   CHi: I found that the card selectors aid in the viewing of the page from setting the card names to the margin size along with the set color. 
+
   VIII.ii. Write your observations in this commment.
-6 nesting levels.
+  CHi; I found that the curation and creation of the card selectors shows how to properly space out the code. 
+
   VIII.iii. Write your observations in this commment.
-.card, &, @, .bio_container, etc.
+ Chi: I like seeing how the code is run through the different color schemes that show how the code works as a result. 
+
 ================== */
