@@ -1,0 +1,100 @@
+/* Note: in order to get the same designs in one css file and one html file, I will switch between naming the main's class "design-1" and "design-2". In order to see both, you must do that */
+main {
+  width: auto;
+  margin: auto;
+}
+
+/* DESIGN 2 */
+.design-2 section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: auto;
+}
+
+.design-2 section img {
+  width: 50%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+
+.design-2 section div {
+  width: 50%;
+}
+
+.design-2 section:first-child {
+  flex-direction: row-reverse;
+}
+
+.design-2 section:nth-child(2) {
+  background-color: orange;
+  border-top: 2px solid;
+}
+
+.design-2 section:nth-child(3) {
+  flex-direction: row-reverse;
+  border-top: 2px solid;
+}
+
+footer {
+  display: flex;
+}
+
+footer div {
+  width: 25%;
+  text-align: center;
+  padding: 20px;
+  border-right: 5px solid;
+  border-top: 5px solid;
+}
+
+/* DESIGN 1 */
+
+.design-1 section {
+  display: flex;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.design-1 section img {
+  width: 300px;
+  height: 300px;
+}
+
+.design-1 section div {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.design-1 section:first-child {
+  justify-content: flex-start;
+}
+
+.design-1 section:first-child div {
+  display: none;
+}
+
+.design-1 section:nth-child(2) {
+  justify-content: center;
+}
+
+.design-1 section:nth-child(2) img {
+  display: none;
+}
+
+.design-1 section:nth-child(3) {
+  justify-content: flex-end;
+}
+
+.design-1 section:nth-child(3) div {
+  display: none;
+}
+
+.design-1 section:nth-child(2) h2 {
+  display: none;
+}
+
+body:has(.design-1) footer {
+  display: none;
+}
