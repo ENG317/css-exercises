@@ -34,3 +34,105 @@
   width: 350px;
   height: auto;
 }
+
+/* ==========================
+   DESIGN TWO
+========================== */
+
+.design-two {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  margin: 0 auto;
+
+  border-top: 2px solid #666;
+}
+
+/* Regular Rows */
+
+.row {
+  display: flex;
+  border-bottom: 2px solid #666;
+}
+
+/* Orange Row */
+
+.row-highlighted {
+  display: flex;
+
+  background-color: #f5cd83;
+  border-bottom: 2px solid #666;
+}
+
+/* Text Side */
+
+.text-card {
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Image Side */
+
+.image-card {
+  width: 50%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Images */
+
+.image-card img {
+  width: 100%;
+  display: block;
+}
+
+/* Headings */
+
+.text-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraphs */
+
+.text-card p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+
+.bottom-section {
+  display: flex;
+
+  width: 90%;
+  margin: 2rem auto;
+
+  background-color: #f5cd83;
+
+  border-top: 2px solid #666;
+}
+
+/* Four Columns */
+
+.bottom-section div {
+  flex: 1;
+
+  padding: 4rem 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border-right: 2px solid #666;
+}
+
+.bottom-section div:last-child {
+  border-right: none;
+}
