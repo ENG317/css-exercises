@@ -470,7 +470,7 @@ main {
     & > div:first-child {
       flex: 1 0 300px;
     }
-    & > :not(div:first-child()) {
+    & > :not(div:first-child) {
       flex: 0.1 1 240px;
     }
   }
@@ -649,7 +649,7 @@ main {
 
   VIII.ii. There are five nested levels which include .card__sections. The deepest selectors are inside the .card__project_leads_container, such as the nested span and hover selectors.
 
-  VIII.iii. The component uses class selectors, element selectors, child combinators and pseudo-class selectors (such as :hover).
+  VIII.iii. The component uses class selectors, element selectors, child combinators and pseudo-class selectors (such as :hover). Class selectors include: .card__sections, .cards__main_external_wrapper, .cards__sub_container, .card__project_leads_container, .partner_title, .bio_container, and .card__main_name. Type selectors include: h2, h3, p, a, piture, img, and span. Compound selector includes: h3.card__main_name. Child combinator includes: & > span. Psuedo-class includes: &:hover. The & symbol references the parent selector and commas group selectors that share styles. 
 
 
 ================== */
