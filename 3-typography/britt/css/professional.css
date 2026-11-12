@@ -37,77 +37,19 @@
 =============*/
 
 :root {
-  --backgroundColor: #f3faff;
-  --foregroundColor: #0d242f;
-
-  --primaryColor: #005687;
-  --primaryShade1: #e1f5fe;
-  --primaryShade2: #b3e5fc;
-  --primaryShade3: #4fc3f7;
-  --primaryShade4: #0288d1;
-  --primaryShade5: #186cb8;
-
-  --secondaryColor: #f44336;
-  --secondaryShade1: #ffdde0;
-  --secondaryShade2: #ffcdd2;
-  --secondaryShade3: #ef9a9a;
-  --secondaryShade4: #d32f2f;
-  --secondaryShade5: #b71c1c;
-
-  --accentColor: #f1b211;
-  --accentShade1: #f9f1dc;
-  --accentShade2: #f4dea7;
-  --accentShade3: #f2cb69;
-  --accentShade4: #f0bb34;
-  --accentShade5: #b68300;
-
-  --accent2Color: #009688;
-  --accent2Shade1: #e0f2f1;
-  --accent2Shade2: #b2dfdb;
-  --accent2Shade3: #64babe;
-  --accent2Shade4: #429499;
-  --accent2Shade5: #1d7b80;
-
-  --neutralShade1: #f2f2f2;
-  --neutralShade2: #e8e9e9;
-  --neutralShade3: #d1d3d4;
-  --neutralShade4: #babdbf;
-  --neutralShade5: #808488;
-  --neutralShade6: #666a6d;
-  --neutralShade7: #4d5052;
-  --neutralShade8: #212122;
-
-  --grayColor: #999;
-  --lightGrayColor: #ddd;
-
   /* Fonts */
-  --copyFontFamily: "Raleway", sans-serif;
-  --headingFontFamily: "Patua One", serif;
+  --copyFontFamily: "DM Serif Text", serif;
+  --headingFontFamily: "DM Serif Text", serif;
   /* Change default root font size (16px), if desired */
-  font-size: 18px;
+  font-size: 20px;
 
   /* You can also use it for generally applied sizing and spacing. */
   --borderRadius: 6px;
   --boxShadow: 0 2px 5px rgba(#333, 0.2);
 }
-
-/*
-  After you define your color schemes above, revise the color and typography rulesets below in accordance with your desired new font families, weights, line-heights, etc. You can even modify which variables are being used.
-*/
-
-/* GENERAL COLOR SCHEME */
-body {
-  background: var(--backgroundColor);
-  color: var(--foregroundColor);
-}
-
 /*==========
   TYPOGRAPHY
 ===========*/
-
-:root {
-  --copyFontFamily: "DM+Serif+Text", serif --headingFontFamily: "DM+Serif+Text";
-}
 
 /* Font Families */
 body {
@@ -170,47 +112,4 @@ h6 {
 
 a {
   font-weight: 500;
-}
-
-/* Default Font Colors & Styling */
-
-/* default links */
-a {
-  color: var(--foregroundColor);
-  border-bottom: 2px dashed;
-  cursor: pointer;
-  transition: 0.4s;
-}
-a:hover {
-  background-color: var(--accentColor);
-  border-bottom: 3px solid var(--secondaryShade5);
-  transition: 0.4s;
-}
-
-/* primary color links */
-a.primary {
-  color: var(--primaryColor);
-  border-bottom: 2px dashed;
-  cursor: pointer;
-  transition: 0.4s;
-}
-a.primary:hover {
-  color: var(--primaryShade1);
-  background-color: var(--primaryShade4);
-  border-bottom: 3px solid var(--secondaryColor);
-  transition: 0.4s;
-}
-
-/* secondary color links */
-a.secondary {
-  color: var(--secondaryShade5);
-  border-bottom: 2px dashed;
-  cursor: pointer;
-  transition: 0.4s;
-}
-a.secondary:hover {
-  color: var(--secondaryShade1);
-  background-color: var(--secondaryShade5);
-  border-bottom: 3px solid var(--primaryColor);
-  transition: 0.4s;
 }
