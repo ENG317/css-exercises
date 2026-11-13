@@ -20,12 +20,12 @@ p {
   display: grid;
 
   /* Three columns with different sizes */
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 15px;
+  gap: 12px;
 
-  max-width: 850px;
-  margin: 40px auto;
+  max-width: 950px;
+  margin: 30px auto;
 }
 
 .poster {
