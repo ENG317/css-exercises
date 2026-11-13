@@ -1,7 +1,7 @@
 .flex {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap:2rem;
+  gap: 2rem;
   border-color: black;
   border-width: 1px;
   border-style: solid;
@@ -11,13 +11,13 @@
 .image-one,
 .image-two,
 .image-three {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Row 1 */
-.text-one { 
+.text-one {
   grid-column: 1/2;
   grid-row: 1/2;
 }
@@ -28,7 +28,7 @@
 }
 
 /* Row 2 */
-.image-two { 
+.image-two {
   grid-column: 1/2;
   grid-row: 2/3;
 }
@@ -39,7 +39,7 @@
 }
 
 /* Row 3 */
-.text-three { 
+.text-three {
   grid-column: 1/2;
   grid-row: 3/4;
 }
