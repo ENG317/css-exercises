@@ -1,25 +1,23 @@
 .flex {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap:.5rem;
-}
-
-/* Adding Borders */
-.flex > section {
-  border: 1.5px solid black;
+  gap:2rem;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
 }
 
 /* Centering Images */
 .image-one,
 .image-two,
 .image-three {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Row 1 */
-.text-one { 
+.text-one {
   grid-column: 1/2;
   grid-row: 1/2;
   padding: .5rem;
@@ -31,7 +29,7 @@
 }
 
 /* Row 2 */
-.image-two { 
+.image-two {
   grid-column: 1/2;
   grid-row: 2/3;
   background-color:cornflowerblue;
@@ -45,7 +43,7 @@
 }
 
 /* Row 3 */
-.text-three { 
+.text-three {
   grid-column: 1/2;
   grid-row: 3/4;
   padding: .5rem;
@@ -54,20 +52,4 @@
 .image-three {
   grid-column: 2/3;
   grid-row: 3/4;
-}
-
-/* Footer */
-.footer {
-  grid-column: 1/3;
-  grid-row: 4/5;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-}
-
-.footer-item {
-  border: 1.5px solid black;
-  padding: 1rem;
-  background-color: cornflowerblue;
-  padding: .5rem;
 }
