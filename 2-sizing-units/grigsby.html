@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="css/grigsby.css"><head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units & Sizing</title>
+
+  <!-- RESOURCES -->
+</head>
+<body>
+
+  <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+  <section class="abs_rel_lengths__container">
+    <h2>1. Absolute vs. Relative Lengths</h2>
+    <div class="px__300">
+      <p>I am 300px wide - Absolute length (px)</p>
+    </div>
+    <div class="vw__30">
+      <p>I am 30vw wide - Relative to viewport width (vw)</p>
+    </div>
+    <div class="perc__30">
+      <p>I am 30% wide - Relative to parent container's width</p>
+    </div>
+    <div class="em__30">
+      <p>I am 30em wide - Relative to local element (em) font size</p>
+    </div>
+    <div class="rem__30">
+      <p>I am 30rem wide - Relative to :root element (rem) font size</p>
+    </div>
+  </section>
+
+  <!-- 2. IMAGE SIZING
+       Start and complete in Tuesday's class
+
+    Below, create the following HTML structure:
+
+    A <section> with the class "img_sizing__container"
+      - h2 - "1. Image Sizing"
+      - img with
+        - class: img_absolute_px
+        - src: "https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+      - img with
+        - class: img_relative_percentage
+        - src: "https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+      - img with
+        - class: img_relative_vw
+        - src: "https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+        - width: 800
+        - height: 400
+        - alt: Leave blank
+  -->
+
+  <section class="img_sizing__container">
+    <h2>2. Image Sizing</h2>
+
+    <img
+    class="img_absolute_px"
+    src="https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+    width="800"
+    height="400"
+    alt=""
+    >
+  <img
+  class="img_relative_percentage"
+  src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+  width="800"
+  height="400"
+  alt=""
+>
+
+<img
+  class="img_relative_vw"
+  src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+  width="800"
+  height="400"
+  alt=""
+>
+  </section>
+
+  <!-- 3. RECREATE THE DESIGN
+    3.1. Add a new section with the class name of "wf_recreation_container".
+    3.2. Open the image in the 'images' folder.
+    3.3. Review the wireframe and outline your HTML
+    3.4. Recreate it by writing both the HTML and CSS with your newfound sizing knowledge. Your CSS should incorporate CSS Nesting techniques to create a scoped component for this design solution.
+
+    Hint: You'll need to apply a float property and value to those images to change their default flow behavior.
+  -->
+  <section class="wf_recreation_container">
+  <h2>3. Recreate the Design</h2>
+  <img
+  class="wf_image_left"
+  src="https://placehold.co/300x300"
+  alt="Placeholder image"
+>
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi autem nulla at sed fugit cumque facilis, provident quas maiores omnis facere dolore magni suscipit ullam doloremque recusandae! Quos, magni laudantium. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem corrupti nisi, laudantium animi consequuntur nemo minima exercitationem voluptatum expedita voluptates ex, et ullam provident veniam vero modi saepe, similique cumque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, iusto porro necessitatibus vel nulla accusamus reprehenderit alias laboriosam suscipit corporis mollitia amet nisi, totam numquam quam laborum ea nemo? Veritatis.
+</p>
+<img
+  class="wf_image_right"
+  src="https://placehold.co/200x200"
+  alt="Placeholder image"
+>
+<p>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure blanditiis inventore repudiandae, quidem earum sapiente aut maxime iste nobis enim, provident, quam itaque? Voluptas accusamus ducimus, eum dicta corrupti facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui explicabo, mollitia sequi officiis modi aperiam sapiente molestiae, veniam temporibus, similique dignissimos. Vel nihil, sed cupiditate ex tenetur ab. Magnam, similique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolores nam deleniti, iste perspiciatis libero voluptate excepturi impedit quis quae earum! Quisquam expedita delectus tempora animi pariatur. Qui, cum accusamus?
+</p>
+</section>
+</body>
+</html>

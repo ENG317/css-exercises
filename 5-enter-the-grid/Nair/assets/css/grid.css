@@ -1,0 +1,113 @@
+/* General page styling */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f0ed;
+  margin: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+/* FIRST GRID: Poster collage */
+
+.poster-grid {
+  display: grid;
+
+  /* Three columns with different sizes */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 15px;
+
+  max-width: 850px;
+  margin: 40px auto;
+}
+
+.poster {
+  background-color: white;
+  padding: 8px;
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Different poster sizes */
+
+.poster-one {
+  grid-column: span 2;
+}
+
+.poster-two {
+  grid-row: span 2;
+}
+
+/* ART GALLERY */
+
+.art-grid {
+  display: grid;
+
+  grid-template-columns: 1.3fr 1fr 0.9fr 1.2fr;
+
+  /* Make the rows shorter */
+  grid-template-rows: 120px 120px;
+
+  grid-template-areas:
+    "nasa nasa sketch panels"
+    "portrait abstract abstract panels";
+
+  gap: 8px;
+
+  /* Make the entire collage smaller */
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+/* Keep pictures inside their grid spaces */
+
+.art-grid > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Prevent pictures from stretching */
+
+.art-grid img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Position the artwork */
+
+.nasa {
+  grid-area: nasa;
+}
+
+.sketch {
+  grid-area: sketch;
+}
+
+.portrait {
+  grid-area: portrait;
+}
+
+.abstract {
+  grid-area: abstract;
+}
+
+.panels {
+  grid-area: panels;
+}
