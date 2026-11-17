@@ -2,23 +2,25 @@
 :root {
   font-size: 10px;
 }
+/*root sets some defualt values, and this can be helpful so you don't have to repeat values everywhere), place to set CSS settings for entire page*/
 
 /*=======================================
   1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS
 =======================================*/
 /* 1.1. Experiment with CSS values
   Test out changing the padding and margins with any of the elements: the `section` element with the `abs_rel_lengths__container` class and anything contained by it.
-
-  Play around with changing it to diffferent values in the inspection tool.
-
-  Be sure to test them out in the browser's inspection tool.
-
-  Be sure to understand the difference between padding and margins and how to write the shorthand versions.
 */
+
+/* For future reference: 
+padding - space inside an element's border, between its content and border
+margin - space outside border that separates the element from other elements*/ 
+
+/*selectors like below need to match the class inside the html, this identifies what element is being styled/changed by CSS*/
 .abs_rel_lengths__container {
   font-size: 16px;
-  width: 30%;
-  border: black solid 2px;
+  width: 50%;
+  border:blue solid 5px; 
+  /*need to put solid to make it work*/
 
   & > div {
     background: purple;
@@ -26,22 +28,25 @@
     font-weight: 900;
   }
 }
-.px__300 { width: 300px; }
-.vw__30 { width: 30vw; }
-.em__30 { width: 30em; }
-.rem__30 { width: 30rem; }
-.perc__30 { width: 30%; }
-
+.px__300 { width: 200px; }
+.vw__30 { width: 25vw; }
+.em__30 { width: 10em; }
+.rem__30 { width: 20rem; }
+.perc__30 { width: 50%; }
+/* px = fixed width of set pixels
+   vw = percentage of browser's veiwport width (whats currently visible in the browser)
+   em = x times the elements font size
+   rem = x times the root element's font size
+   perc = percentage of the containing element's width*/
 
 /*===============
   2. IMAGE SIZING
 ================*/
 /*
-  Below, apply and inspect your work as you go, making sure they each work ...
-
   1.a viewport width of 65 (65vw) to the section with the class "img_sizing__container"
 
     - What does this select and do, and how does it impact the elements inside of it?
+    It selects the section with img_sizing_container and makes the section 65% of the brower window's viewport. This can ultimately affect the images that go inside and what they look like.
 
   2. an absolute length of 100 pixels (100px to the image with the "img_absolute_px" class
 
@@ -55,16 +60,64 @@
 */
 
 .img_sizing_container {
-  
+  width: 65vw;
 }
 
+/* Makes section 65% of brower window's width, can alter space left for images to go inside */
+
+.img_absolute_px {
+  width: 100px;
+}
+
+/* width of image, simple */
+
+.img_relative_percentage {
+  width: 75%
+}
+
+/* Image here is 50% (half) the width of its containing element, percentage looks at parent element */
+
+.img_relative_vw {
+  width: 30vw
+}
+
+/* Image is 30% of browser window's width */
 
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
-/*
-  Recreate the wireframe design in the images folder.
+.design-container {
+  border: 2px solid black;
+  font-size: 15px;
+  padding: 20px;
+  width: 85%;
+  margin: 20px auto;;
+}
 
-  HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
-*/
+.design-feature {
+  margin-bottom: 20px;
+}
 
+/*For floats*/
+
+.design-main-image {
+  float: left;
+  width: 40%;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.design-small-image {
+  float: right;
+  width: 25%;
+  height: auto;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+/* Clear floats */
+
+.clear {
+  clear: both;
+}
