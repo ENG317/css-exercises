@@ -15,6 +15,7 @@
 
   Be sure to understand the difference between padding and margins and how to write the shorthand versions.
 */
+
 .abs_rel_lengths__container {
   font-size: 20px;
   width: 50%;
@@ -26,34 +27,38 @@
     font-weight: 900;
   }
 }
-.px__300 { width: 300px; }
-.vw__30 { width: 30vw; }
-.em__30 { width: 30em; }
-.rem__30 { width: 30rem; }
-.perc__30 { width: 30%; }
-
+.px__300 {
+  width: 300px;
+}
+.vw__30 {
+  width: 30vw;
+}
+.em__30 {
+  width: 30em;
+}
+.rem__30 {
+  width: 30rem;
+}
+.perc__30 {
+  width: 30%;
+}
 
 /*===============
   2. IMAGE SIZING
 ================*/
-/*
-  Below, apply and inspect your work as you go, making sure they each work ...
 
-  1.a viewport width of 65 (65vw) to the section with the class "img_sizing__container"
-    - What does this select and do, and how does it impact the elements inside of it?
-
-  2. an absolute length of 100 pixels (100px to the image with the "img_absolute_px" class
-
-  3. a percentage relative length to the image with an "img_relative_percentage" class
-
-  4. a viewport width relative length to the image with an "img_relative_vw" class
-
-  REVIEW
-    - Inspect each image and change their values.
-    - AS you do so, also hover over the HTML of those images to compare their box dimensions and see if you understand why their size is as it is.
-*/
-
-
+.img_absolute_px {
+  width: 200px;
+  height: auto;
+}
+.img_relative_percentage {
+  width: 30%;
+  height: auto;
+}
+.img_relative_vw {
+  width: 55vw;
+  height: auto;
+}
 
 /*======================
   3. RECREATE THE DESIGN
@@ -63,4 +68,18 @@
 
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
+.clear_fix {
+  clear: both;
+}
 
+.wireframe {
+  p {
+    line-height: 1;
+  }
+  & .biggerimage {
+    float: left;
+  }
+  & .smallerimage {
+    float: right;
+  }
+}
