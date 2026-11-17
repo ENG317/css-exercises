@@ -4,6 +4,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Isometra&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+
+/* LINDGREN:
+  - You won't need these, since the root below covers it too. But, it's ok to separate concerns. Just make sure you don't double-up your properties.
+  - I'd make the case that these two font families could prove tricky for some users to distinguisch; especially if your website it text-heavy. That said, if the copy font family has different weighted options, you could consider scaling those to yield a sharper contrast.
+*/
 :root {
   --copyFontFamily: "Isometra", sans-serif;
   --headingFontFamily: "Lobster Two", cursive;
