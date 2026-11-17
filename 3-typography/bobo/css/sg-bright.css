@@ -1,12 +1,12 @@
 /*
-  When you complete this style guide, you will copy the following scope of the code below starting at the font import until the comment that states "STYLES BELOW ARE SPECIFIC TO THE STYLE GUIDE"
+  Start at the font import until the comment that states "STYLES BELOW ARE SPECIFIC TO THE STYLE GUIDE"
 */
 
 /*============
   IMPORT FONTS
   1. Import your own fonts via https://fonts.google.com. Be sure to revise the family names in the CSS and in the HTML
 ==============*/
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /*============
   COLOR SCHEME
@@ -28,43 +28,39 @@
   - Make sure the colors are AAA rated, as this meets A11Y standards for color contrasts
 
   - You can also use Adobe's Color Picker: https://color.adobe.com/create/color-wheel. Just make sure the colors are AAA rated by testing the darkest vs. lightest colors here: https://webaim.org/resources/contrastchecker/
-
-  - Note how the colors shades move from 1-5, i.e., lighter shades to darker shades. To produce shades, use VS Code's color picker tool to produce gradiations of the initial color.
-
-  - If you want //accent// shade(s), feel free to consider additional complimentary colors.
 =============*/
 
 :root {
-  --backgroundColor: #f3faff;
-  --foregroundColor: #0d242f;
+  --backgroundColor: #fbf8d8;
+  --foregroundColor: #89039B;
 
-  --primaryColor: #005687;
-  --primaryShade1: #e1f5fe;
-  --primaryShade2: #b3e5fc;
-  --primaryShade3: #4fc3f7;
-  --primaryShade4: #0288d1;
-  --primaryShade5: #186cb8;
+  --primaryColor: #FF33B4;
+  --primaryShade1:#ce2991;
+  --primaryShade2: #ba2584;
+  --primaryShade3: #951c69;
+  --primaryShade4: #6b1448;
+  --primaryShade5: #370b27;
 
-  --secondaryColor: #f44336;
-  --secondaryShade1: #ffdde0;
-  --secondaryShade2: #ffcdd2;
-  --secondaryShade3: #ef9a9a;
-  --secondaryShade4: #d32f2f;
-  --secondaryShade5: #b71c1c;
+  --secondaryColor: #80ee55;
+  --secondaryShade1: #72d14d;
+  --secondaryShade2: #5a9f3e;
+  --secondaryShade3: #447a2e;
+  --secondaryShade4: #305322;
+  --secondaryShade5: #1d3016;
 
-  --accentColor: #f1b211;
-  --accentShade1: #f9f1dc;
-  --accentShade2: #f4dea7;
-  --accentShade3: #f2cb69;
-  --accentShade4: #f0bb34;
-  --accentShade5: #b68300;
+  --accentColor: #ecf729;
+  --accentShade1: #d3dd25;
+  --accentShade2: #b0b820;
+  --accentShade3: #929817;
+  --accentShade4: #696d14;
+  --accentShade5: #44470c;
 
-  --accent2Color: #009688;
-  --accent2Shade1: #e0f2f1;
-  --accent2Shade2: #b2dfdb;
-  --accent2Shade3: #64babe;
-  --accent2Shade4: #429499;
-  --accent2Shade5: #1d7b80;
+  --accent2Color: #19f4de;
+  --accent2Shade1: #13dbd1;
+  --accent2Shade2: #17b7aa;
+  --accent2Shade3: #11979e;
+  --accent2Shade4: #12777c;
+  --accent2Shade5: #0c3c3e;
 
   --neutralShade1: #f2f2f2;
   --neutralShade2: #e8e9e9;
@@ -79,10 +75,10 @@
   --lightGrayColor: #ddd;
 
   /* Fonts */
-  --copyFontFamily: "Raleway", sans-serif;
-  --headingFontFamily: "Patua One", serif;
+  --copyFontFamily: "Open Sans", sans-serif;
+  --headingFontFamily: "Fredoka", sans-serif;
   /* Change default root font size (16px), if desired */
-  font-size: 18px;
+  font-size: 20px;
 
   /* You can also use it for generally applied sizing and spacing. */
   --borderRadius: 6px;
@@ -109,13 +105,14 @@ body { font-family: var(--copyFontFamily); }
 h1,h2,h3 { font-family: var(--headingFontFamily); }
 
 /* Emphasis and Bolding */
-strong { font-weight: 500; }
+strong { font-weight: 600; }
 em { font-style: italic; }
 
 /* Font Weight, Sizing & Spacing */
+/*below affects "body text", closer to 1.0 makes the lines closer together and farther from 1.0 they get more spacious*/
 body {
-  font-weight: 300;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.6;
   transition: all 0.3s ease;
 }
 h1 {
@@ -126,7 +123,7 @@ h1 {
   text-transform: uppercase;
 }
 h2 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(1.75rem,2rem,2.5rem);
   line-height: 1.2;
   text-transform: uppercase;
@@ -137,7 +134,7 @@ h3 {
   line-height: 1.2;
 }
 h4 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.25rem,1.5rem,1.75rem);
   line-height: 1.2;
   font-style: italic;
@@ -178,7 +175,7 @@ a.primary {
   transition: 0.4s;
 }
 a.primary:hover {
-  color: var(--primaryShade1);
+  color: var(--backgroundColor);/*changed this from primaryShade1)*/
   background-color: var(--primaryShade4);
   border-bottom: 3px solid var(--secondaryColor);
   transition: 0.4s;
@@ -196,6 +193,21 @@ a.secondary:hover {
   background-color: var(--secondaryShade5);
   border-bottom: 3px solid var(--primaryColor);
   transition: 0.4s;
+}
+
+/*==============
+ADDITIONAL BRIGHT STYLES
+===============*/
+/*gave the title a color (main banner) plus a pink border*/
+.main_banner {
+background-color: var(--accentColor);
+border-bottom: 0.5rem solid var(--primaryColor);
+padding: 1rem;
+}
+/*highlight part of the regular text, this addition can work but only when you assign a class to it in the HTML and names must be the same*/
+.highlight_shading {
+background-color: var(--accent2Color);
+padding: 1rem;
 }
 
 
