@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    grid-gap: 10px;
+    grid-template-areas:
+        ". tr1 tr1 tr2"
+        "aside1 mr1 mr2 mr3"
+        "aside1 mr1 mr2 mr3"
+        "aside2 br1 br2 br3";
+        
+}
+/* adding padding and border for visibility and clarity */
+.grid-container > div {
+    border: 1.5px solid black;
+    padding: 5px;
+}
+/* defining my divs so that I can use grid-template-areas */
+.star-one { grid-area: tr1; }
+.star-two { grid-area: tr2; }
+.star-three { grid-area: aside1; }
+.star-four { grid-area: mr1; }
+.star-five { grid-area: mr2; }
+.star-six { grid-area: mr3; }
+.star-seven { grid-area: aside2; }
+.star-eight { grid-area: br1; }
+.star-nine { grid-area: br2; }
+.star-ten { grid-area: br3; }

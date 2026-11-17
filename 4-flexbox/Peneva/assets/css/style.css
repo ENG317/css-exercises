@@ -1,0 +1,116 @@
+/* Flow CSS */
+.flow {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* heading */
+.flow h1 {
+  width: 100%;
+  margin-bottom: 2rem;
+  Margin-right: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  text-align: left;
+}
+
+/* image left */
+.flow .flow-image:first-child {
+  width: 100%;
+  height: auto;
+}
+
+/* centre text */
+.flow .text-box {
+  width: 25%;
+  align-self: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border: 1px solid black;
+}
+
+/* image right */
+.flow .flow-image:last-child {
+  align-self: flex-end;
+}
+
+
+/* full page css */
+.design-two {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #666;
+}
+
+/* normal rows */
+
+.row {
+    display: flex;
+    border-bottom: 2px solid #666;
+}
+
+/* highlighted row */
+
+.row-highlighted {
+    display: flex;
+    background-color: #f5cd83;
+    border-bottom: 2px solid #666;
+}
+
+/* text sections */
+
+.text-card,
+.text-highlighted {
+    width: 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* image sections */
+
+.image-card {
+    width: 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.image-card img {
+    width: 100%;
+    display: block;
+}
+
+
+.text-card h2,
+.text-highlighted h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+
+/* bottom section */
+.bottom-section {
+    display: flex;
+    background-color: #f5cd83;
+    border-top: 2px solid #666;
+}
+
+.bottom-section div {
+    flex: 1;
+    text-align: center;
+    padding: 4rem 1rem;
+    border-right: 2px solid #666;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-section div:last-child {
+    border-right: none;
+}

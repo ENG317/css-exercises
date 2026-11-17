@@ -72,11 +72,11 @@
 */
 
 /* General page styling */
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 20px;
   line-height: 1.6;
-}
+} */
 
 /* --------------------------------
    1. Image Sizing Examples
@@ -110,48 +110,59 @@ body {
    3. Recreate the Design
 -------------------------------- */
 
-.article-layout {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  overflow: auto;
-}
-
-.article-layout h2 {
-  margin-bottom: 25px;
-}
-
-.article-layout h3 {
-  font-size: 28px;
-  margin-bottom: 25px;
-}
-
-/* Large image on the left */
-.main-image {
-  float: left;
-  width: 35%;
-  height: auto;
-  margin-right: 25px;
-  margin-bottom: 15px;
-}
-
-/* Smaller image on the right */
-.small-image {
-  float: right;
-  width: 22%;
-  height: auto;
-  margin-left: 25px;
-  margin-bottom: 15px;
-}
-
-/* Paragraph styling */
-.article-layout p {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
+/* FEEDBACK
+  - Used CSS nesting to scope out the solution
+  - Commented out unnecessary code for the solution
+  - Converted the clear fix to a general utility to use anywhere
+  - Offered alternative ways to represent margin values with the single property and the `em` value, which works well for component scoping
+  - Revised class names to account for a wider design context.
+*/
 
 /* Place the final paragraph below both images */
-.last-paragraph {
-  clear: both;
+.clear_fix { clear: both; }
+
+.article-layout {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+  /* max-width: 1200px; */
+  /* margin: 40px auto; */
+  padding: 20px;
+  /* overflow: auto; */
+
+  & h2 {
+    margin-bottom: 25px;
+  }
+  & h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  & p {
+    /* font-size: 16px; */
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  /* Large image on the left */
+  /* & .main-image { */
+  & .img_float_left {
+    float: left;
+    /* width: 35%; */
+    /* height: auto; */
+    margin: 0 1em 0.75em 0;
+    /* margin-right: 25px; */
+    /* margin-bottom: 15px; */
+  }
+
+  /* Smaller image on the right */
+  & .img_float_right {
+    float: right;
+    /* width: 22%; */
+    /* height: auto; */
+    margin: 0 0 0.75em 1em;
+    /* margin-left: 25px; */
+    /* margin-bottom: 15px; */
+  }
 }
+

@@ -1,0 +1,115 @@
+/* GENERAL STYLES */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #eeeeee;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+}
+
+/* DESIGN 1: STEPPING STONES */
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #dddddd;
+}
+
+.step {
+  width: 150px;
+  padding: 15px;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.step-one {
+  align-self: flex-start;
+}
+
+.step-two {
+  align-self: flex-start;
+  margin-left: 30px;
+}
+
+.step-three {
+  align-self: flex-start;
+  margin-left: 60px;
+}
+
+.step-four {
+  align-self: flex-start;
+  margin-left: 90px;
+}
+
+.step-five {
+  align-self: flex-start;
+  margin-left: 120px;
+}
+
+/* DESIGN 2: SWITCHING IT UP */
+
+.switch-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.switch-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.switch-image {
+  display: flex;
+  flex: 1 1 50%;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+.image-two {
+  background-color: lightcoral;
+}
+
+.image-three {
+  background-color: lightgray;
+}
+
+.switch-text {
+  flex: 1 1 50%;
+  padding: 10px;
+  background-color: #dddddd;
+}
+
+/* SMALL SCREENS */
+
+@media (max-width: 600px) {
+  .switch-row,
+  .switch-row.reverse {
+    flex-direction: column;
+  }
+
+  .switch-image {
+    width: 100%;
+  }
+
+  .switch-text {
+    width: 100%;
+  }
+}

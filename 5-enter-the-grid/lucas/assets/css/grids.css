@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: start;
+    justify-items: start;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    display: grid;
+    gap: 20px;
+}
+
+/* Pinterest layout */
+
+.pinterest {
+    grid-template-columns: 1fr;
+}
+
+.pinterest section {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+}
+
+.pinterest section h2,
+.pinterest section p {
+    grid-column: 1 / -1;
+}
+
+.pinterest img {
+    width: 100%;
+    height: auto;
+}

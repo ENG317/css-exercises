@@ -1,0 +1,218 @@
+/* grid */
+.time-slot1 {
+  grid-area: a1;
+}
+
+.time-slot2 {
+  grid-area: a2;
+}
+
+.time-slot3 {
+  grid-area: a3;
+}
+
+.time-slot4 {
+  grid-area: a4;
+}
+
+.time-slot5 {
+  grid-area: a5;
+}
+
+.time-slot6 {
+  grid-area: a6;
+}
+
+.time-slot7 {
+  grid-area: a7;
+}
+
+.time-slot8 {
+  grid-area: a8;
+}
+
+.time-slot9 {
+  grid-area: a9;
+}
+
+.time-slot10 {
+  grid-area: a10;
+}
+
+.day-column1 {
+  grid-area: b1;
+}
+
+.day-column2 {
+  grid-area: b2;
+}
+
+.day-column3 {
+  grid-area: b3;
+}
+
+.day-column4 {
+  grid-area: b4;
+}
+
+.day-column5 {
+  grid-area: b5;
+}
+
+.class1 {
+  grid-area: c1;
+}
+
+.class2 {
+  grid-area: c2;
+}
+
+.class3 {
+  grid-area: c3;
+}
+
+.class4 {
+  grid-area: c4;
+}
+
+.class5 {
+  grid-area: c5;
+}
+
+.class1a {
+  grid-area: d1;
+}
+
+.class2a {
+  grid-area: d2;
+}
+
+.class3a {
+  grid-area: d3;
+}
+
+.class4a {
+  grid-area: d4;
+}
+
+.class5a {
+  grid-area: d5;
+}
+
+.schedule-grid {
+  max-width: 1280px;
+  max-height: 720px;
+  margin: auto;
+  display: grid;
+  outline: 1px solid #000;
+  background-color: #949494;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". b1 b2 b3 b4 b5"
+    "a1 . . . . ."
+    ". . . . . ."
+    "a2 . . . . ."
+    ". . . . . ."
+    "a3 c1 c2 d1 d2 ."
+    ". c1 c2 d1 d2 ."
+    "a4 c1 c2 d1 d2 ."
+    ". c1 c2 d1 d2 ."
+    "a5 . . . . ."
+    ". . . . . ."
+    "a6 . . . . ."
+    ". . c4 . d4 ."
+    "a7 . c4 . d4 ."
+    ". . c4 . d4 ."
+    "a8 . c5 . d5 ."
+    ". . c5 . d5 ."
+    "a9 . c5 . d5 ."
+    ". c3 . d3 . ."
+    "a10 c3 . d3 . ."
+    ". c3 . d3 . .";
+}
+
+.class1 {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class2 {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class3 {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class4 {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class5 {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class1a {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class2a {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class3a {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class4a {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.class5a {
+  background-color: #099904;
+  outline: 1px solid #000;
+  width: 75px;
+  height: 100px;
+}
+
+.column-bg {
+  background-color: #f0f0f0;
+  outline: 1px solid #000;
+  grid-column: 1;
+  grid-row: 1 / 22;
+}
+
+.row-bg {
+  background-color: #f0f0f0;
+  outline: 1px solid #000;
+  grid-column: 1 / 7;
+  grid-row: 1;
+}

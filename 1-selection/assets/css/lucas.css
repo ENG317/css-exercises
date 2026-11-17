@@ -1,3 +1,27 @@
+/* README FIRST!
+  (1) If you haven't done the readings, you're not ready to dive into this yet. :-) Be sure to do so and come back. You won't be able to barge your way through this material without some conceptual work first.
+
+  (2) This content is embedded within a CSS comment. All of the prompts will be within the comments. Please write your code after them.
+
+  (3) Delete any instructional comment, after you have completed the prompt. But, leave helpful headings to document your CSS.
+*/
+
+/* EXERCISE GOALS ================
+
+  1. Get acclimated to reading and writing CSS files in relationship with HTML.
+
+  2. Implement knowledge about the CASCADE, i.e., understanding why we write CSS starting with more __general selections__ (like simple type selections) to more __specific selections__ (like components.
+
+  3. Practice selection, selection, selection. Make sure to read the CSS selection reading, so you can figure out how to read the HTML and select the appropriate HTML element(s), such as
+      * CSS Nesting
+      * type
+      * class
+      * child and descendant combinators
+
+  4. Practice styling your HTML file with some basic properties. (We'll learn about more "properties" to use as we go.)
+
+==================================== */
+
 /* II. ROOT & BODY SELECTION
   ====================== */
 
@@ -16,7 +40,7 @@
 
 :root {
   /* Most elements have a property of `font-size`. The default font size is 16px, defined by the "user agent" browser vendor, e.g., Chrome, Safari, Firefox, etc. Here, I changed the default font-size to inherit as 18px for many elements, such as <p> and all of the lists for example. Change the font-size here, then inspect the page in the browser to see what happens! */
-  font-size: 18px;
+  font-size: 24px;
   /* All elements have a property of `background-color`. Change the root's default background color from the default hex color value of white (#ffffff) to a keyword value of black ... Check out the other types of values you can use for colors on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color*/
   background-color: black;
 
@@ -24,8 +48,8 @@
 
   /* SPACING VARIABLES */
   --spacing-none: 0;
-  --spacing-extra-small: 0.25rem;
-  --spacing-small: 0.5rem;
+  --spacing-extra-small: .25rem;
+  --spacing-small: .5rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
   --spacing-extra-large: 4rem;
@@ -73,8 +97,8 @@
   --neutralShade8: #212122;
 
   /* ROOT OBSERVATIONS
-    Write your observations in this commment.
-  It seems to me that the root acts as a parent function in the CSS document so that everything else cascades below it. */
+    Changing the root font size affects elements that inherit their font size from it. I also noticed that CSS variables defined in the root can be reused throughout the stylesheet using var(), which helps keep spacing and colors consistent.
+  ================== */
 }
 
 /* II.ii. General Selection with Type Selectors
@@ -103,22 +127,16 @@ body {
   color: #0d242f;
 
   /* Do you notice how there's a thin black box around the body element? Use your inspection tool to select the body element and view the "computed" styles of the body's box model. In Chrome, refer to this documentation for help: https://developer.chrome.com/docs/devtools/css/reference#computed. IF you use a different browser, it will be very similar, and it will display an elements box model with computed styles.  */
-  /* margin: 0; */
-
+margin: 0;
   /* BODY OBSERVATIONS
-    Write your observations in this commment.
-  One thing I noticed was playing around with the margin size and seeing the differences in how it affects the layout of the website. */
+I noticed that the body controls the background and text color for the page. The root sets general styles, but the body can override values. Changing the margin to 0 removes the default space around the edges of the webpage.  ================== */
 }
 
 /* 2. TYPOGRAPAHY */
 
 /* Sizing */
-h1 {
-  font-size: 32px;
-}
-h2 {
-  font-size: 26px;
-}
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
 /* II.iii. Cascade Question!
    Add a font-size below like 24px.
    Now, check an h3 in your inspection tool.
@@ -129,13 +147,11 @@ h2 {
    HINT: Your inspection tool's CSS panel
    will help you solve this mystery.
 ========================= */
-h3 {
-  font-size: 20px;
+h3 {  
+  font-size: 24px;
 }
-
 /* H3 Font Size Observations
-  Write your observations in this commment.
-It is important to add the "px" when labeling the font size. Without font size, the default becomes boring. */
+The h3 font size isn't changing because h3.card__main_name, is more specific than the h3 selector. I set h3 to 24px, but the more specific rule takes priority.================== */
 
 /* 3. LINKS */
 
@@ -154,9 +170,8 @@ It is important to add the "px" when labeling the font size. Without font size, 
   border-width: 0;
 
   /* SKIPLINK OBSERVATIONS
-    Write your observations in this commment.
-    HINT: Lookup 'position' on MDN.
-  I think with the rewritten properties, it removes the element from the overall document flow. */
+The skip link is hidden from the page view because its width and height are set to 1px, and the overflow is hidden (I think). The absolute positioning also takes it from the normal page layout. This allows the skip link to stay available for accessibility without taking up visible space on the page.    HINT: Lookup 'position' on MDN.
+  ================== */
 }
 
 /* 4. IMAGES */
@@ -167,8 +182,9 @@ img {
   height: 100%; */
 }
 
+
 /* IV. WHAT ARE CLASSES & HOW TO REUSE THEM?
-Classes are reusable style attributes unlike ids which can only be used once.  */
+========================================= */
 
 /*
   Classes are meant to be used interchangeably and across multiple elements in sophisticated ways.
@@ -177,26 +193,26 @@ Classes are reusable style attributes unlike ids which can only be used once.  *
 
   Note how you write classes differently in HTML vs. CSS. In HTML, you simply write the name of the class, such as `class="mt4"` on the `main` element. In CSS, when you create a class, you prepend it with a period character, such as `.mt4`.
 
-  IV.i. Take stock of where the `mt4` class is being used in the HTML. Use the inspection tool to observe its behavior and reflect on your observations in the provided space. Be sure to discuss the values being applid with the var() syntax.
+  IV.i. The mt4 class adds space above an element using margin-top. The var() function gets its value from a CSS variable defined in :root. letting the spacing value be reused throughout the page without typing it every single time.
 
   IV.ii. Add a padding class in the HTML. Use the inspection tool to observe its behavior. Then, reflect on your observations in the provided space. Be sure to discuss the values being applid with the var() syntax.
 
 ==================================== */
 
 /* Reusable Class Observations
-  IV.i. Write your observations in this commment.
-I honestly wasn't able to find it.
-  IV.ii. Write your observations in this commment.
-I couldn't find where to add the padding. I think my inspection tool is messed up. */
+  IV.i. The mt4 class adds space above an element using margin-top. It uses var() to get the spacing value from a variable defined in :root, so the same value can be reused throughout the page.
+
+  IV.ii. I added the pa3 class to the main element. It adds padding inside the element, while mt4 adds margin above it. Both classes use var() to get their spacing values from variables defined in :root.
+================== */
 
 /* 5. REUSABLE CLASSES */
 
 .pa3 {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-medium)
 }
 
 .pt4 {
-  padding-top: var(--spacing-large);
+  padding-top: var(--spacing-large)
 }
 
 .pv3 {
@@ -268,6 +284,7 @@ I couldn't find where to add the padding. I think my inspection tool is messed u
   margin-top: 0;
 }
 
+
 /*
   Ok, we've written some more general rules that can be applied in numerous places. Now, let's use the Position rule to our advantage and write our CSS in relationship to the position of the HTML source order:
     - Header
@@ -297,7 +314,7 @@ I couldn't find where to add the padding. I think my inspection tool is messed u
 ========================*/
 
 .banner__container {
-  max-width: 810px;
+  max-width: 1080px;
   margin: auto;
 
   & img {
@@ -305,8 +322,8 @@ I couldn't find where to add the padding. I think my inspection tool is messed u
       - Mac: CMD+/
       - Windows: CTRL+/
      */
-    /* width: ; */
-    /* height: ; */
+    width: 100%;
+    height: 100%;
   }
 
   & h1 {
@@ -316,12 +333,14 @@ I couldn't find where to add the padding. I think my inspection tool is messed u
 }
 
 /* V. Page Banner Class Observations
-  V.i. Write your observations in this commment.
-It's important to make sure that the parent is not nested underneath its child function.
-  V.ii. Write your observations in this commment.
-Things get more squished or stretched depending on what values i put in.
-  V.iii. Write your observations in this commment.
-It is behaving like this due to where it falls in the code's nesting. */
+  V.i. CSS nesting uses style elements inside a specific container. The & img selector is for images inside .banner__container, while & h1 is for headings inside it. The indentation helps show which rules go together.
+
+  V.ii. Changing the width and height to 100% makes the image fill its container. This changes how much space the image takes up in the banner.
+
+  V.iii. The heading uses position: relative and bottom: 100px, which moves it 100 pixels up from the normal position letting the heading overlap the banner image without removing it from the normal page layout.
+================== */
+
+
 
 /* VI. WRITE YOUR OWN CSS NOW
 
@@ -330,21 +349,30 @@ It is behaving like this due to where it falls in the code's nesting. */
   3. Center the main along the horizontal axis with the box model's `margin` as follows: `margin: auto;`
 
   Research into this solution. Why does it work? Respond in the observations area below.
-It works because the margin auto fits. */
+==================================== */
 
 /* 6. MAIN
 ========*/
+main {
+  max-width: 810px;
+  margin: auto;
+}
+
 
 /* VI. MAIN OBSERVATIONS
-  Write your observations in this commment.
-There is a lot of nesting. */
+The max-width limits how wide the main content can be. making margins to auto makes the left and right margins equal, and centers the main content horizontally when there's extra space.
+================== */
+
+
 
 /* 7. SECTIONs =====================
   Once you've completed all of the prompts, come back here.
-  And, if you'd like to do so, select and style anything regarding the sections on the page and their contents within this portion of the CSS document.
+  And, iff you'd like to do so, select and style anything regarding the sections on the page and their contents within this portion of the CSS document.
 
   I ask you to return here later, since there's some CSS work written for the "cards" on the page. Understand some of that first, then consider if you'd like to change anything more generally about more specific section elements. For example, select one of the section's by their `id` attribute and update its background-color.
 ==================================== */
+
+
 
 /* VII. PRACTICE READING CSS NESTING
   Again, note the use of "CSS NESTING" below by scoping our rulesets for each selection with curly braces {}.
@@ -369,13 +397,13 @@ There is a lot of nesting. */
 
   /* QUESTIONS
     What does the ampersand `&` mean here?
-    A: It is a nesting selector.
+    A: The & represents the parent selector and also lets nesting happen in CSS rules inside that selector.
 
     What type of selector is this: `& .row`?
-    A: Nested descendant selector.
+    A: A descendant selector using a class.
 
     How would you explain the selection condition in plain language?
-    A: It is the parent selector to the rest of the code. 
+    A: It selects any element with the class row inside the footer container.
   ================== */
   & .row {
     display: flex;
@@ -386,18 +414,18 @@ There is a lot of nesting. */
 
     /* QUESTIONS
       What type of selector type is this: `& > div:first-child`?
-      A: Direct child combinator.
+      A: It uses a child combinator (>) with a type selector (div) and a pseudo-class (:first-child).
 
       What type of selector is `:first-child`?
-      A: Pseudo class selector.
+      A: A pseudo-class selector.
 
       How would you explain this selection condition in plain language?
-      A: The child to the parent selector.
+      A: It selects the first div that is a direct child of the .row element.
     ================== */
     & > div:first-child {
       flex: 1 0 300px;
     }
-    & > :not(div:first-child()) {
+    & > :not(div:first-child) {
       flex: 0.1 1 240px;
     }
   }
@@ -412,17 +440,17 @@ There is a lot of nesting. */
   & a {
     text-decoration: underline;
     color: var(--foregroundColor);
-    transition: 0.5s;
+    transition: .5s;
     position: relative;
 
     /* QUESTION
       How would you explain this selection condition in plain language?
-      A: The hover controls the rest of the child selectors until the child selectors are told to behave differently.
+      A: It selects any anchor element that is a descendant of the .footer_site__container class.
     ================== */
     &:hover {
       color: var(--primaryColor);
       text-decoration: none;
-      transition: 0.5s;
+      transition: .5s;
     }
   }
 
@@ -449,10 +477,10 @@ There is a lot of nesting. */
 
     /* QUESTIONS
       What type of selector is this: `&.small`?
-      A: The .small targets class selectors with "small".
+      A: A compound selector combining the parent hr element with the .small class.
 
       How would you explain the selection condition in plain language?
-      A: It's basically a reference number.
+      A: It selects an hr element only when that element also has the class small.
     ================== */
     &.small {
       margin: 20px 0;
@@ -468,11 +496,11 @@ There is a lot of nesting. */
 
   Instead, focus on the CSS Nesting work. Use the observations area to reflect about the following questions/prompts.
 
-  VIII.i. Why wouldn't we put these styles under the "sections" area instead?
+  VIII.i. These styles belong in the components section because they are specifically for the cards, not every section on the page. Keeping them separate makes the CSS more organized and allows the same card styles to be reused without affecting other sections.
 
-  VIII.ii. How many nested levels are there in this component? Which selectors are in the deepest level of .card__sections?
+  VIII.ii. There are six nested selector levels, counting .card__sections as level one. The deepest selectors include & > span inside h3.card__main_name and &:hover inside the nested a rule.
 
-  VIII.iii. Name all the selector types in this component. List the selections under their particular selector type.
+  VIII.iii. The component uses class selectors (.card__sections, .cards__main_external_wrapper, .cards__sub_container, .card__project_leads_container, .partner_title, .bio_container), type selectors (h2, p, a, img, picture), a compound selector (h3.card__main_name), a child combinator (& > span), and a pseudo-class (&:hover)
 
 ==================================== */
 
@@ -481,7 +509,9 @@ There is a lot of nesting. */
 
 /* 9.1. PAGE Cards Component */
 .card__sections {
+
   .cards__main_external_wrapper {
+
     h2 {
       font-size: clamp(1.5rem, 2.5rem, 3rem);
       line-height: 1.2em;
@@ -566,13 +596,14 @@ There is a lot of nesting. */
       }
     }
   }
+
 }
 
 /* VIII. COMPONENTS OBSERVATIONS
-  VIII.i. Write your observations in this commment.
-  It makes the styles easier to use and more accessible. 
-  VIII.ii. Write your observations in this commment.
-6 nesting levels.
-  VIII.iii. Write your observations in this commment.
-.card, &, @, .bio_container, etc.
+  VIII.i. These styles are specifically for the cards, not every section on the page. Keeping them separate makes the CSS more organized and allows the card styles to be reused without affecting other sections.
+
+  VIII.ii. There are six nested selector levels at the deepest point, counting .card__sections as level one. The deepest selectors include & > span inside h3.card__main_name and &:hover inside the nested a rule.
+
+  VIII.iii. The component uses class selectors (.card__sections, .cards__main_external_wrapper, .cards__sub_container, .card__project_leads_container, .partner_title, .bio_container), type selectors (h2, p, a, img, picture), a compound selector (h3.card__main_name), a child combinator (& > span), and a pseudo-class (&:hover).
+
 ================== */
