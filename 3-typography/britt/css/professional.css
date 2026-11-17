@@ -1,0 +1,115 @@
+/*
+  When you complete this style guide, you will copy the following scope of the code below starting at the font import until the comment that states "STYLES BELOW ARE SPECIFIC TO THE STYLE GUIDE"
+*/
+
+/*============
+  IMPORT FONTS
+  1. Import your own fonts via https://fonts.google.com. Be sure to revise the family names in the CSS and in the HTML
+==============*/
+
+/* serif font */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+/*============
+  COLOR SCHEME
+
+  2. Define the color scheme within the root element by using CSS variables:
+
+    - '--variableName: color_value;'
+    - Use in code later as "color: var(--variableName)"
+
+  The power of CSS variables includes interchangability. For example, when you want to change your color pallette, you only need to change the value defined at the variable.
+
+  For example, if you want to change your background and foreground colors, your primary and secondary colors, etc., locate the variable in the :root, change it, and then that value will be applied anywhere that variable is used in your CSS.
+
+  Define it once, use across your code.
+  Change it in one spot, it changes everywhere it's used in your code!
+
+  - See https://randoma11y.com to establish the initial basic 2-color scheme: primary and secondary colors.
+
+  - Make sure the colors are AAA rated, as this meets A11Y standards for color contrasts
+
+  - You can also use Adobe's Color Picker: https://color.adobe.com/create/color-wheel. Just make sure the colors are AAA rated by testing the darkest vs. lightest colors here: https://webaim.org/resources/contrastchecker/
+
+  - Note how the colors shades move from 1-5, i.e., lighter shades to darker shades. To produce shades, use VS Code's color picker tool to produce gradiations of the initial color.
+
+  - If you want //accent// shade(s), feel free to consider additional complimentary colors.
+=============*/
+
+:root {
+  /* Fonts */
+  --copyFontFamily: "DM Serif Text", serif;
+  --headingFontFamily: "DM Serif Text", serif;
+  /* Change default root font size (16px), if desired */
+  font-size: 20px;
+
+  /* You can also use it for generally applied sizing and spacing. */
+  --borderRadius: 6px;
+  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+}
+/*==========
+  TYPOGRAPHY
+===========*/
+
+/* Font Families */
+body {
+  font-family: var(--copyFontFamily);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--headingFontFamily);
+}
+
+/* Emphasis and Bolding */
+strong {
+  font-weight: 500;
+}
+em {
+  font-style: italic;
+}
+
+/* Font Weight, Sizing & Spacing */
+body {
+  font-weight: 300;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+h1 {
+  font-weight: 700;
+  /* Check out the clamp() method! */
+  font-size: clamp(2.5rem, 3rem, 3.5rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 500;
+  font-size: clamp(1.75rem, 2rem, 2.5rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+h3 {
+  font-weight: 500;
+  font-size: clamp(1.25rem, 1.5rem, 1.75rem);
+  line-height: 1.2;
+}
+h4 {
+  font-weight: 300;
+  font-size: clamp(1.25rem, 1.5rem, 1.75rem);
+  line-height: 1.2;
+  font-style: italic;
+}
+h5 {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+h6 {
+  font-weight: 200;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+a {
+  font-weight: 500;
+}

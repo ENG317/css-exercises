@@ -8,35 +8,36 @@ Okay, FIRST, right-click on the tab above and select "Open Preview." This will o
 
 - Create **2 common layouts** with flexbox display behavior. (See the wireframe images below.)
 - Implement a flexbox design with HTML that creates:
-     1. parent **flex container** that contains
-     2. `n` number of children **flex items**.
-- Write CSS that tells those children **flex items** how to behave inside of the parent **flex container**. Pyt another way, you will apply certain flexbox *rules* to align the children **flex items** that are within the parent **flex container** container.
+  1.  parent **flex container** that contains
+  2.  `n` number of children **flex items**.
+- Write CSS that tells those children **flex items** how to behave inside of the parent **flex container**. Pyt another way, you will apply certain flexbox _rules_ to align the children **flex items** that are within the parent **flex container** container.
 
 ## Folder-File Setup
 
 Follow this procedure to setup your coding folder:
 
 1. Within this root folder, create a new folder with the name:
- `lastname`.
-   - **NOTE** `lastname` is your last name. Mine would be: 
-   `lindgren`.
-2. Inside the root of *your personal coding folder*, create 
-an `index.html`.
-3. Again, inside the root of *your personal coding folder*, 
-create an `assets` folder.
+   `lastname`.
+   - **NOTE** `lastname` is your last name. Mine would be:
+     `lindgren`.
+2. Inside the root of _your personal coding folder_, create
+   an `index.html`.
+3. Again, inside the root of _your personal coding folder_,
+   create an `assets` folder.
 4. Inside `assets`, create a `.keep` file and a `css` folder.
 5. Inside `css`, create a `style.css` to link to `index.html`.
 6. Within the `index.html`, first use the type `!` and hit `return` to create a skeleton HTML page.
-7. Link your stylesheet to your HTML document. *Make sure the path is correct!*
+7. Link your stylesheet to your HTML document. _Make sure the path is correct!_
 8. Inside the `body`, please create the following structure. Your solution for each design problem will be in their own `section`:
-     ```
-     body
-     |_main
-       |_section
-       |_section
-     ```
-     
-     Again, each section will contain 1 flex design.
+
+   ```
+   body
+   |_main
+     |_section
+     |_section
+   ```
+
+   Again, each section will contain 1 flex design.
 
 9. **※\(^o^)/※** Start writing some code! **※\(^o^)/※**
 
@@ -85,7 +86,7 @@ Apply some classes to the appropriate HTML elements, so you can use them in your
 ## Other Considerations
 
 - I recommend inspecting these sites with the **MOZILLA FIREFOX** browser's inspection tool. It has a more robust inspector than Chrome. However, the latest version of Chrome now has a flex and grid inspection tool.
-- If you'd like to spice it up with your own flare, feel free to practice some basic typography and color schemes. 
+- If you'd like to spice it up with your own flare, feel free to practice some basic typography and color schemes.
 - You can also use your own images, instead of placeholders. BUT, be sure to create your own images folder in your project, and be mindful of the file sizes, since others will fetch these files too.
 - Practice documenting your code and writing your CSS from more general rules to more specific in the HTML source order.
 - **NOTE**: I do not mind if you work together with anyone, but you should not write the same code together. Help each other instead.
