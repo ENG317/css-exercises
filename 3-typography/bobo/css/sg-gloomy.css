@@ -6,7 +6,7 @@
   IMPORT FONTS
   1. Import your own fonts via https://fonts.google.com. Be sure to revise the family names in the CSS and in the HTML
 ==============*/
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Special+Elite&display=swap");
 
 /*============
   COLOR SCHEME
@@ -35,43 +35,43 @@
 =============*/
 
 :root {
-  --backgroundColor: #fff;
-  --foregroundColor: #111;
+  --backgroundColor: #BFBBBE;
+  --foregroundColor: #120B51;
 
-  --primaryColor: #03a9f4;
-  --primaryShade1: #e1f5fe;
-  --primaryShade2: #b3e5fc;
-  --primaryShade3: #4fc3f7;
-  --primaryShade4: #0288d1;
-  --primaryShade5: #0277bd;
+  --primaryColor: #5b8092;
+  --primaryShade1: #4b6976;
+  --primaryShade2: #3c535d;
+  --primaryShade3: #33454e;
+  --primaryShade4: #32424b;
+  --primaryShade5: #1c2429;
 
-  --secondaryColor: #673ab7;
-  --secondaryShade1: #ede7f6;
-  --secondaryShade2: #d1c4e9;
-  --secondaryShade3: #9575cd;
-  --secondaryShade4: #512da8;
-  --secondaryShade5: #311b92;
+  --secondaryColor: #778c5a;
+  --secondaryShade1: #5f6f48;
+  --secondaryShade2: #485437;
+  --secondaryShade3: #39422c;
+  --secondaryShade4: #303826;
+  --secondaryShade5: #21261a;
 
-  --accentColor: #009688;
-  --accentShade1: #e0f2f1;
-  --accentShade2: #b2dfdb;
-  --accentShade3: #4db6ac;
-  --accentShade4: #00796b;
-  --accentShade5: #004d40;
+  --accentColor: #99c2be;
+  --accentShade1: #81a19e;
+  --accentShade2: #6f8b88;
+  --accentShade3: #536b69;
+  --accentShade4: #425251;
+  --accentShade5: #2e3837;
 
-  --accent2Color: #8bc34a;
-  --accent2Shade1: #e7f6d5;
-  --accent2Shade2: #c5e1a5;
-  --accent2Shade3: #aed581;
-  --accent2Shade4: #689f38;
-  --accent2Shade5: #558b2f;
+  --accent2Color: #cebe8d;
+  --accent2Shade1: #ada078;
+  --accent2Shade2: #9b906c;
+  --accent2Shade3: #7d745a;
+  --accent2Shade4: #625b46;
+  --accent2Shade5: #38352a;
 
-  --accent3Color: #f44336;
-  --accent3Shade1: #ffdde0;
-  --accent3Shade2: #ffcdd2;
-  --accent3Shade3: #ef9a9a;
-  --accent3Shade4: #d32f2f;
-  --accent3Shade5: #b71c1c;
+  --accent3Color: #bc9fbc;
+  --accent3Shade1: #988298;
+  --accent3Shade2: #857385;
+  --accent3Shade3: #6a5b6a;
+  --accent3Shade4: #504550;
+  --accent3Shade5: #312a31;
 
   --neutralShade1: #f2f2f2;
   --neutralShade2: #e8e9e9;
@@ -86,8 +86,8 @@
   --lightGrayColor: #ddd;
 
   /* Fonts */
-  --copyFontFamily: "Poppins", sans-serif;
-  --headingFontFamily: "Exo 2", serif;
+  --copyFontFamily: "Special Elite", static;
+  --headingFontFamily: "Rubik Glitch", static;
   /* Change default root font size (16px), if desired */
   font-size: 18px;
 
@@ -103,7 +103,7 @@
 /* GENERAL COLOR SCHEME */
 body {
   background: var(--backgroundColor);
-  color: var(--neutralShade8);
+  color: var(--primaryShade5);
 }
 
 /*==========
@@ -120,43 +120,43 @@ em { font-style: italic; }
 
 /* Font Weight, Sizing & Spacing */
 body {
-  font-weight: 300;
-  line-height: 1.5;
+  font-weight: 600;
+  line-height: 1.6;
   transition: all 0.3s ease;
 }
 h1 {
-  font-weight: 700;
+  font-weight: 500;
   /* Check out the clamp() method! */
   font-size: clamp(2.5rem,3rem,3.5rem);
-  line-height: 1.2;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 h2 {
-  font-weight: 500;
+  font-weight: 300;
   font-size: clamp(1.75rem,2rem,2.5rem);
-  line-height: 1.2;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 h3 {
-  font-weight: 500;
-  font-size: clamp(1.25rem,1.5rem,1.75rem);
-  line-height: 1.2;
-}
-h4 {
   font-weight: 300;
   font-size: clamp(1.25rem,1.5rem,1.75rem);
-  line-height: 1.2;
+  line-height: 1.5;
+}
+h4 {
+  font-weight: 200;
+  font-size: clamp(1.25rem,1.5rem,1.75rem);
+  line-height: 1.5;
   font-style: italic;
 }
 h5 {
-  font-weight: 300;
-  font-size: 1.05rem;
-  line-height: 1.2;
-}
-h6 {
   font-weight: 200;
   font-size: 1.05rem;
-  line-height: 1.2;
+  line-height: 1.5;
+}
+h6 {
+  font-weight: 100;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 a { font-weight: 500; }
@@ -179,14 +179,14 @@ a:hover {
 
 /* primary color links */
 a.primary {
-  color: var(--primaryColor);
+  color: var(--primaryColor5);
   border-bottom: 2px dashed;
   cursor: pointer;
   transition: 0.4s;
 }
 a.primary:hover {
   color: var(--primaryShade1);
-  background-color: var(--primaryShade4);
+  background-color: var(--primaryShade5);
   border-bottom: 3px solid var(--secondaryColor);
   transition: 0.4s;
 }
@@ -204,6 +204,22 @@ a.secondary:hover {
   border-bottom: 3px solid var(--primaryColor);
   transition: 0.4s;
 }
+
+/*==============
+  ADDITIONAL STYLES TO GLOOMY
+===============*/
+.main_banner {
+  background-color: var(--accentShade1);
+  border-bottom: 0.5rem solid var(--neutralShade8);
+  padding: 1rem;
+} 
+
+.shudder {
+  font-style: italic;
+  color: var(--accent2Shade5);
+  letter-spacing: 0.05em;
+}
+
 
 
 /*##########################################
