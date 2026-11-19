@@ -4,7 +4,8 @@ Usually, we should design and plan our site out with wireframes for each desired
 
 In your teams, create a mobile-first approach to `@media` queries to translate your studies of site into a mobile-first design.
 
-You can simply work within the same `studiesof` repo. No need to transfer your work here.
+- You can simply work within the same `studiesof` repo. No need to transfer your work here.
+- Don't worry about the study brief for the mobile and tablet versions. You can simplify the design if you'd like. I mainly want to see you consider how to apply @media queries and make it work decently well.
 
 ## Procedural Tips
 
