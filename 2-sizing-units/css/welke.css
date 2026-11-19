@@ -55,7 +55,9 @@
 .img_sizing__container {
   width: 65vw;
 }
-.px_100 { width: 100px; }
+.img_absolute_px { width: 100px; }
+.img_relative_percentage { width: 100%; }
+.img_relative_vw { width: 100vw; }
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
@@ -64,4 +66,16 @@
 
   HINT: You will need to use floats and a clear fix. (See reading #4 in Week 8)
 */
+.wireframe {
+  font-size: 30px; 
+}
+.float_left { 
+  float: left;
+}
+.float_right { 
+  float: right;
+} 
 
+.clearfix {
+  clear: both;
+}
