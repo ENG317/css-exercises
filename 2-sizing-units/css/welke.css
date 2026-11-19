@@ -52,9 +52,10 @@
     - Inspect each image and change their values.
     - AS you do so, also hover over the HTML of those images to compare their box dimensions and see if you understand why their size is as it is.
 */
-
-
-
+.img_sizing__container {
+  width: 65vw;
+}
+.px_100 { width: 100px; }
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
