@@ -1,8 +1,12 @@
 # @media Query Practice
 
-Usually, we shoudl design and plan our site out with wireframes for each desired breakpoint. But, that's not always the situation. Sometimes, you have code that needs to be translated across breakpoints.
+Usually, we should design and plan our site out with wireframes for each desired breakpoint. But, that's not always the situation. Sometimes, you have code that needs to be translated across breakpoints.
 
 In your teams, create a mobile-first approach to `@media` queries to translate your studies of site into a mobile-first design.
+
+You can simply work within the same `studiesof` repo. No need to transfer your work here.
+
+## Procedural Tips
 
 1. Isolate and create the appropriate *breakpoint* scopes.
     - Does it currently works well on a 320px wide viewport?
@@ -14,5 +18,7 @@ In your teams, create a mobile-first approach to `@media` queries to translate y
 4. Write or move code within its appropriate @media condition.
 
 ## How to Submit
+
+Again, you can simply work within the same `studiesof` repo. No need to transfer your work here.
 
 When your work is complete as a team, each person will submit a simple link to the repo in Moodle.
