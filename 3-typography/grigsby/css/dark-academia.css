@@ -1,0 +1,224 @@
+/*
+  When you complete this style guide, you will copy the following scope of the code below starting at the font import until the comment that states "STYLES BELOW ARE SPECIFIC TO THE STYLE GUIDE"
+*/
+
+/*============
+  IMPORT FONTS
+  1. Import your own fonts via https://fonts.google.com. Be sure to revise the family names in the CSS and in the HTML
+==============*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+/*============
+  COLOR SCHEME
+
+  2. Define the color scheme within the root element by using CSS variables:
+
+    - '--variableName: color_value;'
+    - Use in code later as "color: var(--variableName)"
+
+  The power of CSS variables includes interchangability. For example, when you want to change your color pallette, you only need to change the value defined at the variable.
+
+  For example, if you want to change your background and foreground colors, your primary and secondary colors, etc., locate the variable in the :root, change it, and then that value will be applied anywhere that variable is used in your CSS.
+
+  Define it once, use across your code.
+  Change it in one spot, it changes everywhere it's used in your code!
+
+  - See https://randoma11y.com to establish the initial basic 2-color scheme: primary and secondary colors.
+
+  - Make sure the colors are AAA rated, as this meets A11Y standards for color contrasts
+
+  - You can also use Adobe's Color Picker: https://color.adobe.com/create/color-wheel. Just make sure the colors are AAA rated by testing the darkest vs. lightest colors here: https://webaim.org/resources/contrastchecker/
+
+  - Note how the colors shades move from 1-5, i.e., lighter shades to darker shades. To produce shades, use VS Code's color picker tool to produce gradiations of the initial color.
+
+  - If you want //accent// shade(s), feel free to consider additional complimentary colors.
+=============*/
+
+:root {
+ 
+  --backgroundColor: #f4ecdc;
+  --foregroundColor: #261e1b;
+
+  --primaryColor: #542735;
+  --primaryShade1: #f1e3e6;
+  --primaryShade2: #d8b9c0;
+  --primaryShade3: #b68794;
+  --primaryShade4: #875063;
+  --primaryShade5: #542735;
+
+  --secondaryColor: #34483a;
+  --secondaryShade1: #e5ece3;
+  --secondaryShade2: #c4d0c0;
+  --secondaryShade3: #91a38e;
+  --secondaryShade4: #617a61;
+  --secondaryShade5: #34483a;
+
+  --accentColor: #b28b4d;
+  --accentShade1: #f7eedb;
+  --accentShade2: #e8d4ab;
+  --accentShade3: #d0ae72;
+  --accentShade4: #b28b4d;
+  --accentShade5: #67491f;
+
+  --accent2Color: #493c58;
+  --accent2Shade1: #ece7f0;
+  --accent2Shade2: #cfc4d8;
+  --accent2Shade3: #a797b7;
+  --accent2Shade4: #776486;
+  --accent2Shade5: #493c58;
+
+  --neutralShade1: #faf5ea;
+  --neutralShade2: #eae0d0;
+  --neutralShade3: #d7c8b5;
+  --neutralShade4: #b9a995;
+  --neutralShade5: #978774;
+  --neutralShade6: #756657;
+  --neutralShade7: #51463d;
+  --neutralShade8: #261e1b;
+
+  --grayColor: #665b50;
+  --lightGrayColor: #d7c8b5;
+
+
+  /* Fonts */
+  --copyFontFamily: "Source Sans 3", sans-serif;
+  --headingFontFamily: "Libre Baskerville", serif;
+  /* Change default root font size (16px), if desired */
+  font-size: 18px;
+
+  /* You can also use it for generally applied sizing and spacing. */
+  --borderRadius: 6px;
+  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+}
+
+/*
+  After you define your color schemes above, revise the color and typography rulesets below in accordance with your desired new font families, weights, line-heights, etc. You can even modify which variables are being used.
+*/
+
+/* GENERAL COLOR SCHEME */
+body {
+  background: var(--backgroundColor);
+  color: var(--neutralShade8);
+}
+
+/*==========
+  TYPOGRAPHY
+===========*/
+
+/* Font Families */
+body { font-family: var(--copyFontFamily); }
+h1,h2,h3 { font-family: var(--headingFontFamily); }
+
+/* Emphasis and Bolding */
+strong { font-weight: 500; }
+em { font-style: italic; }
+
+/* Font Weight, Sizing & Spacing */
+body {
+  font-weight: 300;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+h1 {
+  font-weight: 700;
+  /* Check out the clamp() method! */
+  font-size: clamp(2.5rem,3rem,3.5rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 500;
+  font-size: clamp(1.75rem,2rem,2.5rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+h3 {
+  font-weight: 500;
+  font-size: clamp(1.25rem,1.5rem,1.75rem);
+  line-height: 1.2;
+}
+h4 {
+  font-weight: 300;
+  font-size: clamp(1.25rem,1.5rem,1.75rem);
+  line-height: 1.2;
+  font-style: italic;
+}
+h5 {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+h6 {
+  font-weight: 200;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+a { font-weight: 500; }
+
+/* Default Font Colors & Styling */
+
+/* default links */
+a {
+  color: var(--neutralShade8);
+  border-bottom: 2px dashed;
+  cursor: pointer;
+  transition: 0.4s;
+}
+a:hover {
+  color: var(--neutralShade1);
+  background-color: var(--primaryColor);
+  border-bottom: 3px solid var(--primaryShade5);
+  transition: 0.4s;
+}
+
+/* primary color links */
+a.primary {
+  color: var(--primaryColor);
+  border-bottom: 2px dashed;
+  cursor: pointer;
+  transition: 0.4s;
+}
+a.primary:hover {
+  color: var(--primaryShade1);
+  background-color: var(--primaryShade4);
+  border-bottom: 3px solid var(--secondaryColor);
+  transition: 0.4s;
+}
+
+/* secondary color links */
+a.secondary {
+  color: var(--secondaryShade5);
+  border-bottom: 2px dashed;
+  cursor: pointer;
+  transition: 0.4s;
+}
+a.secondary:hover {
+  color: var(--secondaryShade1);
+  background-color: var(--secondaryShade5);
+  border-bottom: 3px solid var(--primaryColor);
+  transition: 0.4s;
+}
+
+/* Typography refinements */
+.font-family-bold > * {
+  font-weight: 700;
+}
+
+.font-family-medium > * {
+  font-weight: 400;
+}
+
+.font-family-light > * {
+  font-weight: 400;
+}
+
+/* Improve typography sample readability */
+.font__first-level > span {
+  font-family: var(--copyFontFamily);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}

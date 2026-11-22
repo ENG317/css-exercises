@@ -1,0 +1,207 @@
+/*
+  When you complete this style guide, you will copy the following scope of the code below starting at the font import until the comment that states "STYLES BELOW ARE SPECIFIC TO THE STYLE GUIDE"
+*/
+
+/*============
+  IMPORT FONTS
+  1. Import your own fonts via https://fonts.google.com. Be sure to revise the family names in the CSS and in the HTML
+==============*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/*============
+  COLOR SCHEME
+
+  2. Define the color scheme within the root element by using CSS variables:
+
+    - '--variableName: color_value;'
+    - Use in code later as "color: var(--variableName)"
+
+  The power of CSS variables includes interchangability. For example, when you want to change your color pallette, you only need to change the value defined at the variable.
+
+  For example, if you want to change your background and foreground colors, your primary and secondary colors, etc., locate the variable in the :root, change it, and then that value will be applied anywhere that variable is used in your CSS.
+
+  Define it once, use across your code.
+  Change it in one spot, it changes everywhere it's used in your code!
+
+  - See https://randoma11y.com to establish the initial basic 2-color scheme: primary and secondary colors.
+
+  - Make sure the colors are AAA rated, as this meets A11Y standards for color contrasts
+
+  - You can also use Adobe's Color Picker: https://color.adobe.com/create/color-wheel. Just make sure the colors are AAA rated by testing the darkest vs. lightest colors here: https://webaim.org/resources/contrastchecker/
+
+  - Note how the colors shades move from 1-5, i.e., lighter shades to darker shades. To produce shades, use VS Code's color picker tool to produce gradiations of the initial color.
+
+  - If you want //accent// shade(s), feel free to consider additional complimentary colors.
+=============*/
+
+:root {
+ 
+  --backgroundColor: #fffaf5;
+  --foregroundColor: #302b28;
+
+  --primaryColor: #713d51;
+  --primaryShade1: #f9edf1;
+  --primaryShade2: #eacbd6;
+  --primaryShade3: #ce9fb0;
+  --primaryShade4: #a46a80;
+  --primaryShade5: #713d51;
+
+  --secondaryColor: #425d49;
+  --secondaryShade1: #edf3eb;
+  --secondaryShade2: #d2dfcf;
+  --secondaryShade3: #a5bea5;
+  --secondaryShade4: #718f75;
+  --secondaryShade5: #425d49;
+
+  --accentColor: #e6c8a6;
+  --accentShade1: #fcf6ee;
+  --accentShade2: #f5e6d4;
+  --accentShade3: #e6c8a6;
+  --accentShade4: #bc9469;
+  --accentShade5: #78532e;
+
+  --accent2Color: #795b79;
+  --accent2Shade1: #f5edf5;
+  --accent2Shade2: #e4d1e4;
+  --accent2Shade3: #c3a4c3;
+  --accent2Shade4: #9a789a;
+  --accent2Shade5: #795b79;
+
+  --neutralShade1: #fffaf5;
+  --neutralShade2: #f4ece4;
+  --neutralShade3: #e3d9d0;
+  --neutralShade4: #c8bbb0;
+  --neutralShade5: #a29388;
+  --neutralShade6: #796b61;
+  --neutralShade7: #51463f;
+  --neutralShade8: #302b28;
+
+  --grayColor: #665b54;
+  --lightGrayColor: #e3d9d0;
+
+ /* Fonts */
+--copyFontFamily: "DM Sans", sans-serif;
+--headingFontFamily: "Cormorant Garamond", serif;
+  /* Change default root font size (16px), if desired */
+  font-size: 18px;
+
+  /* You can also use it for generally applied sizing and spacing. */
+  --borderRadius: 6px;
+  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+}
+
+
+/*
+  After you define your color schemes above, revise the color and typography rulesets below in accordance with your desired new font families, weights, line-heights, etc. You can even modify which variables are being used.
+*/
+
+/* GENERAL COLOR SCHEME */
+body {
+  background: var(--backgroundColor);
+  color: var(--foregroundColor);
+}
+
+/*==========
+  TYPOGRAPHY
+===========*/
+
+/* Font Families */
+body { font-family: var(--copyFontFamily); }
+h1,h2,h3 { font-family: var(--headingFontFamily); }
+
+/* Emphasis and Bolding */
+strong { font-weight: 500; }
+em { font-style: italic; }
+
+/* Font Weight, Sizing & Spacing */
+body {
+  font-weight: 300;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: var(--primaryColor);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  text-transform: none;
+  color: var(--secondaryColor);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.3;
+  color: var(--primaryColor);
+}
+
+h4 {
+  font-weight: 300;
+  font-size: clamp(1.25rem,1.5rem,1.75rem);
+  line-height: 1.2;
+  font-style: italic;
+}
+h5 {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+h6 {
+  font-weight: 200;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+a { font-weight: 500; }
+
+/* Default Font Colors & Styling */
+
+/* default links */
+a {
+  color: var(--foregroundColor);
+  border-bottom: 2px dashed;
+  cursor: pointer;
+  transition: 0.4s;
+}
+a:hover {
+  background-color: var(--accentColor);
+  border-bottom: 3px solid var(--secondaryShade5);
+  transition: 0.4s;
+}
+
+/* primary color links */
+a.primary {
+  color: var(--primaryColor);
+  border-bottom: 2px dashed;
+  cursor: pointer;
+  transition: 0.4s;
+}
+a.primary:hover {
+  color: var(--primaryShade1);
+  background-color: var(--primaryShade4);
+  border-bottom: 3px solid var(--secondaryColor);
+  transition: 0.4s;
+}
+
+/* secondary color links */
+a.secondary {
+  color: var(--secondaryShade5);
+  border-bottom: 2px dashed;
+  cursor: pointer;
+  transition: 0.4s;
+}
+a.secondary:hover {
+  color: var(--secondaryShade1);
+  background-color: var(--secondaryShade5);
+  border-bottom: 3px solid var(--primaryColor);
+  transition: 0.4s;
+}
