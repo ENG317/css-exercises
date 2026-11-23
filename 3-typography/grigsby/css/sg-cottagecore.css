@@ -87,7 +87,7 @@
 
   /* You can also use it for generally applied sizing and spacing. */
   --borderRadius: 6px;
-  --boxShadow: 0 2px 5px rgba(#333, 0.2);
+  --boxShadow: 0 2px 5px rgba(51, 51, 51, 0.2);
 }
 
 
@@ -145,8 +145,8 @@ h3 {
 }
 
 h4 {
-  font-weight: 300;
-  font-size: clamp(1.25rem,1.5rem,1.75rem);
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   line-height: 1.2;
   font-style: italic;
 }
@@ -156,7 +156,7 @@ h5 {
   line-height: 1.2;
 }
 h6 {
-  font-weight: 200;
+  font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.2;
 }
@@ -204,4 +204,18 @@ a.secondary:hover {
   background-color: var(--secondaryShade5);
   border-bottom: 3px solid var(--primaryColor);
   transition: 0.4s;
+}
+
+
+  /*CUSTOM COTTAGECORE STYLES
+  Additional styling*/
+
+a:focus-visible {
+  outline: 3px solid var(--secondaryColor);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--primaryShade2);
+  color: var(--foregroundColor);
 }
