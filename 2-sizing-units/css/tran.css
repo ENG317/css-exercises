@@ -78,3 +78,57 @@ REVIEW
     - Use 2 paragraphs, and use a line-height of 2 for paragraphs in this container.
 */
 
+body {
+  font-family: system-ui, sans-serif;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.wf_recreation_container {
+  max-width: 95%;
+  margin: 0; 
+  background: #ffffff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  overflow: auto; 
+  box-sizing: border-box;
+}
+
+.wf_recreation_container h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  border-bottom: 3px solid #333;
+  padding-bottom: 0.5rem;
+  clear: both;
+}
+
+/* First image: Left side */
+.wf_recreation_container img {
+  float: left;
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 1.5rem 1rem 0; 
+  border: 2px solid #64748b;
+  border-radius: 4px;
+}
+
+/* Second image: Right side (Targeted by class) */
+.wf_recreation_container img.placeholder {
+  float: right;
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0 0 1rem 1.5rem;
+  border: 2px solid #64748b;
+  border-radius: 4px;
+}
+
+.wf_recreation_container img:hover {
+  opacity: 0.8;
+}
+
+.wf_recreation_container p {
+  line-height: 1.6;
+  color: #333;
+}
