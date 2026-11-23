@@ -1,0 +1,46 @@
+.poster-wall {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.poster-1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.poster-2 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.poster-3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.poster-4 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.poster-5 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.poster-6 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.poster-7 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.poster-8 img {
+  max-width: 100%;
+  height: auto;
+}
