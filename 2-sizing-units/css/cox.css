@@ -19,26 +19,9 @@
 .rem__30 { width: 30rem; }
 .perc__30 { width: 30%; }
 
-
 /*===============
   2. IMAGE SIZING
 ================*/
-/*
-  Below, apply and inspect your work as you go, making sure they each work ...
-
-  1.a viewport width of 65 (65vw) to the section with the class "img_sizing__container"
-    - What does this select and do, and how does it impact the elements inside of it?
-
-  2. an absolute length of 100 pixels (100px to the image with the "img_absolute_px" class
-
-  3. a percentage relative length to the image with an "img_relative_percentage" class
-
-  4. a viewport width relative length to the image with an "img_relative_vw" class
-
-  REVIEW
-    - Inspect each image and change their values.
-    - AS you do so, also hover over the HTML of those images to compare their box dimensions and see if you understand why their size is as it is.
-*/
 
 .img_sizing__container {
   width: 65vw;
@@ -62,15 +45,11 @@
 /*======================
   3. RECREATE THE DESIGN
 ======================*/
-/*
-  Recreate the wireframe design in the images folder.
+.wf_recreation_container {
+  width: 950px;
 
-  Use CSS Nesting to create this solution as a component,
-  so the section should have a class name of "wf_recreation_container".
-
-  HINTS:
-    - You will need to use floats and a clear fix. (See reading #4 in Week 8)
-    - The viewport should be about 950px wide for testing.
-    - Use 2 paragraphs, and use a line-height of 2 for paragraphs in this container.
-*/
+  & p {
+    line-height
+  }
+}
 
