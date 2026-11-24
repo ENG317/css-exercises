@@ -1,0 +1,64 @@
+.bookshelf {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  grid-template-rows: repeat(4, 200px);
+  gap: 2rem;
+}
+
+/* Common shelf styling */
+.shelf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.shelf img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+.shelf p {
+  margin-top: 0.5rem;
+}
+
+/* Shelf placement */
+
+.top-right {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.upper-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.middle-right {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.bottom-left {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+/* Center support pole */
+.bookshelf::before {
+  content: "";
+  grid-column: 2;
+  grid-row: 1 / 5;
+  justify-self: center;
+
+  width: 12px;
+  height: 100%;
+  background: #222;
+  border-radius: 10px;
+}
