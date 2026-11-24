@@ -22,7 +22,7 @@
 /*===============
   2. IMAGE SIZING
 ================*/
-
+/* 65vw makes this section 65% of the viewport width. Percentage images inside size against the section instead. */
 .img_sizing__container {
   width: 65vw;
 }
@@ -61,5 +61,10 @@
     float: right;
     margin: 0 0 10px 20px;
   }
-}
 
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
