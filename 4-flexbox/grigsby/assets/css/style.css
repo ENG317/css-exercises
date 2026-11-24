@@ -1,0 +1,105 @@
+/*
+   GENERAL PAGE STYLING
+   */
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f0;
+}
+
+/*
+   DESIGN 1: STEPPING STONES
+    */
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.step {
+    width: 200px;
+    height: 150px;
+    background-color: #a87c91;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Position each step progressively lower */
+
+.step:nth-child(1) {
+    margin-left: 0;
+}
+
+.step:nth-child(2) {
+    margin-left: 150px;
+}
+
+.step:nth-child(3) {
+    margin-left: 300px;
+}
+
+
+/*
+   DESIGN 2: SWITCHING-IT-UP
+    */
+
+.switching-it-up {
+    margin-top: 50px;
+}
+
+.switch-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.switch-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.switch-image {
+    flex: 1;
+    min-height: 200px;
+    background-color: #a87c91;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.switch-text {
+    flex: 1;
+    padding: 30px;
+    background-color: #e8d9df;
+}
+
+/* Four-column Flexbox layout */
+
+.switch-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.footer-item {
+    flex: 1;
+    padding: 30px 10px;
+    background-color: #e8d9df;
+    text-align: center;
+    border-right: 2px solid #a87c91;
+}
+
+.footer-item:last-child {
+    border-right: none;
+}
