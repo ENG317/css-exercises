@@ -6,13 +6,13 @@
 
 Past students have recreated the layout scheme that they inferred by deconstructing:
 
-* a wall of posters,
-* furniture position in a room,
-* book/shelves,
-* wall of a stonework building with windows/doors, etc.,
-* cubism artwork,
-* a star constellation,
-* and so on ...
+- a wall of posters,
+- furniture position in a room,
+- book/shelves,
+- wall of a stonework building with windows/doors, etc.,
+- cubism artwork,
+- a star constellation,
+- and so on ...
 
 **Optional**: You can use placeholder content and images (see [https://placehold.co/](https://placehold.co/)). If you'd like to spice it up with your own flare, feel free to practice implementing a basic typography and color scheme like we practiced in exercise 3.
 
@@ -28,9 +28,9 @@ Follow this procedure to setup your coding folder:
 
 1. Within this root folder, create a new folder with your lastname.
    - **NOTE** `lastname` is your last name. Mine would be: `lindgren`.
-2. Inside the root of *your personal coding folder*, create 2 `.html` files with a meaningfuly label to match the grid.
+2. Inside the root of _your personal coding folder_, create 2 `.html` files with a meaningfuly label to match the grid.
    - **EXAMPLE**: If you create a grid based on a wall of posters, you could name the file `posters.html`.
-3. Again, inside the root of *your personal coding folder*, create an `assets` folder.
+3. Again, inside the root of _your personal coding folder_, create an `assets` folder.
 4. Inside `assets`, add your wireframes/images, and create a `css` folder.
 5. Inside `css`, create `grids.css` to link to your `html` files.
 6. Link your stylesheets to your HTML docs.
@@ -41,31 +41,31 @@ Follow this procedure to setup your coding folder:
 Learn grid terminology and practice applying `grid-template-columns` &amp; new grid values (`fr`, `min` and `max` content, `minmax()`, and `repeat()`)
 
 1. Apply the following terms:
-   * grid container and items
-   * grid lines and line numbers
-   * grid tracks
-   * grid cells vs. areas
-   * implicit vs. explicit grids
-   * grid gaps
-   * New values: `fr`, `min-content`, `max-content`, `minmax()`, `repeat()`
+   - grid container and items
+   - grid lines and line numbers
+   - grid tracks
+   - grid cells vs. areas
+   - implicit vs. explicit grids
+   - grid gaps
+   - New values: `fr`, `min-content`, `max-content`, `minmax()`, `repeat()`
 2. Setup a grid template via a container with grid items.
-3. Infer from your layout source, what HTML structure and content will create a *grid_container* --> *grid_items* (children) relationship appropriate for your design concept.
+3. Infer from your layout source, what HTML structure and content will create a _grid_container_ --> _grid_items_ (children) relationship appropriate for your design concept.
 4. Apply at least the following rules to create your concept in CSS with grid:
    1. `grid-template-columns`
-      * Values for `grid-template-columns`: use some variation, as needed, with the new `fr` unit, perhaps some other sizing unit (px, %, em, rem, vw, etc.) and the `repeat()` and `minmax()` notation.
+      - Values for `grid-template-columns`: use some variation, as needed, with the new `fr` unit, perhaps some other sizing unit (px, %, em, rem, vw, etc.) and the `repeat()` and `minmax()` notation.
    2. `grid-template-rows` is optional, due to "implicit" grids.
    3. `gap`: Apply spacing between grid items.
 5. Adapt grid cells and areas to varying content-sizing conditions:
-   * Use at least two images of different sizes.
-   * Use different amounts of textual content and elements, e.g., some combination of headings and paragraphs.
-   * Use grid alignment techniques to make your content more appealing and aligned with your design goals.
+   - Use at least two images of different sizes.
+   - Use different amounts of textual content and elements, e.g., some combination of headings and paragraphs.
+   - Use grid alignment techniques to make your content more appealing and aligned with your design goals.
 
 ## Important Warnings & Tips
 
 ### Tips
 
 - **Grid-Making Formula**: Grids require a parent (grid container) that contains the number of grid items (child elements). So, you should first consider count how many grid items you need, so you know how many children elements to create within the containing parent element.
-   - Creating a grid that needs 12 grid items ==> Create 12 direct children elements of a grid container element.
+  - Creating a grid that needs 12 grid items ==> Create 12 direct children elements of a grid container element.
 - Open your site with the live server tool in your browser.
 - Practice using the browser's specific grid inspection tool.
 - Keep practicing the art of documenting your code and writing your CSS from more general rules to more specific in the HTML source order.
@@ -73,8 +73,8 @@ Learn grid terminology and practice applying `grid-template-columns` &amp; new g
 ### Warnings
 
 - **Content-Sizing**: Your grid items (children elements) will vary in size when you add different types and amounts of content within them.
-   * Images: Contain them within a generic div; Use CSS to control the sizing of such images.
+  - Images: Contain them within a generic div; Use CSS to control the sizing of such images.
 - **Content Alignment**: Use your knowledge of aligning content to make your final product more appealing too.
 - Be careful where and how you apply **absolute values** to elements.
-   - Absolute values **fix the size**.
-   - If you shrink the viewport width, some elements may break your grid cell/area.
+  - Absolute values **fix the size**.
+  - If you shrink the viewport width, some elements may break your grid cell/area.

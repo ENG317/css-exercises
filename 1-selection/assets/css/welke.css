@@ -149,7 +149,6 @@ h2 {
    In the reflection area provided below,
    explain why the h3 elements' font size
    is **NOT** changing.
-I think h3 elements font size is not changing because its defaulting to the root font size of 12px.
    HINT: Your inspection tool's CSS panel
    will help you solve this mystery.
 ========================= */
@@ -158,9 +157,8 @@ h3 {
 }
 
 /* H3 Font Size Observations
-  Write your observations in this commment.
+  
 ================== */
-
 /* 3. LINKS */
 
 /* III. SKIP LINK SOLUTION
