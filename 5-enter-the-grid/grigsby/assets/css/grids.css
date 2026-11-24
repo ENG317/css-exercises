@@ -1,0 +1,58 @@
+/* Gallery Wall Layout */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.artwork {
+  background-color: #e8d9cc;
+  padding: 20px;
+  border: 2px solid #8b7355;
+  text-align: center;
+}
+
+/* Featured artwork spans two columns */
+.gallery-grid .artwork:first-child {
+  grid-column: span 2;
+}
+
+/* Final artwork spans all three columns */
+.gallery-grid .artwork:last-child {
+  grid-column: 1 / -1;
+}
+
+.artwork img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 15px;
+}
+
+/* Bookshelf Grid Layout */
+.bookshelf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  align-items: stretch;
+}
+
+.shelf-item {
+  padding: 20px;
+  background-color: #f0e5d8;
+  border-bottom: 8px solid #8b7355;
+  text-align: center;
+}
+
+/* Feature the first bookshelf item */
+.bookshelf-grid .shelf-item:first-child {
+  grid-column: span 2;
+}
+
+.artwork img.small-art {
+  max-width: 150px;
+}
