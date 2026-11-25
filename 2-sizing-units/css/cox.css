@@ -1,0 +1,70 @@
+/* Root */
+:root {
+  font-size: 10px;
+}
+.abs_rel_lengths__container {
+  font-size: 20px;
+  width: 50%;
+  border: black solid 2px;
+
+  & > div {
+    background: purple;
+    color: white;
+    font-weight: 900;
+  }
+}
+.px__300 { width: 300px; }
+.vw__30 { width: 30vw; }
+.em__30 { width: 30em; }
+.rem__30 { width: 30rem; }
+.perc__30 { width: 30%; }
+
+/*===============
+  2. IMAGE SIZING
+================*/
+/* 65vw makes this section 65% of the viewport width. Percentage images inside size against the section instead. */
+.img_sizing__container {
+  width: 65vw;
+}
+
+.img_absolute_px {
+  width: 100px;
+  height: auto;
+}
+
+.img_relative_percentage {
+  width: 50%;
+  height: auto;
+}
+
+.img_relative_vw {
+  width: 20vw;
+  height: auto;
+}
+
+/*======================
+  3. RECREATE THE DESIGN
+======================*/
+.wf_recreation_container {
+  width: 950px;
+
+  & p {
+    line-height: 2;
+  }
+
+  & .img_left {
+    float: left;
+    margin: 0 20px 10px 0;
+  }
+
+  & .img_right {
+    float: right;
+    margin: 0 0 10px 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Units & Sizing</title>
+
+  <!-- RESOURCES -->
+<link rel="stylesheet" href="css/cox.css">
+</head>
+<body>
+
+  <!-- 1. ABSOLUTE LENGTHS VS RELATIVE LENGTHS -->
+  <section class="abs_rel_lengths__container">
+    <h2>1. Absolute vs. Relative Lengths</h2>
+    <div class="px__300">
+      <p>I am 300px wide - Absolute length (px)</p>
+    </div>
+    <div class="vw__30">
+      <p>I am 30vw wide - Relative to viewport width (vw)</p>
+    </div>
+    <div class="perc__30">
+      <p>I am 30% wide - Relative to parent container's width</p>
+    </div>
+    <div class="em__30">
+      <p>I am 30em wide - Relative to local element (em) font size</p>
+    </div>
+    <div class="rem__30">
+      <p>I am 30rem wide - Relative to :root element (rem) font size</p>
+    </div>
+  </section>
+
+  <!-- 2. IMAGE SIZING -->
+  <section class="img_sizing__container">
+  <h2>1. Image Sizing</h2>
+  <img class="img_absolute_px"
+       src="https://placehold.co/800x400?text=800+x+400\nAbsolute+Length"
+       width="800" height="400" alt="">
+  <img class="img_relative_percentage"
+       src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nPercentage"
+       width="800" height="400" alt="">
+  <img class="img_relative_vw"
+       src="https://placehold.co/800x400?text=800+x+400\nRelative+Length\nViewport+Width"
+       width="800" height="400" alt="">
+</section> 
+
+
+  <!-- 3. RECREATE THE DESIGN -->
+  <section class="wf_recreation_container">
+  <h2>Recreate the Design</h2>
+  <img class="img_left"
+       src="https://placehold.co/300x300?text=Left+Image"
+       width="300" height="300" alt="">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque consectetur voluptatem, dolorum optio quasi aliquid, nobis quis at provident iure. Ab dicta officia nam dignissimos. Ab minus ullam consequatur labore facere enim deserunt, vel molestiae nulla repellat accusantium a deleniti dolore sed cum recusandae facilis beatae soluta ex! Enim sapiente fugiat explicabo nostrum illum tempora quae ducimus, necessitatibus deserunt facilis asperiores sed nobis beatae magni dolor praesentium. Cum, fugiat tempore ex amet repellat voluptatum nulla eius sed quia facilis dolorem omnis sit dolores, tempora unde. Et tempora voluptate quibusdam placeat neque, maxime iure explicabo nihil officia laboriosam unde assumenda.</p>
+  <img class="img_right"
+       src="https://placehold.co/200x120?text=Right+Image"
+       width="200" height="120" alt="">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi dolorem eius labore obcaecati provident. Vel nulla totam, laboriosam fugit molestias ut! Libero fuga quisquam quaerat numquam aliquid iste! Laborum nihil, quibusdam, nulla eos eaque voluptatem possimus alias laboriosam nostrum, quae corporis doloremque illo laudantium aliquam dolore libero autem cumque ratione accusantium pariatur eius explicabo. Illo officia fuga nihil dicta. Deleniti reiciendis, rerum ex nulla quia veritatis doloremque ipsum vero voluptatem. Molestias, libero voluptates blanditiis doloribus magnam commodi ex alias ratione, rerum dicta repellendus perspiciatis, amet natus fuga unde vitae impedit cumque. Maiores dolor at aut!</p>
+</section>
+  
+</body>
+</html>
